@@ -1,0 +1,117 @@
+{
+ "Model": {
+  "Precision": {
+   "default": "ap_fixed<18,8>"
+  },
+  "ReuseFactor": 16,
+  "ChannelsLastConversion": "full",
+  "TransposeOutputs": false,
+  "Strategy": "Resource",
+  "BramFactor": 1000000000,
+  "TraceOutput": false
+ },
+ "PytorchModel": "VAEInference(\n  (enc1): Linear(in_features=8, out_features=32, bias=True)\n  (enc2): Linear(in_features=32, out_features=16, bias=True)\n  (mu): Linear(in_features=16, out_features=4, bias=True)\n  (dec1): Linear(in_features=4, out_features=16, bias=True)\n  (dec2): Linear(in_features=16, out_features=32, bias=True)\n  (out): Linear(in_features=32, out_features=8, bias=True)\n)",
+ "InputShape": [
+  8
+ ],
+ "LayerName": {
+  "x": {
+   "Trace": false,
+   "Precision": {
+    "result": "ap_fixed<25,9>"
+   }
+  },
+  "enc1": {
+   "Trace": false,
+   "Precision": {
+    "weight": "ap_fixed<18,3,AP_RND_CONV,AP_SAT>",
+    "bias": "ap_fixed<18,2,AP_RND_CONV,AP_SAT>",
+    "result": "ap_fixed<18,4,AP_RND_CONV,AP_SAT>",
+    "accum": "ap_fixed<30,8>"
+   },
+   "ReuseFactor": 16
+  },
+  "relu": {
+   "Trace": false,
+   "Precision": {
+    "result": "ap_ufixed<18,3,AP_RND_CONV,AP_SAT>"
+   },
+   "ReuseFactor": 16,
+   "TableSize": 1024
+  },
+  "enc2": {
+   "Trace": false,
+   "Precision": {
+    "weight": "ap_fixed<18,3,AP_RND_CONV,AP_SAT>",
+    "bias": "ap_fixed<18,2,AP_RND_CONV,AP_SAT>",
+    "result": "ap_fixed<18,5,AP_RND_CONV,AP_SAT>",
+    "accum": "ap_fixed<30,9>"
+   },
+   "ReuseFactor": 16
+  },
+  "relu_1": {
+   "Trace": false,
+   "Precision": {
+    "result": "ap_ufixed<18,4,AP_RND_CONV,AP_SAT>"
+   },
+   "ReuseFactor": 16,
+   "TableSize": 1024
+  },
+  "mu": {
+   "Trace": false,
+   "Precision": {
+    "weight": "ap_fixed<18,3,AP_RND_CONV,AP_SAT>",
+    "bias": "ap_fixed<18,2,AP_RND_CONV,AP_SAT>",
+    "result": "ap_fixed<18,5,AP_RND_CONV,AP_SAT>",
+    "accum": "ap_fixed<30,9>"
+   },
+   "ReuseFactor": 16
+  },
+  "dec1": {
+   "Trace": false,
+   "Precision": {
+    "weight": "ap_fixed<18,2,AP_RND_CONV,AP_SAT>",
+    "bias": "ap_fixed<18,2,AP_RND_CONV,AP_SAT>",
+    "result": "ap_fixed<18,5,AP_RND_CONV,AP_SAT>",
+    "accum": "ap_fixed<30,9>"
+   },
+   "ReuseFactor": 16
+  },
+  "relu_2": {
+   "Trace": false,
+   "Precision": {
+    "result": "ap_ufixed<18,4,AP_RND_CONV,AP_SAT>"
+   },
+   "ReuseFactor": 16,
+   "TableSize": 1024
+  },
+  "dec2": {
+   "Trace": false,
+   "Precision": {
+    "weight": "ap_fixed<18,3,AP_RND_CONV,AP_SAT>",
+    "bias": "ap_fixed<18,2,AP_RND_CONV,AP_SAT>",
+    "result": "ap_fixed<18,6,AP_RND_CONV,AP_SAT>",
+    "accum": "ap_fixed<30,10>"
+   },
+   "ReuseFactor": 16
+  },
+  "relu_3": {
+   "Trace": false,
+   "Precision": {
+    "result": "ap_ufixed<18,5,AP_RND_CONV,AP_SAT>"
+   },
+   "ReuseFactor": 16,
+   "TableSize": 1024
+  },
+  "out": {
+   "Trace": false,
+   "Precision": {
+    "weight": "ap_fixed<18,2,AP_RND_CONV,AP_SAT>",
+    "bias": "ap_fixed<18,2,AP_RND_CONV,AP_SAT>",
+    "result": "ap_fixed<18,4,AP_RND_CONV,AP_SAT>",
+    "accum": "ap_fixed<30,8>"
+   },
+   "ReuseFactor": 16
+  }
+ }
+}

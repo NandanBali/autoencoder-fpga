@@ -1,0 +1,68 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 3 4 1",
+    "file": "vae_feature_sender.cpp",
+    "fileloc": 85,
+    "instructions": 63,
+    "name": "vae_feature_sender",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 209
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "vae_feature_sender.cpp",
+    "fileloc": 69,
+    "instructions": 28,
+    "loads": {
+      "L": 3
+    },
+    "name": "collect",
+    "total_instructions": 28
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "vae_feature_sender.cpp",
+    "fileloc": 18,
+    "instructions": 25,
+    "loads": {
+      "L": 1
+    },
+    "name": "load",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 25
+  },
+  "3": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "vae_feature_sender.cpp",
+    "fileloc": 27,
+    "instructions": 72,
+    "loads": {
+      "L": 5
+    },
+    "name": "pace_send",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 72
+  },
+  "4": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "vae_feature_sender.cpp",
+    "fileloc": 61,
+    "instructions": 21,
+    "loads": {
+      "L": 2
+    },
+    "name": "store_stamps",
+    "total_instructions": 21
+  }
+}

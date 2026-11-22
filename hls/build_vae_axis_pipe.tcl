@@ -1,0 +1,21 @@
+# Build the pipelined vae_axis IP into runs/vae/vae_axis_pipe_ip. Run: vitis_hls -f hls/build_vae_axis_pipe.tcl
+cd /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae
+open_project -reset vae_axis_pipe_ip
+set_top vae_axis
+add_files /home/nandanbali/programming/deep-svdd/autoencoder/hls/vae_axis.cpp -cflags "-std=c++14 -I/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware -I/home/nandanbali/programming/deep-svdd/autoencoder/hls -include /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/weights_dir.h"
+add_files /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp -cflags "-std=c++14 -I/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware -I/home/nandanbali/programming/deep-svdd/autoencoder/hls -include /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/weights_dir.h"
+add_files -tb /home/nandanbali/programming/deep-svdd/autoencoder/hls/test_vae_axis.cpp -cflags "-std=c++14 -I/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware -I/home/nandanbali/programming/deep-svdd/autoencoder/hls -include /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/weights_dir.h -I/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae"
+open_solution solution1 -flow_target vivado
+set_part {xc7z020clg400-1}
+create_clock -period 10.0 -name default
+# Extra margin: HLS schedules for (period - uncertainty); Vivado still closes at the full period.
+set_clock_uncertainty 3.5
+config_rtl -reset control -reset_level low
+csim_design -ldflags {-B/usr/bin/} -clean
+csynth_design
+if {![info exists ::env(VAE_STAGE)] || $::env(VAE_STAGE) ne "synth"} {
+    # Cosim may reject a free-running (ap_ctrl_none) dataflow top; sim/ has the system RTL testbench.
+    if {[catch {cosim_design -ldflags {-B/usr/bin/} -trace_level none} msg]} { puts "COSIM FAILED: $msg" }
+    export_design -flow impl -format ip_catalog -vendor user.org -library hls -version 1.1 -display_name "VAE anomaly score, pipelined (AXI4-Stream)"
+}
+exit

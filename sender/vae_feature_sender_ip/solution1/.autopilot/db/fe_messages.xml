@@ -1,0 +1,60 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pace_send" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:64:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="store_stamps" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:73:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="collect" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/build_sender.tcl:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=vae_feature_sender" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:90:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=features offset=slave bundle=gmem_in depth=2048 max_read_burst_length=64 num_read_outstanding=8 latency=64" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:92:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=t_send offset=slave bundle=gmem_ts depth=256 max_write_burst_length=64 num_write_outstanding=8" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=results offset=slave bundle=gmem_res depth=256 max_write_burst_length=64 num_write_outstanding=8" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:96:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=features bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:97:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=t_send bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:98:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=results bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:99:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=n_flows bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:100:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=period bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:101:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:102:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port=cycle_tx" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:103:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port=cycle_rx" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:104:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=m_axis_features register_mode=both" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:105:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=s_axis_score register_mode=both" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vae_feature_sender" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

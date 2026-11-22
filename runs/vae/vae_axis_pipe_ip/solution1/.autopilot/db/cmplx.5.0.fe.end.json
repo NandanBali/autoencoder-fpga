@@ -1,0 +1,254 @@
+{
+    "1": {
+        "name": "dense_resource_rf_leq_nin<ap_ufixed,ap_fixed<18,5,4,0,0>,config6>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_dense_resource.h",
+        "fileloc": "46",
+        "instructions": "107",
+        "total_instructions": "271",
+        "calls": "3 3 3 3",
+        "basicblocks": "5",
+        "loads": {
+            "G": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "cast<ap_ufixed<18, 5, 4, 0, 0>, ap_fixed<18, 4, 4, 0, 0>, config11>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_mult.h",
+        "fileloc": "111",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "cast<ap_ufixed<18, 4, 4, 0, 0>, ap_fixed<18, 5, 4, 0, 0>, config6>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_mult.h",
+        "fileloc": "111",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "4": {
+        "name": "(anonymous namespace)score_and_write",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/hls\/vae_axis.cpp",
+        "fileloc": "69",
+        "instructions": "93",
+        "total_instructions": "93",
+        "calls": "",
+        "basicblocks": "3"
+    },
+    "5": {
+        "name": "dense_resource_rf_leq_nin<ap_ufixed,ap_fixed<18,6,4,0,0>,config9>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_dense_resource.h",
+        "fileloc": "46",
+        "instructions": "355",
+        "total_instructions": "1667",
+        "calls": "20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20",
+        "basicblocks": "5",
+        "loads": {
+            "G": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "relu<ap_fixed<18, 4, 4, 0, 0>, ap_ufixed<18, 3, 4, 0, 0>, relu_config3>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_activation.h",
+        "fileloc": "40",
+        "instructions": "226",
+        "total_instructions": "226",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "7": {
+        "name": "dense_resource_rf_leq_nin<ap_ufixed,ap_fixed<18,5,4,0,0>,config4>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_dense_resource.h",
+        "fileloc": "46",
+        "instructions": "374",
+        "total_instructions": "1030",
+        "calls": "14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14",
+        "basicblocks": "5",
+        "loads": {
+            "G": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "dense_resource_rf_gt_nin_rem0<ap_fixed,ap_fixed<18,4,4,0,0>,config2>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_dense_resource.h",
+        "fileloc": "110",
+        "instructions": "385",
+        "total_instructions": "1697",
+        "calls": "11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11",
+        "basicblocks": "5",
+        "loads": {
+            "G": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "(anonymous namespace)read_frame",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/hls\/vae_axis.cpp",
+        "fileloc": "30",
+        "instructions": "58",
+        "total_instructions": "114",
+        "calls": "15 12",
+        "basicblocks": "6",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "8"
+        }
+    },
+    "10": {
+        "name": "dense_resource_rf_leq_nin<ap_ufixed,ap_fixed<18,4,4,0,0>,config11>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_dense_resource.h",
+        "fileloc": "46",
+        "instructions": "238",
+        "total_instructions": "566",
+        "calls": "2 2 2 2 2 2 2 2",
+        "basicblocks": "5",
+        "loads": {
+            "G": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "cast<ap_fixed<25, 9, 5, 3, 0>, ap_fixed<18, 4, 4, 0, 0>, config2>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_mult.h",
+        "fileloc": "111",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "12": {
+        "name": "(anonymous namespace)read_frame_Pipeline_drain",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/hls\/vae_axis.cpp",
+        "fileloc": "38",
+        "instructions": "12",
+        "total_instructions": "12",
+        "calls": "",
+        "basicblocks": "3",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "relu<ap_fixed<18, 5, 4, 0, 0>, ap_ufixed<18, 4, 4, 0, 0>, relu_config8>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_activation.h",
+        "fileloc": "40",
+        "instructions": "114",
+        "total_instructions": "114",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "14": {
+        "name": "cast<ap_ufixed<18, 3, 4, 0, 0>, ap_fixed<18, 5, 4, 0, 0>, config4>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_mult.h",
+        "fileloc": "111",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "0": {
+        "name": "vae_axis",
+        "file": "vae_axis.cpp",
+        "fileloc": "92",
+        "instructions": "30",
+        "total_instructions": "7182",
+        "calls": "9 21 4",
+        "basicblocks": "1"
+    },
+    "15": {
+        "name": "(anonymous namespace)read_frame_Pipeline_read_beats",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/hls\/vae_axis.cpp",
+        "fileloc": "37",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "relu<ap_fixed<18, 6, 4, 0, 0>, ap_ufixed<18, 5, 4, 0, 0>, relu_config10>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_activation.h",
+        "fileloc": "40",
+        "instructions": "226",
+        "total_instructions": "226",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "17": {
+        "name": "cast<ap_fixed<18, 5, 4, 0, 0>, ap_fixed<18, 5, 4, 0, 0>, config7>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_mult.h",
+        "fileloc": "111",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "18": {
+        "name": "relu<ap_fixed<18, 5, 4, 0, 0>, ap_ufixed<18, 4, 4, 0, 0>, relu_config5>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_activation.h",
+        "fileloc": "40",
+        "instructions": "114",
+        "total_instructions": "114",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "19": {
+        "name": "dense_resource_rf_gt_nin_rem0<ap_fixed,ap_fixed<18,5,4,0,0>,config7>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_dense_resource.h",
+        "fileloc": "110",
+        "instructions": "163",
+        "total_instructions": "819",
+        "calls": "17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17",
+        "basicblocks": "5",
+        "loads": {
+            "G": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "20": {
+        "name": "cast<ap_ufixed<18, 4, 4, 0, 0>, ap_fixed<18, 6, 4, 0, 0>, config9>",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/nnet_utils\/nnet_mult.h",
+        "fileloc": "111",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "21": {
+        "name": "vae_core",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/runs\/vae\/hls4ml_prj\/firmware\/vae_core.cpp",
+        "fileloc": "9",
+        "instructions": "215",
+        "total_instructions": "6945",
+        "calls": "8 6 7 18 1 19 13 5 16 10",
+        "basicblocks": "1"
+    }
+}

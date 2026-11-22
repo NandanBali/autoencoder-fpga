@@ -1,0 +1,351 @@
+{
+ "model": "VAE",
+ "architecture": "8-32-16-(4 mu,4 logvar)-16-32-8",
+ "features": [
+  "IN_BYTES",
+  "OUT_BYTES",
+  "FLOW_DURATION_MILLISECONDS",
+  "MIN_TTL",
+  "MAX_IP_PKT_LEN",
+  "MIN_IP_PKT_LEN",
+  "TCP_WIN_MAX_IN",
+  "TCP_WIN_MAX_OUT"
+ ],
+ "preprocessing_sha256": "9c947318add1c3c260dcc2eb500c45e67953a5ae75e939dabcda1014a4a3fc67",
+ "seed": 7,
+ "score": "sum((x - decoder(mu(x)))^2), higher is anomalous",
+ "args": {
+  "software_model": "/home/nandanbali/programming/deep-svdd/software-model",
+  "output": "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae",
+  "device": "auto",
+  "seed": "7",
+  "latent": "4",
+  "beta": "0.01",
+  "warmup": "10",
+  "lr": "0.001",
+  "batch_size": "512",
+  "epochs": "150",
+  "patience": "10",
+  "target_fpr": "0.01",
+  "bits": "18",
+  "reuse_factor": "16",
+  "accum_bits": "0",
+  "strategy": "Resource",
+  "clock": "10.0",
+  "clock_uncertainty": "3.5",
+  "impl": "True",
+  "golden_rows": "256",
+  "skip_test": "False",
+  "retrain": "False",
+  "no_synth": "False"
+ },
+ "float": {
+  "calibration": {
+   "threshold": 0.05268110707402229,
+   "target_fpr": 0.01,
+   "normal_calibration_rows": 90686,
+   "measured_calibration_fpr": 0.009990516728050637,
+   "comparison": "score > threshold"
+  },
+  "validation": {
+   "roc_auc": 0.9997815756465034,
+   "pr_auc_trapezoidal": 0.9977522729670476,
+   "average_precision": 0.9977524504987341,
+   "threshold": 0.05268110707402229,
+   "recall": 0.9996779042301911,
+   "measured_fpr": 0.009990516728050637,
+   "per_attack": {
+    "Analysis": {
+     "rows": 74,
+     "recall": 1.0
+    },
+    "Backdoor": {
+     "rows": 36,
+     "recall": 1.0
+    },
+    "DoS": {
+     "rows": 566,
+     "recall": 0.9982332155477032
+    },
+    "Exploits": {
+     "rows": 3735,
+     "recall": 0.9994645247657296
+    },
+    "Fuzzers": {
+     "rows": 2773,
+     "recall": 1.0
+    },
+    "Generic": {
+     "rows": 486,
+     "recall": 1.0
+    },
+    "Reconnaissance": {
+     "rows": 1438,
+     "recall": 1.0
+    },
+    "Shellcode": {
+     "rows": 198,
+     "recall": 1.0
+    },
+    "Worms": {
+     "rows": 8,
+     "recall": 1.0
+    }
+   },
+   "normal_score_distribution": {
+    "min": 4.922203879687004e-05,
+    "q01": 0.00010928668052656576,
+    "median": 0.0020942699629813433,
+    "q99": 0.052595621161162266,
+    "max": 9.313308715820312
+   },
+   "attack_score_distribution": {
+    "min": 0.006283631082624197,
+    "q01": 1.0289219200611115,
+    "median": 9.04887056350708,
+    "q99": 10.093636083602906,
+    "max": 22.698850631713867
+   },
+   "score_std": 2.3160807841576023,
+   "nearly_constant_scores": false
+  },
+  "test": {
+   "roc_auc": 0.9998374359433116,
+   "pr_auc_trapezoidal": 0.9972341947559391,
+   "average_precision": 0.9972600608605433,
+   "threshold": 0.05268110707402229,
+   "recall": 0.9996634129922585,
+   "measured_fpr": 0.010473503353936346,
+   "per_attack": {
+    "Analysis": {
+     "rows": 113,
+     "recall": 1.0
+    },
+    "Backdoor": {
+     "rows": 248,
+     "recall": 1.0
+    },
+    "DoS": {
+     "rows": 472,
+     "recall": 0.9936440677966102
+    },
+    "Exploits": {
+     "rows": 3495,
+     "recall": 1.0
+    },
+    "Fuzzers": {
+     "rows": 2454,
+     "recall": 1.0
+    },
+    "Generic": {
+     "rows": 533,
+     "recall": 1.0
+    },
+    "Reconnaissance": {
+     "rows": 1444,
+     "recall": 1.0
+    },
+    "Shellcode": {
+     "rows": 143,
+     "recall": 1.0
+    },
+    "Worms": {
+     "rows": 11,
+     "recall": 1.0
+    }
+   },
+   "normal_score_distribution": {
+    "min": 4.917274782201275e-05,
+    "q01": 0.00010972568052238784,
+    "median": 0.002293473109602928,
+    "q99": 0.05336211077868938,
+    "max": 10.411764144897461
+   },
+   "attack_score_distribution": {
+    "min": 0.03172391653060913,
+    "q01": 1.0285837984085082,
+    "median": 9.051339149475098,
+    "q99": 10.155828132629386,
+    "max": 21.89647102355957
+   },
+   "score_std": 2.251791306723812,
+   "nearly_constant_scores": false
+  }
+ },
+ "fixed_point": {
+  "precision_plan": {
+   "enc1": {
+    "max_abs_train": 3.285907030105591,
+    "weight_int": 3,
+    "bias_int": 2,
+    "result_int": 4
+   },
+   "enc2": {
+    "max_abs_train": 6.453848838806152,
+    "weight_int": 3,
+    "bias_int": 2,
+    "result_int": 5
+   },
+   "mu": {
+    "max_abs_train": 4.405514717102051,
+    "weight_int": 3,
+    "bias_int": 2,
+    "result_int": 5
+   },
+   "dec1": {
+    "max_abs_train": 4.317709922790527,
+    "weight_int": 2,
+    "bias_int": 2,
+    "result_int": 5
+   },
+   "dec2": {
+    "max_abs_train": 8.214076042175293,
+    "weight_int": 3,
+    "bias_int": 2,
+    "result_int": 6
+   },
+   "out": {
+    "max_abs_train": 1.209747314453125,
+    "weight_int": 2,
+    "bias_int": 2,
+    "result_int": 4
+   }
+  },
+  "calibration": {
+   "threshold": 0.05266858451068401,
+   "target_fpr": 0.01,
+   "normal_calibration_rows": 90686,
+   "measured_calibration_fpr": 0.009990516728050637,
+   "comparison": "score > threshold"
+  },
+  "threshold_code_u64": 226209848,
+  "validation": {
+   "roc_auc": 0.9997815945892741,
+   "pr_auc_trapezoidal": 0.9977518218055644,
+   "average_precision": 0.997751996411391,
+   "threshold": 0.05266858451068401,
+   "recall": 0.9996779042301911,
+   "measured_fpr": 0.009990516728050637,
+   "per_attack": {
+    "Analysis": {
+     "rows": 74,
+     "recall": 1.0
+    },
+    "Backdoor": {
+     "rows": 36,
+     "recall": 1.0
+    },
+    "DoS": {
+     "rows": 566,
+     "recall": 0.9982332155477032
+    },
+    "Exploits": {
+     "rows": 3735,
+     "recall": 0.9994645247657296
+    },
+    "Fuzzers": {
+     "rows": 2773,
+     "recall": 1.0
+    },
+    "Generic": {
+     "rows": 486,
+     "recall": 1.0
+    },
+    "Reconnaissance": {
+     "rows": 1438,
+     "recall": 1.0
+    },
+    "Shellcode": {
+     "rows": 198,
+     "recall": 1.0
+    },
+    "Worms": {
+     "rows": 8,
+     "recall": 1.0
+    }
+   },
+   "normal_score_distribution": {
+    "min": 4.871212877333164e-05,
+    "q01": 0.00010921107605099678,
+    "median": 0.0020902606192976236,
+    "q99": 0.052604449493810095,
+    "max": 9.313113313401118
+   },
+   "attack_score_distribution": {
+    "min": 0.006294182734563947,
+    "q01": 1.029012226029299,
+    "median": 9.048993077361956,
+    "q99": 10.094538498600015,
+    "max": 22.698833151254803
+   },
+   "score_std": 2.3161225499557934,
+   "nearly_constant_scores": false
+  },
+  "max_abs_score_error_vs_float_validation": 0.001793550793081522,
+  "test": {
+   "roc_auc": 0.999837323854804,
+   "pr_auc_trapezoidal": 0.9972322264368142,
+   "average_precision": 0.9972582144982639,
+   "threshold": 0.05266858451068401,
+   "recall": 0.9996634129922585,
+   "measured_fpr": 0.010440567808798182,
+   "per_attack": {
+    "Analysis": {
+     "rows": 113,
+     "recall": 1.0
+    },
+    "Backdoor": {
+     "rows": 248,
+     "recall": 1.0
+    },
+    "DoS": {
+     "rows": 472,
+     "recall": 0.9936440677966102
+    },
+    "Exploits": {
+     "rows": 3495,
+     "recall": 1.0
+    },
+    "Fuzzers": {
+     "rows": 2454,
+     "recall": 1.0
+    },
+    "Generic": {
+     "rows": 533,
+     "recall": 1.0
+    },
+    "Reconnaissance": {
+     "rows": 1444,
+     "recall": 1.0
+    },
+    "Shellcode": {
+     "rows": 143,
+     "recall": 1.0
+    },
+    "Worms": {
+     "rows": 11,
+     "recall": 1.0
+    }
+   },
+   "normal_score_distribution": {
+    "min": 4.943506792187691e-05,
+    "q01": 0.00010987883433699608,
+    "median": 0.0022993648890405893,
+    "q99": 0.05339887551963329,
+    "max": 10.411929164081812
+   },
+   "attack_score_distribution": {
+    "min": 0.0316515420563519,
+    "q01": 1.0286101505439729,
+    "median": 9.05154129350558,
+    "q99": 10.155362671101457,
+    "max": 21.89365431270562
+   },
+   "score_std": 2.251831692549875,
+   "nearly_constant_scores": false
+  }
+ },
+ "synthesis_report": "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/syn/report/vae_axis_csynth.rpt",
+ "ip_export": "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/impl/export.zip",
+ "post_implementation": "#=== Post-Implementation Resource usage ===\nSLICE:         9357\nLUT:          27840\nFF:           28342\nDSP:            128\nBRAM:            49\nURAM:             0\nLATCH:            0\nSRL:            896\nCLB:              0\n\n#=== Final timing ===\nCP required:                     10.000\nCP achieved post-synthesis:      10.773\nCP achieved post-implementation: 9.773\nTiming met"
+}

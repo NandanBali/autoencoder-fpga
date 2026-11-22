@@ -1,0 +1,219 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_store_stamps'
+================================================================
+* Date:           Sun Nov 22 22:38:39 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        vae_feature_sender_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.000 ns|     2.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                    |                                                          |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                              Instance                              |                          Module                          |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77  |p_anonymous_namespace_store_stamps_Pipeline_write_stamps  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +--------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     101|    138|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    253|    -|
+|Register         |        -|    -|     104|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     205|    393|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------------+----------------------------------------------------------+---------+----+-----+-----+-----+
+    |                              Instance                              |                          Module                          | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------------------------+----------------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77  |p_anonymous_namespace_store_stamps_Pipeline_write_stamps  |        0|   0|  101|  138|    0|
+    +--------------------------------------------------------------------+----------------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                               |                                                          |        0|   0|  101|  138|    0|
+    +--------------------------------------------------------------------+----------------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |  53|         10|    1|         10|
+    |ap_done                 |   9|          2|    1|          2|
+    |gmem_ts_blk_n_AW        |   9|          2|    1|          2|
+    |gmem_ts_blk_n_B         |   9|          2|    1|          2|
+    |m_axi_gmem_ts_AWADDR    |  14|          3|   64|        192|
+    |m_axi_gmem_ts_AWBURST   |   9|          2|    2|          4|
+    |m_axi_gmem_ts_AWCACHE   |   9|          2|    4|          8|
+    |m_axi_gmem_ts_AWID      |   9|          2|    1|          2|
+    |m_axi_gmem_ts_AWLEN     |  14|          3|   32|         96|
+    |m_axi_gmem_ts_AWLOCK    |   9|          2|    2|          4|
+    |m_axi_gmem_ts_AWPROT    |   9|          2|    3|          6|
+    |m_axi_gmem_ts_AWQOS     |   9|          2|    4|          8|
+    |m_axi_gmem_ts_AWREGION  |   9|          2|    4|          8|
+    |m_axi_gmem_ts_AWSIZE    |   9|          2|    3|          6|
+    |m_axi_gmem_ts_AWUSER    |   9|          2|    1|          2|
+    |m_axi_gmem_ts_AWVALID   |  14|          3|    1|          3|
+    |m_axi_gmem_ts_BREADY    |  14|          3|    1|          3|
+    |m_axi_gmem_ts_WVALID    |   9|          2|    1|          2|
+    |n_flows_blk_n           |   9|          2|    1|          2|
+    |stamps_read             |   9|          2|    1|          2|
+    |t_send_blk_n            |   9|          2|    1|          2|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   | 253|         54|  130|        366|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                       Name                                      | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                        |   9|   0|    9|          0|
+    |ap_done_reg                                                                      |   1|   0|    1|          0|
+    |grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77_ap_start_reg  |   1|   0|    1|          0|
+    |n_flows_read_reg_107                                                             |  32|   0|   32|          0|
+    |trunc_ln_reg_113                                                                 |  61|   0|   61|          0|
+    +---------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                            | 104|   0|  104|          0|
+    +---------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  (anonymous namespace)store_stamps|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  (anonymous namespace)store_stamps|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  (anonymous namespace)store_stamps|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)store_stamps|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  (anonymous namespace)store_stamps|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)store_stamps|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  (anonymous namespace)store_stamps|  return value|
+|stamps_dout             |   in|   64|     ap_fifo|                             stamps|       pointer|
+|stamps_num_data_valid   |   in|    7|     ap_fifo|                             stamps|       pointer|
+|stamps_fifo_cap         |   in|    7|     ap_fifo|                             stamps|       pointer|
+|stamps_empty_n          |   in|    1|     ap_fifo|                             stamps|       pointer|
+|stamps_read             |  out|    1|     ap_fifo|                             stamps|       pointer|
+|n_flows_dout            |   in|   32|     ap_fifo|                            n_flows|       pointer|
+|n_flows_num_data_valid  |   in|    3|     ap_fifo|                            n_flows|       pointer|
+|n_flows_fifo_cap        |   in|    3|     ap_fifo|                            n_flows|       pointer|
+|n_flows_empty_n         |   in|    1|     ap_fifo|                            n_flows|       pointer|
+|n_flows_read            |  out|    1|     ap_fifo|                            n_flows|       pointer|
+|m_axi_gmem_ts_AWVALID   |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWREADY   |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWADDR    |  out|   64|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWID      |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWLEN     |  out|   32|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWSIZE    |  out|    3|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWBURST   |  out|    2|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWLOCK    |  out|    2|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWCACHE   |  out|    4|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWPROT    |  out|    3|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWQOS     |  out|    4|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWREGION  |  out|    4|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_AWUSER    |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_WVALID    |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_WREADY    |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_WDATA     |  out|   64|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_WSTRB     |  out|    8|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_WLAST     |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_WID       |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_WUSER     |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARVALID   |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARREADY   |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARADDR    |  out|   64|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARID      |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARLEN     |  out|   32|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARSIZE    |  out|    3|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARBURST   |  out|    2|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARLOCK    |  out|    2|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARCACHE   |  out|    4|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARPROT    |  out|    3|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARQOS     |  out|    4|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARREGION  |  out|    4|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_ARUSER    |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_RVALID    |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_RREADY    |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_RDATA     |   in|   64|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_RLAST     |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_RID       |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_RFIFONUM  |   in|    9|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_RUSER     |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_RRESP     |   in|    2|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_BVALID    |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_BREADY    |  out|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_BRESP     |   in|    2|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_BID       |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|m_axi_gmem_ts_BUSER     |   in|    1|       m_axi|                            gmem_ts|       pointer|
+|t_send_dout             |   in|   64|     ap_fifo|                             t_send|       pointer|
+|t_send_num_data_valid   |   in|    3|     ap_fifo|                             t_send|       pointer|
+|t_send_fifo_cap         |   in|    3|     ap_fifo|                             t_send|       pointer|
+|t_send_empty_n          |   in|    1|     ap_fifo|                             t_send|       pointer|
+|t_send_read             |  out|    1|     ap_fifo|                             t_send|       pointer|
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+

@@ -1,0 +1,113 @@
+<pragmas>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi35ELb0EEC2EDq35_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, false>::ap_int_base<67, true>(ap_int_base<67, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::RType<32, false>::plus operator+<64, false, 32, false>(ap_int_base<64, false> const&, ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint<65>(ap_uint<65> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>& ap_int_base<3, false>::operator+=<1, false>(ap_int_base<1, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="106" pragmaType="dataflow" parentfunction="vae_feature_sender" disable_start_propagation="0"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="90" pragmaType="interface" parentfunction="vae_feature_sender" mode="m_axi" port="features" bundle="gmem_in" offset="slave" name="" depth="2048" num_read_outstanding="8" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="64" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="92" pragmaType="interface" parentfunction="vae_feature_sender" mode="m_axi" port="t_send" bundle="gmem_ts" offset="slave" name="" depth="256" num_read_outstanding="-1" num_write_outstanding="8" max_burst_read_length="-1" max_burst_write_length="64" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="94" pragmaType="interface" parentfunction="vae_feature_sender" mode="m_axi" port="results" bundle="gmem_res" offset="slave" name="" depth="256" num_read_outstanding="-1" num_write_outstanding="8" max_burst_read_length="-1" max_burst_write_length="64" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="96" pragmaType="interface" parentfunction="vae_feature_sender" mode="s_axilite" port="features" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="97" pragmaType="interface" parentfunction="vae_feature_sender" mode="s_axilite" port="t_send" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="98" pragmaType="interface" parentfunction="vae_feature_sender" mode="s_axilite" port="results" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="99" pragmaType="interface" parentfunction="vae_feature_sender" mode="s_axilite" port="n_flows" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="100" pragmaType="interface" parentfunction="vae_feature_sender" mode="s_axilite" port="period" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="101" pragmaType="interface" parentfunction="vae_feature_sender" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="102" pragmaType="interface" parentfunction="vae_feature_sender" mode="ap_fifo" port="cycle_tx" register="0" name="" depth="-1"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="103" pragmaType="interface" parentfunction="vae_feature_sender" mode="ap_fifo" port="cycle_rx" register="0" name="" depth="-1"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="104" pragmaType="interface" parentfunction="vae_feature_sender" mode="axis" port="m_axis_features" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="105" pragmaType="interface" parentfunction="vae_feature_sender" mode="axis" port="s_axis_score" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<ap_uint<32>, 256>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="stream" parentfunction="hls::stream<ap_uint<32>, 256>::stream()" depth="256" type="fifo" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<ap_uint<64>, 64>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="stream" parentfunction="hls::stream<ap_uint<64>, 64>::stream()" depth="64" type="fifo" variable="this"/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="22" pragmaType="pipeline" parentfunction="load" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="37" pragmaType="pipeline" parentfunction="pace_send" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="64" pragmaType="pipeline" parentfunction="store_stamps" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp" line="73" pragmaType="pipeline" parentfunction="collect" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<32, false>::operator<<32, false>(ap_int_base<32, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::operator++()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>& ap_int_base<32, false>::operator+=<1, false>(ap_int_base<1, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<128, false>::ssdm_int(unsigned __int128)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>::ap_range_ref(ap_int_base<128, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read_nb" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator!=<3, false>(ap_int_base<3, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<64, false>::operator>=<64, false>(ap_int_base<64, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::operator++()" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<32, false>::ssdm_int(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<3>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator==<3, false>(ap_int_base<3, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(bool)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write_nb" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base<65, false>(ap_int_base<65, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<64, false>::ssdm_int(unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, false>::ap_int_base<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<65>::ap_uint<65, false>(ap_int_base<65, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi65ELb0EEC2EDq65_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(bool)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<3, false>::operator==<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi4ELb0EEC2EDq4_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<3, false>::operator!=<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, false>::operator++()" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi3ELb0EEC2EDq3_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<35>::ap_uint<32>(ap_uint<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, false>::RType<($_0)32, true>::mult operator*<35, false>(ap_int_base<35, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<35>::ap_uint<67>(ap_int<67> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<35>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<35, false>::operator<<35, false>(ap_int_base<35, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, false>& ap_int_base<35, false>::operator+=<1, false>(ap_int_base<1, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, false>::RType<32, true>::mult operator*<35, false, 32, true>(ap_int_base<35, false> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<67, true>::ap_int_base<35, false>(ap_int_base<35, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<67, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<67, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<67>::ap_int<67, true>(ap_int_base<67, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi67ELb1EEC2EDq67_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<ap_uint<64>, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<ap_uint<32>, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>& ap_range_ref<128, false>::operator=<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+</pragmas>

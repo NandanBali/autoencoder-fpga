@@ -1,0 +1,58 @@
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=load_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:37:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pace_send_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:64:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=store_stamps_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:73:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=collect_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/build_sender.tcl:20:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=name=vae_feature_sender_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=vae_feature_sender
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:90:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=m_axi port=features offset=slave bundle=gmem_in depth=2048 max_read_burst_length=64 num_read_outstanding=8 latency=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=features offset=slave bundle=gmem_in depth=2048 max_read_burst_length=64 num_read_outstanding=8 latency=64
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:92:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=m_axi port=t_send offset=slave bundle=gmem_ts depth=256 max_write_burst_length=64 num_write_outstanding=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=t_send offset=slave bundle=gmem_ts depth=256 max_write_burst_length=64 num_write_outstanding=8
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:94:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=m_axi port=results offset=slave bundle=gmem_res depth=256 max_write_burst_length=64 num_write_outstanding=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=results offset=slave bundle=gmem_res depth=256 max_write_burst_length=64 num_write_outstanding=8
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:96:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=s_axilite port=features bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=features bundle=control
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:97:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=s_axilite port=t_send bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=t_send bundle=control
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:98:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=s_axilite port=results bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=results bundle=control
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:99:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=s_axilite port=n_flows bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=n_flows bundle=control
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:100:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=s_axilite port=period bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=period bundle=control
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:101:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:102:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=ap_fifo port=cycle_tx_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_fifo port=cycle_tx
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:103:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=ap_fifo port=cycle_rx_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_fifo port=cycle_rx
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:104:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=axis port=m_axis_features register_mode=both_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=m_axis_features register_mode=both
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:105:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=axis port=s_axis_score register_mode=both_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=s_axis_score register_mode=both
+        ^
+/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vae_feature_sender_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+19 warnings generated.

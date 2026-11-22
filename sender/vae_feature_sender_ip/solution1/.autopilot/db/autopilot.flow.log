@@ -1,0 +1,1384 @@
+INFO-FLOW: Workspace /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1 opened at Sun Nov 22 22:38:17 IST 2026
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /opt/AMD/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/AMD/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.3 sec.
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.37 sec.
+Execute     create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_clock_uncertainty 2.0 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 2.0 
+Execute       ap_set_clock -name default -uncertainty 2 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2ns.
+Execute     config_rtl -reset control -reset_level low 
+INFO: [HLS 200-1510] Running: config_rtl -reset control -reset_level low 
+Execute     csim_design -ldflags -B/usr/bin/ -clean 
+INFO: [HLS 200-1510] Running: csim_design -ldflags -B/usr/bin/ -clean 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 0.35 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.67 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 9 seconds. CPU system time: 1.3 seconds. Elapsed time: 10.67 seconds; current allocated memory: 0.000 MB.
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 252.195 MB.
+Execute         set_directive_top vae_feature_sender -name=vae_feature_sender 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO: [HLS 200-10] Analyzing design file '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp as C++
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp -foptimization-record-file=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /opt/AMD/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/all.directive.json -E -std=c++14 -I/home/nandanbali/programming/deep-svdd/autoencoder/sender -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot -I /opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp -hls-platform-db-name=/opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.cpp.clang.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp -hls-platform-db-name=/opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/clang.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/clang.err.log
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp std=c++14 -target fpga  -directive=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/.systemc_flag -fix-errors /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp -- -std=c++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.35 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp std=c++14 -target fpga  -directive=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/all.directive.json -fix-errors /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp -- -std=c++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.5 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp std=c++14 -target fpga  
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp -- -std=c++14 -target fpga -fhls -ferror-limit=0 > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.clang-tidy.loop-label.err.log
+Execute           source /opt/AMD/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 0.61 sec.
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp -- -std=c++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp -std=c++14 -I/home/nandanbali/programming/deep-svdd/autoencoder/sender -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot -I /opt/AMD/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.bc -hls-platform-db-name=/opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.clang.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.22 seconds. CPU system time: 0.61 seconds. Elapsed time: 2.92 seconds; current allocated memory: 254.688 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.g.bc"  
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.g.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.0.bc > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/AMD/Vitis_HLS/2023.2/lnx64/lib/libhlsm_39.bc /opt/AMD/Vitis_HLS/2023.2/lnx64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/AMD/Vitis_HLS/2023.2/lnx64/lib/libhlsm_39.bc /opt/AMD/Vitis_HLS/2023.2/lnx64/lib/libhlsmc++_39.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.35 sec.
+Execute         run_link_or_opt -opt -out /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=vae_feature_sender -reflow-float-conversion 
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=vae_feature_sender -reflow-float-conversion -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command         run_link_or_opt done; 0.51 sec.
+Execute         run_link_or_opt -out /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/AMD/Vitis_HLS/2023.2/lnx64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/AMD/Vitis_HLS/2023.2/lnx64/lib/libfloatconversion_39.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=vae_feature_sender 
+INFO-FLOW: run_clang exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=vae_feature_sender -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute         send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute         is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang (background poll_ms 5000) exec: /opt/AMD/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=vae_feature_sender -mllvm -hls-db-dir -mllvm /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 2> /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 1,273 Compile/Link /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 1,273 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 221 Unroll/Inline (step 1) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 221 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 182 Unroll/Inline (step 2) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 185 Unroll/Inline (step 3) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 185 Unroll/Inline (step 4) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 172 Array/Struct (step 1) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 172 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 172 Array/Struct (step 2) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 172 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 172 Array/Struct (step 3) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 172 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 172 Array/Struct (step 4) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 172 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 211 Array/Struct (step 5) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 211 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 213 Performance (step 1) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 213 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 211 Performance (step 2) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 211 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 181 Performance (step 3) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 181 Performance (step 4) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 186 HW Transforms (step 1) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 186 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 209 HW Transforms (step 2) /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 209 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'read_ddr'(/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5) has been inferred on bundle 'gmem_in'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 64 in loop 'write_stamps'(/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5) has been inferred on bundle 'gmem_ts'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 128 in loop 'write_results'(/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5) has been inferred on bundle 'gmem_res'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.23 seconds. CPU system time: 0.75 seconds. Elapsed time: 7.2 seconds; current allocated memory: 257.055 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 257.055 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top vae_feature_sender -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.0.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 257.383 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.1.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 258.574 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.g.1.bc to /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.o.1.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-712] Applying dataflow to function 'vae_feature_sender' (/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:85:1), detected/extracted 5 process function(s): 
+	 'entry_proc'
+	 '(anonymous namespace)::load'
+	 '(anonymous namespace)::pace_send'
+	 '(anonymous namespace)::store_stamps'
+	 '(anonymous namespace)::collect'.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 281.781 MB.
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.o.2.bc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Execute             auto_get_db
+WARNING: [HLS 200-765] Process (anonymous namespace)pace_send is made part of the output synchronization in its dataflow region, because it has an external FIFO output and no PIPO output
+WARNING: [HLS 200-1450] Process (anonymous namespace)pace_send has both a successor and writes an output to its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this output via a successor process.
+WARNING: [HLS 200-1614] Cosimulation may deadlock if process (anonymous namespace)pace_send has a streamed top-level array input and has predecessor processes. If a deadlock occurs, please consider converting the streamed array into an hls::stream
+Command           transform done; 0.11 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.08 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.12 seconds; current allocated memory: 350.773 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 0.25 sec.
+Command       elaborate done; 10.38 sec.
+Execute       ap_eval exec zip -j /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'vae_feature_sender' ...
+Execute         ap_set_top_model vae_feature_sender 
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)load_Pipeline_read_ddr' to 'p_anonymous_namespace_load_Pipeline_read_ddr'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)load' to 'p_anonymous_namespace_load'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)pace_send_Pipeline_send' to 'p_anonymous_namespace_pace_send_Pipeline_send'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)pace_send' to 'p_anonymous_namespace_pace_send'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)store_stamps_Pipeline_write_stamps' to 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)store_stamps' to 'p_anonymous_namespace_store_stamps'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)collect' to 'p_anonymous_namespace_collect'.
+Execute         get_model_list vae_feature_sender -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model vae_feature_sender 
+Execute         preproc_iomode -model (anonymous namespace)collect 
+Execute         preproc_iomode -model (anonymous namespace)store_stamps 
+Execute         preproc_iomode -model (anonymous namespace)store_stamps_Pipeline_write_stamps 
+Execute         preproc_iomode -model (anonymous namespace)pace_send 
+Execute         preproc_iomode -model (anonymous namespace)pace_send_Pipeline_send 
+Execute         preproc_iomode -model (anonymous namespace)load 
+Execute         preproc_iomode -model (anonymous namespace)load_Pipeline_read_ddr 
+Execute         preproc_iomode -model entry_proc 
+Execute         get_model_list vae_feature_sender -filter all-wo-channel 
+INFO-FLOW: Model list for configure: entry_proc {(anonymous namespace)load_Pipeline_read_ddr} {(anonymous namespace)load} {(anonymous namespace)pace_send_Pipeline_send} {(anonymous namespace)pace_send} {(anonymous namespace)store_stamps_Pipeline_write_stamps} {(anonymous namespace)store_stamps} {(anonymous namespace)collect} vae_feature_sender
+INFO-FLOW: Configuring Module : entry_proc ...
+Execute         set_default_model entry_proc 
+Execute         apply_spec_resource_limit entry_proc 
+INFO-FLOW: Configuring Module : (anonymous namespace)load_Pipeline_read_ddr ...
+Execute         set_default_model (anonymous namespace)load_Pipeline_read_ddr 
+Execute         apply_spec_resource_limit (anonymous namespace)load_Pipeline_read_ddr 
+INFO-FLOW: Configuring Module : (anonymous namespace)load ...
+Execute         set_default_model (anonymous namespace)load 
+Execute         apply_spec_resource_limit (anonymous namespace)load 
+INFO-FLOW: Configuring Module : (anonymous namespace)pace_send_Pipeline_send ...
+Execute         set_default_model (anonymous namespace)pace_send_Pipeline_send 
+Execute         apply_spec_resource_limit (anonymous namespace)pace_send_Pipeline_send 
+INFO-FLOW: Configuring Module : (anonymous namespace)pace_send ...
+Execute         set_default_model (anonymous namespace)pace_send 
+Execute         apply_spec_resource_limit (anonymous namespace)pace_send 
+INFO-FLOW: Configuring Module : (anonymous namespace)store_stamps_Pipeline_write_stamps ...
+Execute         set_default_model (anonymous namespace)store_stamps_Pipeline_write_stamps 
+Execute         apply_spec_resource_limit (anonymous namespace)store_stamps_Pipeline_write_stamps 
+INFO-FLOW: Configuring Module : (anonymous namespace)store_stamps ...
+Execute         set_default_model (anonymous namespace)store_stamps 
+Execute         apply_spec_resource_limit (anonymous namespace)store_stamps 
+INFO-FLOW: Configuring Module : (anonymous namespace)collect ...
+Execute         set_default_model (anonymous namespace)collect 
+Execute         apply_spec_resource_limit (anonymous namespace)collect 
+INFO-FLOW: Configuring Module : vae_feature_sender ...
+Execute         set_default_model vae_feature_sender 
+Execute         apply_spec_resource_limit vae_feature_sender 
+INFO-FLOW: Model list for preprocess: entry_proc {(anonymous namespace)load_Pipeline_read_ddr} {(anonymous namespace)load} {(anonymous namespace)pace_send_Pipeline_send} {(anonymous namespace)pace_send} {(anonymous namespace)store_stamps_Pipeline_write_stamps} {(anonymous namespace)store_stamps} {(anonymous namespace)collect} vae_feature_sender
+INFO-FLOW: Preprocessing Module: entry_proc ...
+Execute         set_default_model entry_proc 
+Execute         cdfg_preprocess -model entry_proc 
+Execute         rtl_gen_preprocess entry_proc 
+INFO-FLOW: Preprocessing Module: (anonymous namespace)load_Pipeline_read_ddr ...
+Execute         set_default_model (anonymous namespace)load_Pipeline_read_ddr 
+Execute         cdfg_preprocess -model (anonymous namespace)load_Pipeline_read_ddr 
+Execute         rtl_gen_preprocess (anonymous namespace)load_Pipeline_read_ddr 
+INFO-FLOW: Preprocessing Module: (anonymous namespace)load ...
+Execute         set_default_model (anonymous namespace)load 
+Execute         cdfg_preprocess -model (anonymous namespace)load 
+Execute         rtl_gen_preprocess (anonymous namespace)load 
+INFO-FLOW: Preprocessing Module: (anonymous namespace)pace_send_Pipeline_send ...
+Execute         set_default_model (anonymous namespace)pace_send_Pipeline_send 
+Execute         cdfg_preprocess -model (anonymous namespace)pace_send_Pipeline_send 
+Execute         rtl_gen_preprocess (anonymous namespace)pace_send_Pipeline_send 
+INFO-FLOW: Preprocessing Module: (anonymous namespace)pace_send ...
+Execute         set_default_model (anonymous namespace)pace_send 
+Execute         cdfg_preprocess -model (anonymous namespace)pace_send 
+Execute         rtl_gen_preprocess (anonymous namespace)pace_send 
+INFO-FLOW: Preprocessing Module: (anonymous namespace)store_stamps_Pipeline_write_stamps ...
+Execute         set_default_model (anonymous namespace)store_stamps_Pipeline_write_stamps 
+Execute         cdfg_preprocess -model (anonymous namespace)store_stamps_Pipeline_write_stamps 
+Execute         rtl_gen_preprocess (anonymous namespace)store_stamps_Pipeline_write_stamps 
+INFO-FLOW: Preprocessing Module: (anonymous namespace)store_stamps ...
+Execute         set_default_model (anonymous namespace)store_stamps 
+Execute         cdfg_preprocess -model (anonymous namespace)store_stamps 
+Execute         rtl_gen_preprocess (anonymous namespace)store_stamps 
+INFO-FLOW: Preprocessing Module: (anonymous namespace)collect ...
+Execute         set_default_model (anonymous namespace)collect 
+Execute         cdfg_preprocess -model (anonymous namespace)collect 
+Execute         rtl_gen_preprocess (anonymous namespace)collect 
+INFO-FLOW: Preprocessing Module: vae_feature_sender ...
+Execute         set_default_model vae_feature_sender 
+Execute         cdfg_preprocess -model vae_feature_sender 
+Execute         rtl_gen_preprocess vae_feature_sender 
+INFO-FLOW: Model list for synthesis: entry_proc {(anonymous namespace)load_Pipeline_read_ddr} {(anonymous namespace)load} {(anonymous namespace)pace_send_Pipeline_send} {(anonymous namespace)pace_send} {(anonymous namespace)store_stamps_Pipeline_write_stamps} {(anonymous namespace)store_stamps} {(anonymous namespace)collect} vae_feature_sender
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model entry_proc 
+Execute         schedule -model entry_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.06 seconds; current allocated memory: 351.074 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling entry_proc.
+Execute         set_default_model entry_proc 
+Execute         bind -model entry_proc 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 351.133 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.bind.adb -f 
+INFO-FLOW: Finish binding entry_proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_load_Pipeline_read_ddr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model (anonymous namespace)load_Pipeline_read_ddr 
+Execute         schedule -model (anonymous namespace)load_Pipeline_read_ddr 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_ddr'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'read_ddr'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 352.320 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.sched.adb -f 
+INFO-FLOW: Finish scheduling (anonymous namespace)load_Pipeline_read_ddr.
+Execute         set_default_model (anonymous namespace)load_Pipeline_read_ddr 
+Execute         bind -model (anonymous namespace)load_Pipeline_read_ddr 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 352.320 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.bind.adb -f 
+INFO-FLOW: Finish binding (anonymous namespace)load_Pipeline_read_ddr.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model (anonymous namespace)load 
+Execute         schedule -model (anonymous namespace)load 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 352.488 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.sched.adb -f 
+INFO-FLOW: Finish scheduling (anonymous namespace)load.
+Execute         set_default_model (anonymous namespace)load 
+Execute         bind -model (anonymous namespace)load 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 352.488 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.bind.adb -f 
+INFO-FLOW: Finish binding (anonymous namespace)load.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_pace_send_Pipeline_send' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model (anonymous namespace)pace_send_Pipeline_send 
+Execute         schedule -model (anonymous namespace)pace_send_Pipeline_send 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'send'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'send'
+WARNING: [HLS 200-871] Estimated clock period (14.093 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.000 ns, effective delay budget: 8.000 ns).
+WARNING: [HLS 200-1016] The critical path in module 'p_anonymous_namespace_pace_send_Pipeline_send' consists of the following:
+	'load' operation 32 bit ('flow', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:54) on local variable 'flow', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:31 [32]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln36', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:36) [33]  (2.552 ns)
+	fifo read operation ('now', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:38) on port 'cycle_tx' (/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:38) [38]  (3.477 ns)
+	'icmp' operation 1 bit ('icmp_ln41_1', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:41) [52]  (3.520 ns)
+	'xor' operation 1 bit ('xor_ln41_1', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:41) [53]  (0.000 ns)
+	'or' operation 1 bit ('or_ln41', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:41) [54]  (0.978 ns)
+	axis write operation ('tmp', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:48) on port 'm_axis_features_V_data_V' (/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:48) [59]  (1.000 ns)
+	'store' operation 0 bit ('next_1_write_ln30', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:30) of variable 'next', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:52 on local variable 'next', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:30 [66]  (1.588 ns)
+	blocking operation 0.978 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 353.574 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.sched.adb -f 
+INFO-FLOW: Finish scheduling (anonymous namespace)pace_send_Pipeline_send.
+Execute         set_default_model (anonymous namespace)pace_send_Pipeline_send 
+Execute         bind -model (anonymous namespace)pace_send_Pipeline_send 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 353.574 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.bind.adb -f 
+INFO-FLOW: Finish binding (anonymous namespace)pace_send_Pipeline_send.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_pace_send' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model (anonymous namespace)pace_send 
+Execute         schedule -model (anonymous namespace)pace_send 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (11.527 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.000 ns, effective delay budget: 8.000 ns).
+WARNING: [HLS 200-1016] The critical path in module 'p_anonymous_namespace_pace_send' consists of the following:
+	'call' operation 0 bit ('_ln30', /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:30) to '(anonymous namespace)pace_send_Pipeline_send' [24]  (11.527 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 353.676 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.sched.adb -f 
+INFO-FLOW: Finish scheduling (anonymous namespace)pace_send.
+Execute         set_default_model (anonymous namespace)pace_send 
+Execute         bind -model (anonymous namespace)pace_send 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 353.676 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.bind.adb -f 
+INFO-FLOW: Finish binding (anonymous namespace)pace_send.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model (anonymous namespace)store_stamps_Pipeline_write_stamps 
+Execute         schedule -model (anonymous namespace)store_stamps_Pipeline_write_stamps 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'write_stamps'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'write_stamps'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 354.125 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.sched.adb -f 
+INFO-FLOW: Finish scheduling (anonymous namespace)store_stamps_Pipeline_write_stamps.
+Execute         set_default_model (anonymous namespace)store_stamps_Pipeline_write_stamps 
+Execute         bind -model (anonymous namespace)store_stamps_Pipeline_write_stamps 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 354.125 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.bind.adb -f 
+INFO-FLOW: Finish binding (anonymous namespace)store_stamps_Pipeline_write_stamps.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_store_stamps' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model (anonymous namespace)store_stamps 
+Execute         schedule -model (anonymous namespace)store_stamps 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 354.285 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.sched.adb -f 
+INFO-FLOW: Finish scheduling (anonymous namespace)store_stamps.
+Execute         set_default_model (anonymous namespace)store_stamps 
+Execute         bind -model (anonymous namespace)store_stamps 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 354.285 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.bind.adb -f 
+INFO-FLOW: Finish binding (anonymous namespace)store_stamps.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_collect' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model (anonymous namespace)collect 
+Execute         schedule -model (anonymous namespace)collect 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'write_results'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'write_results'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 354.758 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.sched.adb -f 
+INFO-FLOW: Finish scheduling (anonymous namespace)collect.
+Execute         set_default_model (anonymous namespace)collect 
+Execute         bind -model (anonymous namespace)collect 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 354.758 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.bind.adb -f 
+INFO-FLOW: Finish binding (anonymous namespace)collect.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vae_feature_sender' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model vae_feature_sender 
+Execute         schedule -model vae_feature_sender 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO start_for_p_anonymous_namespace_store_stamps_U0 (from entry_proc_U0 to p_anonymous_namespace_store_stamps_U0) to 3 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 355.008 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.verbose.sched.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.sched.adb -f 
+INFO-FLOW: Finish scheduling vae_feature_sender.
+Execute         set_default_model vae_feature_sender 
+Execute         bind -model vae_feature_sender 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 355.008 MB.
+Execute         syn_report -verbosereport -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.verbose.bind.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.bind.adb -f 
+INFO-FLOW: Finish binding vae_feature_sender.
+Execute         get_model_list vae_feature_sender -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess entry_proc 
+Execute         rtl_gen_preprocess (anonymous namespace)load_Pipeline_read_ddr 
+Execute         rtl_gen_preprocess (anonymous namespace)load 
+Execute         rtl_gen_preprocess (anonymous namespace)pace_send_Pipeline_send 
+Execute         rtl_gen_preprocess (anonymous namespace)pace_send 
+Execute         rtl_gen_preprocess (anonymous namespace)store_stamps_Pipeline_write_stamps 
+Execute         rtl_gen_preprocess (anonymous namespace)store_stamps 
+Execute         rtl_gen_preprocess (anonymous namespace)collect 
+Execute         rtl_gen_preprocess vae_feature_sender 
+INFO-FLOW: Model list for RTL generation: entry_proc {(anonymous namespace)load_Pipeline_read_ddr} {(anonymous namespace)load} {(anonymous namespace)pace_send_Pipeline_send} {(anonymous namespace)pace_send} {(anonymous namespace)store_stamps_Pipeline_write_stamps} {(anonymous namespace)store_stamps} {(anonymous namespace)collect} vae_feature_sender
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model entry_proc -top_prefix vae_feature_sender_ -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 355.008 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl entry_proc -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender_entry_proc 
+Execute         gen_rtl entry_proc -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender_entry_proc 
+Execute         syn_report -csynth -model entry_proc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/entry_proc_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model entry_proc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/entry_proc_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model entry_proc -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model entry_proc -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.adb 
+Execute         db_write -model entry_proc -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info entry_proc -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_load_Pipeline_read_ddr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model (anonymous namespace)load_Pipeline_read_ddr -top_prefix vae_feature_sender_ -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_load_Pipeline_read_ddr' pipeline 'read_ddr' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_load_Pipeline_read_ddr/m_axi_gmem_in_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_load_Pipeline_read_ddr'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 355.648 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl (anonymous namespace)load_Pipeline_read_ddr -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender_p_anonymous_namespace_load_Pipeline_read_ddr 
+Execute         gen_rtl (anonymous namespace)load_Pipeline_read_ddr -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender_p_anonymous_namespace_load_Pipeline_read_ddr 
+Execute         syn_report -csynth -model (anonymous namespace)load_Pipeline_read_ddr -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_load_Pipeline_read_ddr_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model (anonymous namespace)load_Pipeline_read_ddr -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_load_Pipeline_read_ddr_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model (anonymous namespace)load_Pipeline_read_ddr -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model (anonymous namespace)load_Pipeline_read_ddr -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.adb 
+Execute         db_write -model (anonymous namespace)load_Pipeline_read_ddr -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info (anonymous namespace)load_Pipeline_read_ddr -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model (anonymous namespace)load -top_prefix vae_feature_sender_ -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_load'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 357.379 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl (anonymous namespace)load -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender_p_anonymous_namespace_load 
+Execute         gen_rtl (anonymous namespace)load -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender_p_anonymous_namespace_load 
+Execute         syn_report -csynth -model (anonymous namespace)load -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_load_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model (anonymous namespace)load -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_load_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model (anonymous namespace)load -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model (anonymous namespace)load -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.adb 
+Execute         db_write -model (anonymous namespace)load -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info (anonymous namespace)load -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_pace_send_Pipeline_send' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model (anonymous namespace)pace_send_Pipeline_send -top_prefix vae_feature_sender_ -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_pace_send_Pipeline_send' pipeline 'send' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_pace_send_Pipeline_send'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 358.473 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl (anonymous namespace)pace_send_Pipeline_send -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender_p_anonymous_namespace_pace_send_Pipeline_send 
+Execute         gen_rtl (anonymous namespace)pace_send_Pipeline_send -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender_p_anonymous_namespace_pace_send_Pipeline_send 
+Execute         syn_report -csynth -model (anonymous namespace)pace_send_Pipeline_send -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_pace_send_Pipeline_send_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model (anonymous namespace)pace_send_Pipeline_send -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_pace_send_Pipeline_send_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model (anonymous namespace)pace_send_Pipeline_send -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model (anonymous namespace)pace_send_Pipeline_send -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.adb 
+Execute         db_write -model (anonymous namespace)pace_send_Pipeline_send -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info (anonymous namespace)pace_send_Pipeline_send -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_pace_send' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model (anonymous namespace)pace_send -top_prefix vae_feature_sender_ -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_pace_send'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 359.969 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl (anonymous namespace)pace_send -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender_p_anonymous_namespace_pace_send 
+Execute         gen_rtl (anonymous namespace)pace_send -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender_p_anonymous_namespace_pace_send 
+Execute         syn_report -csynth -model (anonymous namespace)pace_send -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_pace_send_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model (anonymous namespace)pace_send -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_pace_send_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model (anonymous namespace)pace_send -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model (anonymous namespace)pace_send -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.adb 
+Execute         db_write -model (anonymous namespace)pace_send -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info (anonymous namespace)pace_send -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model (anonymous namespace)store_stamps_Pipeline_write_stamps -top_prefix vae_feature_sender_ -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps' pipeline 'write_stamps' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps/m_axi_gmem_ts_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_store_stamps_Pipeline_write_stamps'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 360.738 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl (anonymous namespace)store_stamps_Pipeline_write_stamps -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender_p_anonymous_namespace_store_stamps_Pipeline_write_stamps 
+Execute         gen_rtl (anonymous namespace)store_stamps_Pipeline_write_stamps -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender_p_anonymous_namespace_store_stamps_Pipeline_write_stamps 
+Execute         syn_report -csynth -model (anonymous namespace)store_stamps_Pipeline_write_stamps -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_store_stamps_Pipeline_write_stamps_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model (anonymous namespace)store_stamps_Pipeline_write_stamps -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_store_stamps_Pipeline_write_stamps_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model (anonymous namespace)store_stamps_Pipeline_write_stamps -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model (anonymous namespace)store_stamps_Pipeline_write_stamps -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.adb 
+Execute         db_write -model (anonymous namespace)store_stamps_Pipeline_write_stamps -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info (anonymous namespace)store_stamps_Pipeline_write_stamps -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_store_stamps' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model (anonymous namespace)store_stamps -top_prefix vae_feature_sender_ -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_store_stamps'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.03 seconds; current allocated memory: 361.801 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl (anonymous namespace)store_stamps -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender_p_anonymous_namespace_store_stamps 
+Execute         gen_rtl (anonymous namespace)store_stamps -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender_p_anonymous_namespace_store_stamps 
+Execute         syn_report -csynth -model (anonymous namespace)store_stamps -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_store_stamps_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model (anonymous namespace)store_stamps -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_store_stamps_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model (anonymous namespace)store_stamps -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model (anonymous namespace)store_stamps -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.adb 
+Execute         db_write -model (anonymous namespace)store_stamps -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info (anonymous namespace)store_stamps -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_collect' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model (anonymous namespace)collect -top_prefix vae_feature_sender_ -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_collect' pipeline 'write_results' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_collect'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 362.789 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl (anonymous namespace)collect -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender_p_anonymous_namespace_collect 
+Execute         gen_rtl (anonymous namespace)collect -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender_p_anonymous_namespace_collect 
+Execute         syn_report -csynth -model (anonymous namespace)collect -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_collect_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model (anonymous namespace)collect -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/p_anonymous_namespace_collect_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model (anonymous namespace)collect -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model (anonymous namespace)collect -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.adb 
+Execute         db_write -model (anonymous namespace)collect -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info (anonymous namespace)collect -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vae_feature_sender' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model vae_feature_sender -top_prefix  -sub_prefix vae_feature_sender_ -mg_file /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/gmem_in' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/gmem_ts' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/gmem_res' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/features' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/t_send' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/results' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/n_flows' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/period' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/cycle_tx' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/cycle_rx' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/m_axis_features_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/m_axis_features_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/m_axis_features_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/m_axis_features_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/s_axis_score_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/s_axis_score_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/s_axis_score_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'vae_feature_sender/s_axis_score_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'vae_feature_sender' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'features', 't_send', 'results', 'n_flows', 'period' and 'return' to AXI-Lite port control.
+WARNING: [HLS 200-656] Deadlocks can occur since process (anonymous namespace)collect is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vae_feature_sender'.
+INFO: [RTMG 210-285] Implementing FIFO 't_send_c_U(vae_feature_sender_fifo_w64_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'period_c_U(vae_feature_sender_fifo_w32_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'words_U(vae_feature_sender_fifo_w32_d256_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'n_flows_c19_U(vae_feature_sender_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stamps_U(vae_feature_sender_fifo_w64_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'n_flows_c_U(vae_feature_sender_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_p_anonymous_namespace_pace_send_U0_U(vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_p_anonymous_namespace_store_stamps_U0_U(vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 365.859 MB.
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         gen_rtl vae_feature_sender -istop -style xilinx -f -lang vhdl -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/vhdl/vae_feature_sender 
+Execute         gen_rtl vae_feature_sender -istop -style xilinx -f -lang vlog -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/verilog/vae_feature_sender 
+Execute         syn_report -csynth -model vae_feature_sender -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/vae_feature_sender_csynth.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -rtlxml -model vae_feature_sender -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/vae_feature_sender_csynth.xml 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -verbosereport -model vae_feature_sender -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.verbose.rpt 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         db_write -model vae_feature_sender -f -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.adb 
+Execute         db_write -model vae_feature_sender -bindview -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info vae_feature_sender -p /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender 
+Execute         export_constraint_db -f -tool general -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.constraint.tcl 
+Execute         syn_report -designview -model vae_feature_sender -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.design.xml 
+Execute         syn_report -csynthDesign -model vae_feature_sender -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth.rpt -MHOut /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute           list_part -family xc7z020-clg400-1 
+Execute             ap_family_info -name xc7z020-clg400-1 -data names 
+Execute             ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute         syn_report -wcfg -model vae_feature_sender -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model vae_feature_sender -o /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.protoinst 
+Execute         sc_get_clocks vae_feature_sender 
+Execute         sc_get_portdomain vae_feature_sender 
+INFO-FLOW: Model list for RTL component generation: entry_proc {(anonymous namespace)load_Pipeline_read_ddr} {(anonymous namespace)load} {(anonymous namespace)pace_send_Pipeline_send} {(anonymous namespace)pace_send} {(anonymous namespace)store_stamps_Pipeline_write_stamps} {(anonymous namespace)store_stamps} {(anonymous namespace)collect} vae_feature_sender
+INFO-FLOW: Handling components in module [entry_proc] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.compgen.tcl 
+INFO-FLOW: Handling components in module [p_anonymous_namespace_load_Pipeline_read_ddr] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.compgen.tcl 
+INFO-FLOW: Found component vae_feature_sender_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model vae_feature_sender_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [p_anonymous_namespace_load] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.compgen.tcl 
+INFO-FLOW: Handling components in module [p_anonymous_namespace_pace_send_Pipeline_send] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.compgen.tcl 
+INFO-FLOW: Found component vae_feature_sender_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model vae_feature_sender_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [p_anonymous_namespace_pace_send] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.compgen.tcl 
+INFO-FLOW: Found component vae_feature_sender_regslice_both.
+INFO-FLOW: Append model vae_feature_sender_regslice_both
+INFO-FLOW: Found component vae_feature_sender_regslice_both.
+INFO-FLOW: Append model vae_feature_sender_regslice_both
+INFO-FLOW: Found component vae_feature_sender_regslice_both.
+INFO-FLOW: Append model vae_feature_sender_regslice_both
+INFO-FLOW: Found component vae_feature_sender_regslice_both.
+INFO-FLOW: Append model vae_feature_sender_regslice_both
+INFO-FLOW: Handling components in module [p_anonymous_namespace_store_stamps_Pipeline_write_stamps] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.compgen.tcl 
+INFO-FLOW: Found component vae_feature_sender_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model vae_feature_sender_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [p_anonymous_namespace_store_stamps] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.compgen.tcl 
+INFO-FLOW: Handling components in module [p_anonymous_namespace_collect] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.compgen.tcl 
+INFO-FLOW: Found component vae_feature_sender_regslice_both.
+INFO-FLOW: Append model vae_feature_sender_regslice_both
+INFO-FLOW: Found component vae_feature_sender_regslice_both.
+INFO-FLOW: Append model vae_feature_sender_regslice_both
+INFO-FLOW: Found component vae_feature_sender_regslice_both.
+INFO-FLOW: Append model vae_feature_sender_regslice_both
+INFO-FLOW: Found component vae_feature_sender_regslice_both.
+INFO-FLOW: Append model vae_feature_sender_regslice_both
+INFO-FLOW: Found component vae_feature_sender_flow_control_loop_pipe.
+INFO-FLOW: Append model vae_feature_sender_flow_control_loop_pipe
+INFO-FLOW: Handling components in module [vae_feature_sender] ... 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.tcl 
+INFO-FLOW: Found component vae_feature_sender_fifo_w64_d4_S.
+INFO-FLOW: Append model vae_feature_sender_fifo_w64_d4_S
+INFO-FLOW: Found component vae_feature_sender_fifo_w32_d3_S.
+INFO-FLOW: Append model vae_feature_sender_fifo_w32_d3_S
+INFO-FLOW: Found component vae_feature_sender_fifo_w32_d256_A.
+INFO-FLOW: Append model vae_feature_sender_fifo_w32_d256_A
+INFO-FLOW: Found component vae_feature_sender_fifo_w32_d2_S.
+INFO-FLOW: Append model vae_feature_sender_fifo_w32_d2_S
+INFO-FLOW: Found component vae_feature_sender_fifo_w64_d64_A.
+INFO-FLOW: Append model vae_feature_sender_fifo_w64_d64_A
+INFO-FLOW: Found component vae_feature_sender_fifo_w32_d2_S.
+INFO-FLOW: Append model vae_feature_sender_fifo_w32_d2_S
+INFO-FLOW: Found component vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0.
+INFO-FLOW: Append model vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0
+INFO-FLOW: Found component vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0.
+INFO-FLOW: Append model vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0
+INFO-FLOW: Found component vae_feature_sender_gmem_in_m_axi.
+INFO-FLOW: Append model vae_feature_sender_gmem_in_m_axi
+INFO-FLOW: Found component vae_feature_sender_gmem_ts_m_axi.
+INFO-FLOW: Append model vae_feature_sender_gmem_ts_m_axi
+INFO-FLOW: Found component vae_feature_sender_gmem_res_m_axi.
+INFO-FLOW: Append model vae_feature_sender_gmem_res_m_axi
+INFO-FLOW: Found component vae_feature_sender_control_s_axi.
+INFO-FLOW: Append model vae_feature_sender_control_s_axi
+INFO-FLOW: Append model entry_proc
+INFO-FLOW: Append model p_anonymous_namespace_load_Pipeline_read_ddr
+INFO-FLOW: Append model p_anonymous_namespace_load
+INFO-FLOW: Append model p_anonymous_namespace_pace_send_Pipeline_send
+INFO-FLOW: Append model p_anonymous_namespace_pace_send
+INFO-FLOW: Append model p_anonymous_namespace_store_stamps_Pipeline_write_stamps
+INFO-FLOW: Append model p_anonymous_namespace_store_stamps
+INFO-FLOW: Append model p_anonymous_namespace_collect
+INFO-FLOW: Append model vae_feature_sender
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: vae_feature_sender_flow_control_loop_pipe_sequential_init vae_feature_sender_flow_control_loop_pipe_sequential_init vae_feature_sender_regslice_both vae_feature_sender_regslice_both vae_feature_sender_regslice_both vae_feature_sender_regslice_both vae_feature_sender_flow_control_loop_pipe_sequential_init vae_feature_sender_regslice_both vae_feature_sender_regslice_both vae_feature_sender_regslice_both vae_feature_sender_regslice_both vae_feature_sender_flow_control_loop_pipe vae_feature_sender_fifo_w64_d4_S vae_feature_sender_fifo_w32_d3_S vae_feature_sender_fifo_w32_d256_A vae_feature_sender_fifo_w32_d2_S vae_feature_sender_fifo_w64_d64_A vae_feature_sender_fifo_w32_d2_S vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0 vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0 vae_feature_sender_gmem_in_m_axi vae_feature_sender_gmem_ts_m_axi vae_feature_sender_gmem_res_m_axi vae_feature_sender_control_s_axi entry_proc p_anonymous_namespace_load_Pipeline_read_ddr p_anonymous_namespace_load p_anonymous_namespace_pace_send_Pipeline_send p_anonymous_namespace_pace_send p_anonymous_namespace_store_stamps_Pipeline_write_stamps p_anonymous_namespace_store_stamps p_anonymous_namespace_collect vae_feature_sender
+INFO-FLOW: Generating /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model vae_feature_sender_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model vae_feature_sender_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model vae_feature_sender_regslice_both
+INFO-FLOW: To file: write model vae_feature_sender_regslice_both
+INFO-FLOW: To file: write model vae_feature_sender_regslice_both
+INFO-FLOW: To file: write model vae_feature_sender_regslice_both
+INFO-FLOW: To file: write model vae_feature_sender_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model vae_feature_sender_regslice_both
+INFO-FLOW: To file: write model vae_feature_sender_regslice_both
+INFO-FLOW: To file: write model vae_feature_sender_regslice_both
+INFO-FLOW: To file: write model vae_feature_sender_regslice_both
+INFO-FLOW: To file: write model vae_feature_sender_flow_control_loop_pipe
+INFO-FLOW: To file: write model vae_feature_sender_fifo_w64_d4_S
+INFO-FLOW: To file: write model vae_feature_sender_fifo_w32_d3_S
+INFO-FLOW: To file: write model vae_feature_sender_fifo_w32_d256_A
+INFO-FLOW: To file: write model vae_feature_sender_fifo_w32_d2_S
+INFO-FLOW: To file: write model vae_feature_sender_fifo_w64_d64_A
+INFO-FLOW: To file: write model vae_feature_sender_fifo_w32_d2_S
+INFO-FLOW: To file: write model vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0
+INFO-FLOW: To file: write model vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0
+INFO-FLOW: To file: write model vae_feature_sender_gmem_in_m_axi
+INFO-FLOW: To file: write model vae_feature_sender_gmem_ts_m_axi
+INFO-FLOW: To file: write model vae_feature_sender_gmem_res_m_axi
+INFO-FLOW: To file: write model vae_feature_sender_control_s_axi
+INFO-FLOW: To file: write model entry_proc
+INFO-FLOW: To file: write model p_anonymous_namespace_load_Pipeline_read_ddr
+INFO-FLOW: To file: write model p_anonymous_namespace_load
+INFO-FLOW: To file: write model p_anonymous_namespace_pace_send_Pipeline_send
+INFO-FLOW: To file: write model p_anonymous_namespace_pace_send
+INFO-FLOW: To file: write model p_anonymous_namespace_store_stamps_Pipeline_write_stamps
+INFO-FLOW: To file: write model p_anonymous_namespace_store_stamps
+INFO-FLOW: To file: write model p_anonymous_namespace_collect
+INFO-FLOW: To file: write model vae_feature_sender
+INFO-FLOW: Generating /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vhdl' dstVlogDir='/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vlog' tclDir='/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db' modelList='vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_flow_control_loop_pipe
+vae_feature_sender_fifo_w64_d4_S
+vae_feature_sender_fifo_w32_d3_S
+vae_feature_sender_fifo_w32_d256_A
+vae_feature_sender_fifo_w32_d2_S
+vae_feature_sender_fifo_w64_d64_A
+vae_feature_sender_fifo_w32_d2_S
+vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0
+vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0
+vae_feature_sender_gmem_in_m_axi
+vae_feature_sender_gmem_ts_m_axi
+vae_feature_sender_gmem_res_m_axi
+vae_feature_sender_control_s_axi
+entry_proc
+p_anonymous_namespace_load_Pipeline_read_ddr
+p_anonymous_namespace_load
+p_anonymous_namespace_pace_send_Pipeline_send
+p_anonymous_namespace_pace_send
+p_anonymous_namespace_store_stamps_Pipeline_write_stamps
+p_anonymous_namespace_store_stamps
+p_anonymous_namespace_collect
+vae_feature_sender
+' expOnly='0'
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.compgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.compgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.compgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.compgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.compgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.compgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.compgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.compgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.tcl 
+Execute           source ./control.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.19 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.24 seconds; current allocated memory: 369.047 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='vae_feature_sender_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: No bind nodes found for module_name entry_proc
+INFO-FLOW: No bind nodes found for module_name p_anonymous_namespace_load
+INFO-FLOW: No bind nodes found for module_name p_anonymous_namespace_pace_send
+INFO-FLOW: No bind nodes found for module_name p_anonymous_namespace_store_stamps
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_flow_control_loop_pipe
+vae_feature_sender_fifo_w64_d4_S
+vae_feature_sender_fifo_w32_d3_S
+vae_feature_sender_fifo_w32_d256_A
+vae_feature_sender_fifo_w32_d2_S
+vae_feature_sender_fifo_w64_d64_A
+vae_feature_sender_fifo_w32_d2_S
+vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0
+vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0
+vae_feature_sender_gmem_in_m_axi
+vae_feature_sender_gmem_ts_m_axi
+vae_feature_sender_gmem_res_m_axi
+vae_feature_sender_control_s_axi
+entry_proc
+p_anonymous_namespace_load_Pipeline_read_ddr
+p_anonymous_namespace_load
+p_anonymous_namespace_pace_send_Pipeline_send
+p_anonymous_namespace_pace_send
+p_anonymous_namespace_store_stamps_Pipeline_write_stamps
+p_anonymous_namespace_store_stamps
+p_anonymous_namespace_collect
+vae_feature_sender
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/top-io-be.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.dataonly.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.dataonly.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.dataonly.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.constraint.tcl 
+Execute         sc_get_clocks vae_feature_sender 
+Execute         source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem_in_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem_in DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem_res_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem_res DSP 0 BRAM 16 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem_ts_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem_ts DSP 0 BRAM 8 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} report_dict {TOPINST vae_feature_sender MODULE2INSTS {vae_feature_sender vae_feature_sender entry_proc entry_proc_U0 p_anonymous_namespace_load p_anonymous_namespace_load_U0 p_anonymous_namespace_load_Pipeline_read_ddr grp_p_anonymous_namespace_load_Pipeline_read_ddr_fu_90 p_anonymous_namespace_collect p_anonymous_namespace_collect_U0 p_anonymous_namespace_pace_send p_anonymous_namespace_pace_send_U0 p_anonymous_namespace_pace_send_Pipeline_send grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88 p_anonymous_namespace_store_stamps p_anonymous_namespace_store_stamps_U0 p_anonymous_namespace_store_stamps_Pipeline_write_stamps grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77} INST2MODULE {vae_feature_sender vae_feature_sender entry_proc_U0 entry_proc p_anonymous_namespace_load_U0 p_anonymous_namespace_load grp_p_anonymous_namespace_load_Pipeline_read_ddr_fu_90 p_anonymous_namespace_load_Pipeline_read_ddr p_anonymous_namespace_collect_U0 p_anonymous_namespace_collect p_anonymous_namespace_pace_send_U0 p_anonymous_namespace_pace_send grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88 p_anonymous_namespace_pace_send_Pipeline_send p_anonymous_namespace_store_stamps_U0 p_anonymous_namespace_store_stamps grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77 p_anonymous_namespace_store_stamps_Pipeline_write_stamps} INSTDATA {vae_feature_sender {DEPTH 1 CHILDREN {entry_proc_U0 p_anonymous_namespace_load_U0 p_anonymous_namespace_collect_U0 p_anonymous_namespace_pace_send_U0 p_anonymous_namespace_store_stamps_U0}} entry_proc_U0 {DEPTH 2 CHILDREN {}} p_anonymous_namespace_load_U0 {DEPTH 2 CHILDREN grp_p_anonymous_namespace_load_Pipeline_read_ddr_fu_90} grp_p_anonymous_namespace_load_Pipeline_read_ddr_fu_90 {DEPTH 3 CHILDREN {}} p_anonymous_namespace_collect_U0 {DEPTH 2 CHILDREN {}} p_anonymous_namespace_pace_send_U0 {DEPTH 2 CHILDREN grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88} grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88 {DEPTH 3 CHILDREN {}} p_anonymous_namespace_store_stamps_U0 {DEPTH 2 CHILDREN grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77} grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77 {DEPTH 3 CHILDREN {}}} MODULEDATA {p_anonymous_namespace_load_Pipeline_read_ddr {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln21_fu_97_p2 SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21 VARIABLE add_ln21 LOOP read_ddr BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} p_anonymous_namespace_pace_send_Pipeline_send {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME next_2_fu_277_p2 SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:52 VARIABLE next_2 LOOP send BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_287_p2 SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:54 VARIABLE add_ln54 LOOP send BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME beat_3_fu_301_p2 SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:55 VARIABLE beat_3 LOOP send BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} p_anonymous_namespace_store_stamps_Pipeline_write_stamps {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln63_fu_98_p2 SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63 VARIABLE add_ln63 LOOP write_stamps BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} p_anonymous_namespace_collect {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln72_fu_181_p2 SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72 VARIABLE add_ln72 LOOP write_results BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} vae_feature_sender {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME t_send_c_U SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106 VARIABLE t_send_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {scalar prop} STORAGESIZE {64 4 1} STORAGEUSAGE {fifo channel} DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME period_c_U SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106 VARIABLE period_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {scalar prop} STORAGESIZE {32 3 1} STORAGEUSAGE {fifo channel} DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL memory LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME words_U SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:108 VARIABLE words LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 STORAGESUBTYPE stream STORAGESIZE {32 256 1} STORAGEUSAGE {fifo channel} DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME n_flows_c19_U SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106 VARIABLE n_flows_c19 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {scalar prop} STORAGESIZE {32 2 1} STORAGEUSAGE {fifo channel} DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL memory LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME stamps_U SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:109 VARIABLE stamps LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE stream STORAGESIZE {64 64 1} STORAGEUSAGE {fifo channel} DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME n_flows_c_U SOURCE /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106 VARIABLE n_flows_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {scalar prop} STORAGESIZE {32 2 1} STORAGEUSAGE {fifo channel} DISPNAME {bind_storage fifo}}} AREA {DSP 0 BRAM 34 URAM 0}} entry_proc {AREA {DSP 0 BRAM 0 URAM 0}} p_anonymous_namespace_load {AREA {DSP 0 BRAM 0 URAM 0}} p_anonymous_namespace_pace_send {AREA {DSP 0 BRAM 0 URAM 0}} p_anonymous_namespace_store_stamps {AREA {DSP 0 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+Execute         send_msg_by_id INFO @200-1603@%s  and missed bursts 
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.96 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.01 seconds; current allocated memory: 378.219 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vae_feature_sender.
+INFO: [VLOG 209-307] Generating Verilog RTL for vae_feature_sender.
+Execute         syn_report -model vae_feature_sender -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 70.96 MHz
+Command       autosyn done; 2.08 sec.
+Command     csynth_design done; 12.54 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6.52 seconds. CPU system time: 1.64 seconds. Elapsed time: 12.54 seconds; current allocated memory: 126.387 MB.
+Execute     export_design -flow impl -format ip_catalog -vendor user.org -library hls -version 1.0 -display_name VAE batch feature sender 
+INFO: [HLS 200-1510] Running: export_design -flow impl -format ip_catalog -vendor user.org -library hls -version 1.0 -display_name VAE batch feature sender 
+Execute       config_export -display_name VAE batch feature sender -flow=impl -format=ip_catalog -library=hls -vendor=user.org -version=1.0 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -flow impl -format ip_catalog -rtl verilog -vendor user.org -library hls -version 1.0 -display_name {VAE batch feature sender}
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=vae_feature_sender xml_exists=0
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to vae_feature_sender
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=18
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=33 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_flow_control_loop_pipe_sequential_init
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_regslice_both
+vae_feature_sender_flow_control_loop_pipe
+vae_feature_sender_fifo_w64_d4_S
+vae_feature_sender_fifo_w32_d3_S
+vae_feature_sender_fifo_w32_d256_A
+vae_feature_sender_fifo_w32_d2_S
+vae_feature_sender_fifo_w64_d64_A
+vae_feature_sender_fifo_w32_d2_S
+vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0
+vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0
+vae_feature_sender_gmem_in_m_axi
+vae_feature_sender_gmem_ts_m_axi
+vae_feature_sender_gmem_res_m_axi
+vae_feature_sender_control_s_axi
+entry_proc
+p_anonymous_namespace_load_Pipeline_read_ddr
+p_anonymous_namespace_load
+p_anonymous_namespace_pace_send_Pipeline_send
+p_anonymous_namespace_pace_send
+p_anonymous_namespace_store_stamps_Pipeline_write_stamps
+p_anonymous_namespace_store_stamps
+p_anonymous_namespace_collect
+vae_feature_sender
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.dataonly.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.dataonly.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.dataonly.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/entry_proc.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load_Pipeline_read_ddr.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_load.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send_Pipeline_send.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_pace_send.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps_Pipeline_write_stamps.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_store_stamps.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/p_anonymous_namespace_collect.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.constraint.tcl 
+Execute       sc_get_clocks vae_feature_sender 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to vae_feature_sender
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/driver
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.dataonly.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.compgen.dataonly.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=vae_feature_sender
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.rtl_wrap.cfg.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.constraint.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:   auto_impl: eval: -flow impl -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-flow impl -rtl verilog'
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+INFO-FLOW: DBG:PUTS: automg_wrap -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -rtl vlog -tool Vivado -impltomg_flag
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.constraint.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/vae_feature_sender.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/AMD/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/autopilot.rtl.models.tcl 
+Execute       source /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: debug_in_auto_impl: vlog exec /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/verilog/impl.sh
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report topinfo_dict='RtlTopPrefix {} RtlSubPrefix vae_feature_sender_ TopModuleNoPrefix vae_feature_sender TopModuleWithPrefix vae_feature_sender' export_design_flow='impl' impl_dir='/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl' lang='verilog' out_dir=''
+INFO-FLOW: DBG:PUTS:     auto_impl_report: impl processing xml
+Execute       ap_part_info -quiet -data family -name xc7z020-clg400-1 
+INFO-FLOW: DBG:PUTS:     writing export xml file: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/report/verilog/export_impl.xml
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x7fc3b3f911e8' export_design_flow='impl' export_rpt='/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/report/verilog/export_impl.rpt' rpt_txt_var=''
+INFO-FLOW: DBG:PUTS:     wrote export rpt file: export_impl.rpt
+INFO-FLOW: DBG:PUTS:     auto_impl_report: syn processing xml
+Execute       ap_part_info -quiet -data family -name xc7z020-clg400-1 
+INFO-FLOW: DBG:PUTS:     writing export xml file: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/report/verilog/export_syn.xml
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0x7fc3b3ddb048' export_design_flow='syn' export_rpt='/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/report/verilog/export_syn.rpt' rpt_txt_var=''
+INFO-FLOW: DBG:PUTS:     wrote export rpt file: export_syn.rpt
+Execute       send_msg_by_id INFO @200-802@%s vae_feature_sender_ip/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file vae_feature_sender_ip/solution1/impl/export.zip
+Command     export_design done; 239.65 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 134.97 seconds. CPU system time: 9.96 seconds. Elapsed time: 239.65 seconds; current allocated memory: 8.762 MB.
+Execute     cleanup_all 
+Command     cleanup_all done; 0.27 sec.

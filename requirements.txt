@@ -1,0 +1,3 @@
+hls4ml==1.3.0
+quantizers==1.2.2
+# torch==2.12.0, numpy, pandas, scipy, scikit-learn come from the system site-packages (same as software-model)

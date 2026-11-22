@@ -1,0 +1,608 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Sun Nov 22 20:28:10 2026
+| Host         : fedora running 64-bit unknown
+| Command      : report_timing -max_paths 10 -file ./report/vae_axis_timing_paths_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.077ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_138_reg_3489_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.901ns  (logic 1.620ns (16.362%)  route 8.281ns (83.638%))
+  Logic Levels:           4  (CARRY4=3 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X50Y63         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y63         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/Q
+                         net (fo=1906, routed)        8.281     9.732    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/out_index_reg_2862_pp0_iter4_reg
+    SLICE_X28Y131        LUT4 (Prop_lut4_I2_O)        0.296    10.028 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_138_reg_3489[23]_i_7/O
+                         net (fo=1, routed)           0.000    10.028    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_138_reg_3489[23]_i_7_n_0
+    SLICE_X28Y131        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.426 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_138_reg_3489_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.426    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_138_reg_3489_reg[23]_i_1_n_0
+    SLICE_X28Y132        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.540 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_138_reg_3489_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_138_reg_3489_reg[27]_i_1_n_0
+    SLICE_X28Y133        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.874 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_138_reg_3489_reg[29]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.874    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33_n_90
+    SLICE_X28Y133        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_138_reg_3489_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X28Y133        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_138_reg_3489_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X28Y133        FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_138_reg_3489_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                         -10.874    
+  -------------------------------------------------------------------
+                         slack                                  0.077    
+
+Slack (MET) :             0.082ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_137_reg_3471_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.943ns  (logic 2.195ns (22.076%)  route 7.748ns (77.924%))
+  Logic Levels:           8  (CARRY4=7 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X50Y63         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y63         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/Q
+                         net (fo=1906, routed)        7.748     9.199    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/out_index_reg_2862_pp0_iter4_reg
+    SLICE_X30Y114        LUT4 (Prop_lut4_I2_O)        0.296     9.495 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471[7]_i_9/O
+                         net (fo=1, routed)           0.000     9.495    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471[7]_i_9_n_0
+    SLICE_X30Y114        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.008 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.008    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[7]_i_1_n_0
+    SLICE_X30Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.125 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.125    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[11]_i_1_n_0
+    SLICE_X30Y116        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.242 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.242    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[15]_i_1_n_0
+    SLICE_X30Y117        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.359 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.359    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[19]_i_1_n_0
+    SLICE_X30Y118        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.476 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.476    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[23]_i_1_n_0
+    SLICE_X30Y119        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.593 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.593    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[27]_i_1_n_0
+    SLICE_X30Y120        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.916 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_137_reg_3471_reg[29]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.916    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32_n_120
+    SLICE_X30Y120        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_137_reg_3471_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X30Y120        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_137_reg_3471_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X30Y120        FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_137_reg_3471_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                         -10.916    
+  -------------------------------------------------------------------
+                         slack                                  0.082    
+
+Slack (MET) :             0.086ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_139_reg_3483_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.939ns  (logic 2.175ns (21.884%)  route 7.764ns (78.116%))
+  Logic Levels:           9  (CARRY4=8 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X50Y63         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y63         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/Q
+                         net (fo=1906, routed)        7.755     9.206    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/out_index_reg_2862_pp0_iter4_reg
+    SLICE_X30Y124        LUT4 (Prop_lut4_I2_O)        0.296     9.502 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483[3]_i_6/O
+                         net (fo=1, routed)           0.000     9.502    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483[3]_i_6_n_0
+    SLICE_X30Y124        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     9.878 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.009     9.887    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[3]_i_1_n_0
+    SLICE_X30Y125        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.004 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.004    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[7]_i_1_n_0
+    SLICE_X30Y126        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.121 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.121    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[11]_i_1_n_0
+    SLICE_X30Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.238 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.238    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[15]_i_1_n_0
+    SLICE_X30Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.355 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.355    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[19]_i_1_n_0
+    SLICE_X30Y129        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.472 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.472    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[23]_i_1_n_0
+    SLICE_X30Y130        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.589 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.589    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[27]_i_1_n_0
+    SLICE_X30Y131        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.912 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33/acc_139_reg_3483_reg[29]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.912    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U33_n_120
+    SLICE_X30Y131        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_139_reg_3483_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X30Y131        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_139_reg_3483_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X30Y131        FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_139_reg_3483_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                         -10.912    
+  -------------------------------------------------------------------
+                         slack                                  0.086    
+
+Slack (MET) :             0.090ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_136_reg_3477_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.888ns  (logic 1.658ns (16.767%)  route 8.230ns (83.233%))
+  Logic Levels:           3  (CARRY4=2 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X50Y63         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y63         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/Q
+                         net (fo=1906, routed)        8.230     9.681    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/out_index_reg_2862_pp0_iter4_reg
+    SLICE_X28Y118        LUT4 (Prop_lut4_I2_O)        0.296     9.977 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_136_reg_3477[27]_i_8/O
+                         net (fo=1, routed)           0.000     9.977    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_136_reg_3477[27]_i_8_n_0
+    SLICE_X28Y118        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.527 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_136_reg_3477_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.527    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_136_reg_3477_reg[27]_i_1_n_0
+    SLICE_X28Y119        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.861 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32/acc_136_reg_3477_reg[29]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.861    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U32_n_90
+    SLICE_X28Y119        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_136_reg_3477_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X28Y119        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_136_reg_3477_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X28Y119        FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_136_reg_3477_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                         -10.861    
+  -------------------------------------------------------------------
+                         slack                                  0.090    
+
+Slack (MET) :             0.113ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_132_reg_3453_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.912ns  (logic 1.747ns (17.625%)  route 8.165ns (82.375%))
+  Logic Levels:           4  (CARRY4=3 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X50Y63         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y63         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/Q
+                         net (fo=1906, routed)        8.165     9.616    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/out_index_reg_2862_pp0_iter4_reg
+    SLICE_X38Y126        LUT4 (Prop_lut4_I2_O)        0.296     9.912 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_132_reg_3453[23]_i_8/O
+                         net (fo=1, routed)           0.000     9.912    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_132_reg_3453[23]_i_8_n_0
+    SLICE_X38Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.445 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_132_reg_3453_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.445    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_132_reg_3453_reg[23]_i_1_n_0
+    SLICE_X38Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.562 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_132_reg_3453_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.562    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_132_reg_3453_reg[27]_i_1_n_0
+    SLICE_X38Y128        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.885 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_132_reg_3453_reg[29]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.885    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30_n_90
+    SLICE_X38Y128        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_132_reg_3453_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X38Y128        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_132_reg_3453_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X38Y128        FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_132_reg_3453_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                         -10.885    
+  -------------------------------------------------------------------
+                         slack                                  0.113    
+
+Slack (MET) :             0.117ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_133_reg_3447_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.861ns  (logic 1.640ns (16.632%)  route 8.221ns (83.368%))
+  Logic Levels:           3  (CARRY4=2 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X50Y63         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y63         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/Q
+                         net (fo=1906, routed)        8.221     9.672    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/out_index_reg_2862_pp0_iter4_reg
+    SLICE_X37Y127        LUT4 (Prop_lut4_I2_O)        0.296     9.968 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_133_reg_3447[27]_i_9/O
+                         net (fo=1, routed)           0.000     9.968    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_133_reg_3447[27]_i_9_n_0
+    SLICE_X37Y127        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.500 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_133_reg_3447_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.500    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_133_reg_3447_reg[27]_i_1_n_0
+    SLICE_X37Y128        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.834 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30/acc_133_reg_3447_reg[29]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.834    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U30_n_120
+    SLICE_X37Y128        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_133_reg_3447_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X37Y128        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_133_reg_3447_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X37Y128        FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_133_reg_3447_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                         -10.834    
+  -------------------------------------------------------------------
+                         slack                                  0.117    
+
+Slack (MET) :             0.130ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][19]_srl7/CLK
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][16]_srl7/CE
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.269ns  (logic 2.724ns (29.387%)  route 6.545ns (70.613%))
+  Logic Levels:           7  (LUT3=1 LUT4=1 LUT5=2 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/ap_clk
+    SLICE_X62Y8          SRL16E                                       r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][19]_srl7/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y8          SRL16E (Prop_srl16e_CLK_Q)
+                                                      1.628     2.601 f  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][19]_srl7/Q
+                         net (fo=3, routed)           0.863     3.464    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][19]_srl7_n_0
+    SLICE_X60Y11         LUT4 (Prop_lut4_I1_O)        0.150     3.614 f  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/pf_done_INST_0/O
+                         net (fo=2, routed)           0.979     4.593    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U_pf_done
+    SLICE_X55Y11         LUT5 (Prop_lut5_I1_O)        0.326     4.919 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_24/O
+                         net (fo=33, routed)          0.863     5.781    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_24_n_0
+    SLICE_X51Y12         LUT6 (Prop_lut6_I3_O)        0.124     5.905 f  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_24_i_1/O
+                         net (fo=2, routed)           0.813     6.718    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_channel_write_layer9_out_24
+    SLICE_X53Y12         LUT6 (Prop_lut6_I0_O)        0.124     6.842 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28/O
+                         net (fo=2, routed)           0.728     7.570    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28_n_0
+    SLICE_X52Y10         LUT6 (Prop_lut6_I1_O)        0.124     7.694 f  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20/O
+                         net (fo=96, routed)          1.075     8.768    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/pf_continue
+    SLICE_X60Y11         LUT5 (Prop_lut5_I0_O)        0.124     8.892 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/stalled_i_1/O
+                         net (fo=4, routed)           0.524     9.416    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/must_stall
+    SLICE_X62Y10         LUT3 (Prop_lut3_I1_O)        0.124     9.540 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][0]_srl7_i_1/O
+                         net (fo=19, routed)          0.702    10.242    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/write_enable
+    SLICE_X62Y2          SRL16E                                       r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][16]_srl7/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/ap_clk
+    SLICE_X62Y2          SRL16E                                       r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][16]_srl7/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X62Y2          SRL16E (Setup_srl16e_CLK_CE)
+                                                     -0.517    10.372    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][16]_srl7
+  -------------------------------------------------------------------
+                         required time                         10.372    
+                         arrival time                         -10.242    
+  -------------------------------------------------------------------
+                         slack                                  0.130    
+
+Slack (MET) :             0.130ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][19]_srl7/CLK
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][17]_srl7/CE
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.269ns  (logic 2.724ns (29.387%)  route 6.545ns (70.613%))
+  Logic Levels:           7  (LUT3=1 LUT4=1 LUT5=2 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/ap_clk
+    SLICE_X62Y8          SRL16E                                       r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][19]_srl7/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y8          SRL16E (Prop_srl16e_CLK_Q)
+                                                      1.628     2.601 f  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][19]_srl7/Q
+                         net (fo=3, routed)           0.863     3.464    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][19]_srl7_n_0
+    SLICE_X60Y11         LUT4 (Prop_lut4_I1_O)        0.150     3.614 f  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/pf_done_INST_0/O
+                         net (fo=2, routed)           0.979     4.593    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U_pf_done
+    SLICE_X55Y11         LUT5 (Prop_lut5_I1_O)        0.326     4.919 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_24/O
+                         net (fo=33, routed)          0.863     5.781    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_24_n_0
+    SLICE_X51Y12         LUT6 (Prop_lut6_I3_O)        0.124     5.905 f  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_24_i_1/O
+                         net (fo=2, routed)           0.813     6.718    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_channel_write_layer9_out_24
+    SLICE_X53Y12         LUT6 (Prop_lut6_I0_O)        0.124     6.842 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28/O
+                         net (fo=2, routed)           0.728     7.570    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28_n_0
+    SLICE_X52Y10         LUT6 (Prop_lut6_I1_O)        0.124     7.694 f  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20/O
+                         net (fo=96, routed)          1.075     8.768    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/pf_continue
+    SLICE_X60Y11         LUT5 (Prop_lut5_I0_O)        0.124     8.892 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/stalled_i_1/O
+                         net (fo=4, routed)           0.524     9.416    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/must_stall
+    SLICE_X62Y10         LUT3 (Prop_lut3_I1_O)        0.124     9.540 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][0]_srl7_i_1/O
+                         net (fo=19, routed)          0.702    10.242    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/write_enable
+    SLICE_X62Y2          SRL16E                                       r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][17]_srl7/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/ap_clk
+    SLICE_X62Y2          SRL16E                                       r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][17]_srl7/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X62Y2          SRL16E (Setup_srl16e_CLK_CE)
+                                                     -0.517    10.372    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_19_U/fifo_reg[6][17]_srl7
+  -------------------------------------------------------------------
+                         required time                         10.372    
+                         arrival time                         -10.242    
+  -------------------------------------------------------------------
+                         slack                                  0.130    
+
+Slack (MET) :             0.138ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_135_reg_3459_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.887ns  (logic 2.098ns (21.219%)  route 7.789ns (78.781%))
+  Logic Levels:           7  (CARRY4=6 LUT4=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X50Y63         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y63         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/out_index_reg_2862_pp0_iter4_reg_reg[0]/Q
+                         net (fo=1906, routed)        7.789     9.240    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/out_index_reg_2862_pp0_iter4_reg
+    SLICE_X32Y98         LUT4 (Prop_lut4_I2_O)        0.296     9.536 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459[11]_i_8/O
+                         net (fo=1, routed)           0.000     9.536    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459[11]_i_8_n_0
+    SLICE_X32Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    10.069 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.069    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[11]_i_1_n_0
+    SLICE_X32Y99         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.186 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.186    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[15]_i_1_n_0
+    SLICE_X32Y100        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.303 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.303    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[19]_i_1_n_0
+    SLICE_X32Y101        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.420 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.420    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[23]_i_1_n_0
+    SLICE_X32Y102        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.537 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.537    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[27]_i_1_n_0
+    SLICE_X32Y103        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.860 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31/acc_135_reg_3459_reg[29]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.860    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/mul_25s_18s_39_3_1_U31_n_120
+    SLICE_X32Y103        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_135_reg_3459_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/ap_clk
+    SLICE_X32Y103        FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_135_reg_3459_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X32Y103        FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_U0/acc_135_reg_3459_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                         -10.860    
+  -------------------------------------------------------------------
+                         slack                                  0.138    
+
+Slack (MET) :             0.143ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/frp_pipeline_valid_U/genblk1[3].v2_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/conv_i2_i_81750_reg_966_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.802ns  (logic 0.580ns (5.917%)  route 9.222ns (94.083%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.973     0.973    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X106Y5         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/frp_pipeline_valid_U/genblk1[3].v2_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y5         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/frp_pipeline_valid_U/genblk1[3].v2_reg[3]/Q
+                         net (fo=1921, routed)        9.222    10.651    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/frp_pipeline_valid_U_valid_out[4]
+    SLICE_X13Y22         LUT5 (Prop_lut5_I2_O)        0.124    10.775 r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/conv_i2_i_81750_reg_966[16]_i_1/O
+                         net (fo=1, routed)           0.000    10.775    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_phi_mux_conv_i2_i_81750_phi_fu_970_p6[16]
+    SLICE_X13Y22         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/conv_i2_i_81750_reg_966_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30836, unset)        0.924    10.924    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_clk
+    SLICE_X13Y22         FDRE                                         r  bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/conv_i2_i_81750_reg_966_reg[16]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X13Y22         FDRE (Setup_fdre_C_D)        0.029    10.918    bd_0_i/hls_inst/inst/vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/conv_i2_i_81750_reg_966_reg[16]
+  -------------------------------------------------------------------
+                         required time                         10.918    
+                         arrival time                         -10.775    
+  -------------------------------------------------------------------
+                         slack                                  0.143    
+
+
+
+

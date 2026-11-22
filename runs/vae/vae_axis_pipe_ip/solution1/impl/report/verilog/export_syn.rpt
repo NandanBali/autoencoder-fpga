@@ -1,0 +1,820 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Sun Nov 22 20:28:49 IST 2026
+    * Version:         2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:         vae_axis_pipe_ip
+    * Solution:        solution1 (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     3.5 ns
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              29221
+FF:               29106
+DSP:              136
+BRAM:             57
+URAM:             0
+SRL:              1614
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was NOT met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 10.398      |
++----------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++-------------------------------------------------------------------------------+-------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                                          | LUT   | FF    | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++-------------------------------------------------------------------------------+-------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                                                          | 29221 | 29106 | 136 | 57   |      |     |        |      |         |          |        |
+|   (inst)                                                                      |       | 8     |     |      |      |     |        |      |         |          |        |
+|   bypass_U                                                                    | 53    | 21    |     | 6    |      |     |        |      |         |          |        |
+|   p_anonymous_namespace_read_frame_U0                                         | 101   | 285   |     | 2    |      |     |        |      |         |          |        |
+|     (p_anonymous_namespace_read_frame_U0)                                     | 15    | 189   |     |      |      |     |        |      |         |          |        |
+|     f_x_U                                                                     | 6     |       |     | 2    |      |     |        |      |         |          |        |
+|     grp_p_anonymous_namespace_read_frame_Pipeline_drain_fu_233                | 1     | 1     |     |      |      |     |        |      |         |          |        |
+|     grp_p_anonymous_namespace_read_frame_Pipeline_read_beats_fu_217           | 17    | 11    |     |      |      |     |        |      |         |          |        |
+|       (grp_p_anonymous_namespace_read_frame_Pipeline_read_beats_fu_217)       |       | 9     |     |      |      |     |        |      |         |          |        |
+|     regslice_both_s_axis_features_V_data_V_U                                  | 34    | 54    |     |      |      |     |        |      |         |          |        |
+|     regslice_both_s_axis_features_V_keep_V_U                                  | 5     | 12    |     |      |      |     |        |      |         |          |        |
+|     regslice_both_s_axis_features_V_last_V_U                                  | 14    | 6     |     |      |      |     |        |      |         |          |        |
+|     regslice_both_s_axis_features_V_strb_V_U                                  | 9     | 12    |     |      |      |     |        |      |         |          |        |
+|   p_anonymous_namespace_score_and_write_U0                                    | 517   | 1430  | 32  |      |      |     |        |      |         |          |        |
+|     (p_anonymous_namespace_score_and_write_U0)                                | 209   | 648   |     |      |      |     |        |      |         |          |        |
+|     mul_26s_26s_50_4_1_U578                                                   | 33    | 84    | 4   |      |      |     |        |      |         |          |        |
+|     mul_26s_26s_50_4_1_U579                                                   | 33    | 84    | 4   |      |      |     |        |      |         |          |        |
+|     mul_26s_26s_50_4_1_U580                                                   | 33    | 84    | 4   |      |      |     |        |      |         |          |        |
+|     mul_26s_26s_50_4_1_U581                                                   | 33    | 84    | 4   |      |      |     |        |      |         |          |        |
+|     mul_26s_26s_50_4_1_U582                                                   | 33    | 84    | 4   |      |      |     |        |      |         |          |        |
+|     mul_26s_26s_50_4_1_U583                                                   | 33    | 84    | 4   |      |      |     |        |      |         |          |        |
+|     mul_26s_26s_50_4_1_U584                                                   | 33    | 84    | 4   |      |      |     |        |      |         |          |        |
+|     mul_26s_26s_50_4_1_U585                                                   | 33    | 84    | 4   |      |      |     |        |      |         |          |        |
+|     regslice_both_m_axis_score_V_data_V_U                                     | 44    | 110   |     |      |      |     |        |      |         |          |        |
+|   recon_1_U                                                                   | 43    | 41    |     |      |      |     |        |      |         |          |        |
+|   recon_2_U                                                                   | 44    | 41    |     |      |      |     |        |      |         |          |        |
+|   recon_3_U                                                                   | 44    | 41    |     |      |      |     |        |      |         |          |        |
+|   recon_4_U                                                                   | 43    | 41    |     |      |      |     |        |      |         |          |        |
+|   recon_5_U                                                                   | 43    | 41    |     |      |      |     |        |      |         |          |        |
+|   recon_6_U                                                                   | 46    | 41    |     |      |      |     |        |      |         |          |        |
+|   recon_7_U                                                                   | 44    | 41    |     |      |      |     |        |      |         |          |        |
+|   recon_U                                                                     | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|   vae_core_U0                                                                 | 27996 | 26629 | 104 | 49   |      |     |        |      |         |          |        |
+|     (vae_core_U0)                                                             | 153   | 196   |     |      |      |     |        |      |         |          |        |
+|       mul_25s_16s_39_3_1_U40                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U25                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U26                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U27                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U28                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U29                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U30                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U31                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U32                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U33                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U34                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U35                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U36                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U37                                                  | 196   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U38                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_25s_18s_39_3_1_U39                                                  | 180   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_8s_6ns_8_1_1_U24                                                    | 10    |       |     |      |      |     |        |      |         |          |        |
+|       outidx_42_U                                                             |       | 1     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_0_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_10_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_11_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_12_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_13_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_14_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_15_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_16_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_17_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_18_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_19_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_1_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_20_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_21_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_22_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_23_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_24_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_25_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_26_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_27_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_28_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_29_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_2_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_30_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_31_U                                                       | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_3_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_4_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_5_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_6_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_7_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_8_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_9_U                                                        | 50    | 8     |     |      |      |     |        |      |         |          |        |
+|       w2_U                                                                    |       |       |     | 8    |      |     |        |      |         |          |        |
+|     dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_5_4_0_0_config7_U0     | 2343  | 2491  | 4   | 2    |      |     |        |      |         |          |        |
+|       (dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_5_4_0_0_config7_U0) | 935   | 1831  |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_U                                                | 13    | 1     |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_560       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_565       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_570       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_575       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_580       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_585       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_590       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_595       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_600       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_605       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_610       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_615       | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_620       | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_625       | 60    | 42    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_630       | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s_fu_635       | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|       mul_18s_17s_35_1_1_U197                                                 | 156   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18s_36_1_1_U194                                                 | 119   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18s_36_1_1_U195                                                 | 119   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18s_36_1_1_U196                                                 | 119   |       | 1   |      |      |     |        |      |         |          |        |
+|       outidx_U                                                                |       | 2     |     |      |      |     |        |      |         |          |        |
+|       sparsemux_9_2_18_1_1_U193                                               | 18    |       |     |      |      |     |        |      |         |          |        |
+|       sparsemux_9_2_30_1_1_U198                                               | 30    |       |     |      |      |     |        |      |         |          |        |
+|       sparsemux_9_2_30_1_1_U199                                               | 30    |       |     |      |      |     |        |      |         |          |        |
+|       sparsemux_9_2_30_1_1_U200                                               | 30    |       |     |      |      |     |        |      |         |          |        |
+|       sparsemux_9_2_30_1_1_U201                                               | 30    |       |     |      |      |     |        |      |         |          |        |
+|       w7_U                                                                    |       |       |     | 2    |      |     |        |      |         |          |        |
+|     dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_4_4_0_0_config11_U0       | 1790  | 2219  | 16  | 8    |      |     |        |      |         |          |        |
+|       (dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_4_4_0_0_config11_U0)   | 670   | 1890  |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s_fu_1478    | 42    | 42    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s_fu_1483    | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s_fu_1488    | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s_fu_1493    | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s_fu_1498    | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s_fu_1503    | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s_fu_1508    | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s_fu_1513    | 42    | 41    |     |      |      |     |        |      |         |          |        |
+|       mul_18ns_17s_35_1_1_U330                                                | 2     |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U315                                                | 60    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U316                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U317                                                | 59    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U318                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U319                                                | 59    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U320                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U321                                                | 59    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U322                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U323                                                | 59    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U324                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U325                                                | 59    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U326                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U327                                                | 59    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U328                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U329                                                | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       sparsemux_33_4_18_1_1_U313                                              | 153   |       |     |      |      |     |        |      |         |          |        |
+|       sparsemux_33_4_18_1_1_U314                                              | 153   |       |     |      |      |     |        |      |         |          |        |
+|       w11_U                                                                   | 5     |       |     | 8    |      |     |        |      |         |          |        |
+|     dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0        | 3458  | 2857  | 32  | 14   |      |     |        |      |         |          |        |
+|       (dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0)    | 790   | 2367  |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_U                                                | 23    | 1     |     |      |      |     |        |      |         |          |        |
+|       frp_pipeline_valid_U                                                    | 3     | 9     |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1596     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1601     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1606     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1611     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1616     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1621     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1626     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1631     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1636     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1641     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1646     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1651     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1656     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1661     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1666     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s_fu_1671     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       mul_18ns_15s_33_1_1_U114                                                | 47    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U100                                                | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U101                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U102                                                | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U103                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U104                                                | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U105                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U106                                                | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U107                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U108                                                | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U109                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U110                                                | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U111                                                |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U112                                                | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U113                                                | 10    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U83                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U84                                                 | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U85                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U86                                                 | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U87                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U88                                                 | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U89                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U90                                                 | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U91                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U92                                                 | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U93                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U94                                                 | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U95                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U96                                                 | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U97                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U98                                                 | 57    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U99                                                 |       |       | 1   |      |      |     |        |      |         |          |        |
+|       pf_ap_return_0_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_10_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_11_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_12_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_13_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_14_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_15_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_1_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_2_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_3_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_4_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_5_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_6_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_7_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_8_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_9_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       sparsemux_33_4_18_1_1_U81                                               | 153   |       |     |      |      |     |        |      |         |          |        |
+|       sparsemux_33_4_18_1_1_U82                                               | 153   |       |     |      |      |     |        |      |         |          |        |
+|       w4_U                                                                    |       |       |     | 14   |      |     |        |      |         |          |        |
+|     dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config6_U0        | 687   | 1070  | 4   | 2    |      |     |        |      |         |          |        |
+|       (dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config6_U0)    | 160   | 904   |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_U                                                | 20    | 1     |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_5_4_0_0_config6_s_fu_748      | 60    | 42    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_5_4_0_0_config6_s_fu_753      | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_5_4_0_0_config6_s_fu_758      | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_5_4_0_0_config6_s_fu_763      | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|       mul_18ns_14s_32_1_1_U173                                                | 177   |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U170                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U171                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U172                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       w6_U                                                                    |       |       |     | 2    |      |     |        |      |         |          |        |
+|     dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0        | 5174  | 4047  | 32  | 15   |      |     |        |      |         |          |        |
+|       (dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0)    | 1187  | 3077  |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_U                                                | 23    | 1     |     |      |      |     |        |      |         |          |        |
+|       frp_pipeline_valid_U                                                    | 3     | 9     |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1302     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1307     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1312     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1317     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1322     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1327     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1332     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1337     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1342     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1347     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1352     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1357     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1362     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1367     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1372     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1377     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1382     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1387     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1392     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1397     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1402     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1407     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1412     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1417     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1422     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1427     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1432     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1437     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1442     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1447     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1452     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       grp_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s_fu_1457     | 43    | 23    |     |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U230                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U231                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U232                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U233                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U234                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U235                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U236                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U237                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U238                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U239                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U240                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U241                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U242                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U243                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U244                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U245                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U246                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U247                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U248                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U249                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U250                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U251                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U252                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U253                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U254                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U255                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U256                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U257                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U258                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U259                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U260                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       mul_18s_18ns_36_1_1_U261                                                | 30    |       | 1   |      |      |     |        |      |         |          |        |
+|       pf_ap_return_0_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_10_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_11_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_12_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_13_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_14_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_15_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_16_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_17_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_18_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_19_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_1_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_20_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_21_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_22_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_23_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_24_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_25_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_26_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_27_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_28_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_29_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_2_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_30_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_31_U                                                       | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_3_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_4_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_5_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_6_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_7_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_8_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       pf_ap_return_9_U                                                        | 46    | 7     |     |      |      |     |        |      |         |          |        |
+|       sparsemux_33_4_18_1_1_U229                                              | 153   |       |     |      |      |     |        |      |         |          |        |
+|       w9_U                                                                    |       |       |     | 15   |      |     |        |      |         |          |        |
+|     layer10_out_10_U                                                          | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_11_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_12_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_13_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_14_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_15_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_16_U                                                          | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_17_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_18_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_19_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_1_U                                                           | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_20_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_21_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_22_U                                                          | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_23_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_24_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_25_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_26_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_27_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_28_U                                                          | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_29_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_2_U                                                           | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_30_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_31_U                                                          | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_3_U                                                           | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_4_U                                                           | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_5_U                                                           | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_6_U                                                           | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_7_U                                                           | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_8_U                                                           | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_9_U                                                           | 20    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer10_out_U                                                             | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_10_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_11_U                                                           | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_12_U                                                           | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_13_U                                                           | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_14_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_15_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_16_U                                                           | 51    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_17_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_18_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_19_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_1_U                                                            | 58    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_20_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_21_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_22_U                                                           | 51    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_23_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_24_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_25_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_26_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_27_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_28_U                                                           | 51    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_29_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_2_U                                                            | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_30_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_31_U                                                           | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_3_U                                                            | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_4_U                                                            | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_5_U                                                            | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_6_U                                                            | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_7_U                                                            | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_8_U                                                            | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_9_U                                                            | 59    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer2_out_U                                                              | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_10_U                                                           | 25    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_11_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_12_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_13_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_14_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_15_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_16_U                                                           | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_17_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_18_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_19_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_1_U                                                            | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_20_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_21_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_22_U                                                           | 25    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_23_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_24_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_25_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_26_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_27_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_28_U                                                           | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_29_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_2_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_30_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_31_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_3_U                                                            | 26    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_4_U                                                            | 25    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_5_U                                                            | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_6_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_7_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_8_U                                                            | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_9_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer3_out_U                                                              | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_10_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_11_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_12_U                                                           | 63    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_13_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_14_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_15_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_1_U                                                            | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_2_U                                                            | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_3_U                                                            | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_4_U                                                            | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_5_U                                                            | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_6_U                                                            | 62    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_7_U                                                            | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_8_U                                                            | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_9_U                                                            | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer4_out_U                                                              | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_10_U                                                           | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_11_U                                                           | 25    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_12_U                                                           | 27    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_13_U                                                           | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_14_U                                                           | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_15_U                                                           | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_1_U                                                            | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_2_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_3_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_4_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_5_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_6_U                                                            | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_7_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_8_U                                                            | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_9_U                                                            | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer5_out_U                                                              | 24    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer6_out_1_U                                                            | 28    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer6_out_2_U                                                            | 25    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer6_out_3_U                                                            | 25    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer6_out_U                                                              | 25    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_10_U                                                           | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_11_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_12_U                                                           | 98    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_13_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_14_U                                                           | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_15_U                                                           | 60    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_1_U                                                            | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_2_U                                                            | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_3_U                                                            | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_4_U                                                            | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_5_U                                                            | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_6_U                                                            | 52    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_7_U                                                            | 51    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_8_U                                                            | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_9_U                                                            | 61    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer7_out_U                                                              | 50    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_10_U                                                           | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_11_U                                                           | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_12_U                                                           | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_13_U                                                           | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_14_U                                                           | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_15_U                                                           | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_1_U                                                            | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_2_U                                                            | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_3_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_4_U                                                            | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_5_U                                                            | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_6_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_7_U                                                            | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_8_U                                                            | 21    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_9_U                                                            | 23    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer8_out_U                                                              | 22    | 39    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_10_U                                                           | 76    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_11_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_12_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_13_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_14_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_15_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_16_U                                                           | 76    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_17_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_18_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_19_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_1_U                                                            | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_20_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_21_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_22_U                                                           | 76    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_23_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_24_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_25_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_26_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_27_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_28_U                                                           | 76    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_29_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_2_U                                                            | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_30_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_31_U                                                           | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_3_U                                                            | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_4_U                                                            | 76    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_5_U                                                            | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_6_U                                                            | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_7_U                                                            | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_8_U                                                            | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_9_U                                                            | 75    | 41    |     |      |      |     |        |      |         |          |        |
+|     layer9_out_U                                                              | 78    | 41    |     |      |      |     |        |      |         |          |        |
+|     relu_ap_fixed_18_4_4_0_0_ap_ufixed_18_3_4_0_0_relu_config3_U0             | 39    | 545   |     |      |      |     |        |      |         |          |        |
+|     relu_ap_fixed_18_5_4_0_0_ap_ufixed_18_4_4_0_0_relu_config5_U0             | 14    | 273   |     |      |      |     |        |      |         |          |        |
+|     relu_ap_fixed_18_5_4_0_0_ap_ufixed_18_4_4_0_0_relu_config8_U0             | 3     | 273   |     |      |      |     |        |      |         |          |        |
+|     relu_ap_fixed_18_6_4_0_0_ap_ufixed_18_5_4_0_0_relu_config10_U0            | 148   | 545   |     |      |      |     |        |      |         |          |        |
+|   x_core_U                                                                    | 205   | 405   |     |      |      |     |        |      |         |          |        |
++-------------------------------------------------------------------------------+-------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 54.93% | OK     |
+| FD                                                        | 50%       | 27.36% | OK     |
+| LUTRAM+SRL                                                | 25%       | 9.28%  | OK     |
+| MUXF7                                                     | 15%       | 1.56%  | OK     |
+| LUT Combining                                             | 20%       | 20.24% | REVIEW |
+| DSP                                                       | 80%       | 61.82% | OK     |
+| RAMB/FIFO                                                 | 80%       | 20.36% | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 41.09% | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 374    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 3.00   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was NOT met
++--------+--------+---------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path   |  SLACK | STARTPOINT PIN                                                                                                      | ENDPOINT PIN                                                                                                            | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|        |        |                                                                                                                     |                                                                                                                         |              |            |                |          DELAY |        DELAY |
++--------+--------+---------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7/CE  |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path2  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][10]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path3  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][11]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path4  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][12]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path5  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][13]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path6  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][14]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path7  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][15]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path8  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][16]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path9  | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][17]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
+| Path10 | -0.398 | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]/C | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][18]_srl7/CE |            9 |         96 |          9.802 |          1.805 |        7.997 |
++--------+--------+---------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7        | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][10]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][11]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][12]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][13]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path6 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][14]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path7 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][15]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path8 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][16]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path9 Cells                                                                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][17]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path10 Cells                                                                                                               | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_rdPtr_reg[0]          | FLOP_LATCH.flop.FDSE |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/fifo_reg[6][19]_srl7       | DMEM.srl.SRL16E      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_5_U/pf_done_INST_0             | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_35                       | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_26                       | LUT.others.LUT5      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/ap_sync_reg_channel_write_layer9_out_25_i_1 | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_28                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U_i_20                       | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/stalled_i_1                | LUT.others.LUT6      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][0]_srl7_i_1    | LUT.others.LUT4      |
+    | vae_core_U0/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_U0/pf_ap_return_0_U/fifo_reg[6][18]_srl7       | DMEM.srl.SRL16E      |
+    +----------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+-----------------------------------------------------------------+
+| Report Type              | Report Location                                                 |
++--------------------------+-----------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/vae_axis_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/vae_axis_failfast_synth.rpt                 |
+| timing                   | impl/verilog/report/vae_axis_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/vae_axis_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/vae_axis_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/vae_axis_utilization_hierarchical_synth.rpt |
++--------------------------+-----------------------------------------------------------------+
+
+

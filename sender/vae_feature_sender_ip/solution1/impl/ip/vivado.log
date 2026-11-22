@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Nov 22 22:38:44 2026
+# Process ID: 1188497
+# Current directory: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/ip/vivado.log
+# Journal file: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender_ip/solution1/impl/ip/vivado.jou
+# Running On: fedora, OS: Linux, CPU Frequency: 2912.645 MHz, CPU Physical cores: 16, Host memory: 14305 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1594.855 ; gain = 0.020 ; free physical = 216 ; free virtual = 18182
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/AMD/Vivado/2023.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 22 22:38:52 2026...

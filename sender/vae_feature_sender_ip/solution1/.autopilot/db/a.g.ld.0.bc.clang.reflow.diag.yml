@@ -1,0 +1,382 @@
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 36, Column: 5 }
+Function:        _ZN12_GLOBAL__N_19pace_sendERN3hls6streamI7ap_uintILi32EELi0EEES3_S3_RNS1_IS2_ILi64EELi0EEERNS1_INS0_4axisIS3_Lm0ELm0ELm0ELh56ELb0EEELi0EEES8_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        send
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:36:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::pace_send(hls::stream<ap_uint<32>, 0>&, ap_uint<32>, ap_uint<32>, hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<ap_uint<64>, 0>&)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 29, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 21, Column: 5 }
+Function:        _ZN12_GLOBAL__N_14loadEPK7ap_uintILi32EES1_RN3hls6streamIS1_Li0EEE
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        features2seq
+  - ArrayName:       features
+  - String:          ' '
+  - BundleName:      gmem_in
+  - String:          ' '
+  - LoopName:        read_ddr
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::load(ap_uint<32> const*, ap_uint<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 18, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 23, Column: 8 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.4
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 63, Column: 5 }
+Function:        _ZN12_GLOBAL__N_112store_stampsERN3hls6streamI7ap_uintILi64EELi0EEES2_ILi32EEPS3_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        t_send2seq
+  - ArrayName:       t_send
+  - String:          ' '
+  - BundleName:      gmem_ts
+  - String:          ' '
+  - LoopName:        write_stamps
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::store_stamps(hls::stream<ap_uint<64>, 0>&, ap_uint<32>, ap_uint<64>*)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 61, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 65, Column: 12 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.5
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 72, Column: 5 }
+Function:        _ZN12_GLOBAL__N_17collectERN3hls6streamINS0_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES3_ILi32EERNS1_IS4_Li0EEEPS3_ILi128EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        results1seq
+  - ArrayName:       results
+  - String:          ' '
+  - BundleName:      gmem_res
+  - String:          ' '
+  - LoopName:        write_results
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::collect(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>, hls::stream<ap_uint<64>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 70, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 79, Column: 20 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.15
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 21, Column: 5 }
+Function:        _ZN12_GLOBAL__N_14loadEPK7ap_uintILi32EES1_RN3hls6streamIS1_Li0EEE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 21, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          features2seq
+  - ArrayName:       features
+  - String:          ' '
+  - BundleName:      gmem_in
+  - String:          ' '
+  - LoopName:        read_ddr
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::load(ap_uint<32> const*, ap_uint<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 18, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 63, Column: 5 }
+Function:        _ZN12_GLOBAL__N_112store_stampsERN3hls6streamI7ap_uintILi64EELi0EEES2_ILi32EEPS3_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 63, Column: 5 }
+  - OrigDirection:   write
+  - OrigID:          t_send2seq
+  - ArrayName:       t_send
+  - String:          ' '
+  - BundleName:      gmem_ts
+  - String:          ' '
+  - LoopName:        write_stamps
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::store_stamps(hls::stream<ap_uint<64>, 0>&, ap_uint<32>, ap_uint<64>*)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 61, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 72, Column: 5 }
+Function:        _ZN12_GLOBAL__N_17collectERN3hls6streamINS0_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES3_ILi32EERNS1_IS4_Li0EEEPS3_ILi128EE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 72, Column: 5 }
+  - OrigDirection:   write
+  - OrigID:          results1seq
+  - ArrayName:       results
+  - String:          ' '
+  - BundleName:      gmem_res
+  - String:          ' '
+  - LoopName:        write_results
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::collect(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>, hls::stream<ap_uint<64>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 70, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 36, Column: 5 }
+Function:        _ZN12_GLOBAL__N_19pace_sendERN3hls6streamI7ap_uintILi32EELi0EEES3_S3_RNS1_IS2_ILi64EELi0EEERNS1_INS0_4axisIS3_Lm0ELm0ELm0ELh56ELb0EEELi0EEES8_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        send
+  - String:          '''('
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:36:5'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 21, Column: 5 }
+Function:        _ZN12_GLOBAL__N_14loadEPK7ap_uintILi32EES1_RN3hls6streamIS1_Li0EEE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem_in
+  - String:          ' '
+  - LoopName:        read_ddr
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::load(ap_uint<32> const*, ap_uint<32>, hls::stream<ap_uint<32>, 0>&) (.1)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 18, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 21, Column: 5 }
+Function:        _ZN12_GLOBAL__N_14loadEPK7ap_uintILi32EES1_RN3hls6streamIS1_Li0EEE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        read_ddr
+  - String:          '''('
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem_in
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 63, Column: 5 }
+Function:        _ZN12_GLOBAL__N_112store_stampsERN3hls6streamI7ap_uintILi64EELi0EEES2_ILi32EEPS3_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem_ts
+  - String:          ' '
+  - LoopName:        write_stamps
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::store_stamps(hls::stream<ap_uint<64>, 0>&, ap_uint<32>, ap_uint<64>*) (.1)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 61, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 63, Column: 5 }
+Function:        _ZN12_GLOBAL__N_112store_stampsERN3hls6streamI7ap_uintILi64EELi0EEES2_ILi32EEPS3_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        write_stamps
+  - String:          '''('
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem_ts
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 72, Column: 5 }
+Function:        _ZN12_GLOBAL__N_17collectERN3hls6streamINS0_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES3_ILi32EERNS1_IS4_Li0EEEPS3_ILi128EE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem_res
+  - String:          ' '
+  - LoopName:        write_results
+  - String:          ' '
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5'
+  - String:          ' '
+  - Function:        '(anonymous namespace)::collect(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>, hls::stream<ap_uint<64>, 0>&, ap_uint<128>*) (.1)'
+    DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                       Line: 70, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp, 
+                   Line: 72, Column: 5 }
+Function:        _ZN12_GLOBAL__N_17collectERN3hls6streamINS0_4axisI7ap_uintILi64EELm0ELm0ELm0ELh56ELb0EEELi0EEES3_ILi32EERNS1_IS4_Li0EEEPS3_ILi128EE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        write_results
+  - String:          '''('
+  - LoopLoc:         '/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem_res
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

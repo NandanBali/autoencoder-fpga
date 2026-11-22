@@ -1,0 +1,186 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_read_frame'
+================================================================
+* Date:           Sun Nov 22 20:17:02 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        vae_axis_pipe_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.889 ns|     3.50 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------------------+------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |                                                                 |                                                      |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+        |                             Instance                            |                        Module                        |   min   |   max   |    min    |    max   | min | max |   Type  |
+        +-----------------------------------------------------------------+------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |grp_p_anonymous_namespace_read_frame_Pipeline_read_beats_fu_217  |p_anonymous_namespace_read_frame_Pipeline_read_beats  |        2|       10|  20.000 ns|  0.100 us|    2|   10|       no|
+        |grp_p_anonymous_namespace_read_frame_Pipeline_drain_fu_233       |p_anonymous_namespace_read_frame_Pipeline_drain       |        ?|        ?|          ?|         ?|    ?|    ?|       no|
+        +-----------------------------------------------------------------+------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     43|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|      13|    156|    -|
+|Memory           |        0|    -|      50|      4|    0|
+|Multiplexer      |        -|    -|       -|    267|    -|
+|Register         |        -|    -|     189|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     252|    470|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------------------+------------------------------------------------------+---------+----+----+-----+-----+
+    |                             Instance                            |                        Module                        | BRAM_18K| DSP| FF | LUT | URAM|
+    +-----------------------------------------------------------------+------------------------------------------------------+---------+----+----+-----+-----+
+    |grp_p_anonymous_namespace_read_frame_Pipeline_drain_fu_233       |p_anonymous_namespace_read_frame_Pipeline_drain       |        0|   0|   2|   20|    0|
+    |grp_p_anonymous_namespace_read_frame_Pipeline_read_beats_fu_217  |p_anonymous_namespace_read_frame_Pipeline_read_beats  |        0|   0|  11|  136|    0|
+    +-----------------------------------------------------------------+------------------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                            |                                                      |        0|   0|  13|  156|    0|
+    +-----------------------------------------------------------------+------------------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------+----------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    | Memory|                       Module                       | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------+----------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |f_x_U  |p_anonymous_namespace_read_frame_f_x_RAM_AUTO_1R1W  |        0|  50|   4|    0|     8|   25|     1|          200|
+    +-------+----------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total  |                                                    |        0|  50|   4|    0|     8|   25|     1|          200|
+    +-------+----------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln47_fu_258_p2     |         +|   0|  0|  13|           4|           1|
+    |f_valid_fu_276_p2      |       and|   0|  0|   2|           1|           1|
+    |icmp_ln59_1_fu_270_p2  |      icmp|   0|  0|  13|           4|           2|
+    |icmp_ln59_fu_264_p2    |      icmp|   0|  0|  13|           4|           5|
+    |ap_block_state1        |        or|   0|  0|   2|           1|           1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  43|          14|          10|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |and3_i2_reg_186                      |   9|          2|    4|          8|
+    |ap_NS_fsm                            |  65|         15|    1|         15|
+    |ap_done                              |   9|          2|    1|          2|
+    |beats_reg_195                        |   9|          2|    4|          8|
+    |bypass_blk_n                         |   9|          2|    1|          2|
+    |f_valid_1_reg_206                    |   9|          2|    1|          2|
+    |f_x_address0                         |  53|         10|    3|         30|
+    |f_x_address1                         |  48|          9|    3|         27|
+    |f_x_ce0                              |  14|          3|    1|          3|
+    |f_x_d0                               |  14|          3|   25|         75|
+    |f_x_we0                              |  14|          3|    1|          3|
+    |s_axis_features_TREADY_int_regslice  |  14|          3|    1|          3|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                | 267|         56|   46|        178|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                     Name                                     | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |and3_i2_reg_186                                                               |   4|   0|    4|          0|
+    |ap_CS_fsm                                                                     |  14|   0|   14|          0|
+    |ap_done_reg                                                                   |   1|   0|    1|          0|
+    |beats_reg_195                                                                 |   4|   0|    4|          0|
+    |empty_162_reg_172                                                             |   1|   0|    1|          0|
+    |f_valid_1_reg_206                                                             |   1|   0|    1|          0|
+    |f_x_load_1_reg_397                                                            |  25|   0|   25|          0|
+    |f_x_load_2_reg_403                                                            |  25|   0|   25|          0|
+    |f_x_load_3_reg_409                                                            |  25|   0|   25|          0|
+    |f_x_load_4_reg_415                                                            |  25|   0|   25|          0|
+    |f_x_load_5_reg_421                                                            |  25|   0|   25|          0|
+    |f_x_load_reg_391                                                              |  25|   0|   25|          0|
+    |grp_p_anonymous_namespace_read_frame_Pipeline_drain_fu_233_ap_start_reg       |   1|   0|    1|          0|
+    |grp_p_anonymous_namespace_read_frame_Pipeline_read_beats_fu_217_ap_start_reg  |   1|   0|    1|          0|
+    |i_loc_fu_80                                                                   |   3|   0|    3|          0|
+    |targetBlock_reg_371                                                           |   1|   0|    1|          0|
+    |valid_bytes_1_loc_fu_72                                                       |   4|   0|    4|          0|
+    |valid_bytes_loc_fu_76                                                         |   4|   0|    4|          0|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                         | 189|   0|  189|          0|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+---------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |          Source Object          |    C Type    |
++------------------------+-----+-----+------------+---------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame|  return value|
+|ap_return               |  out|  200|  ap_ctrl_hs|  (anonymous namespace)read_frame|  return value|
+|s_axis_features_TDATA   |   in|   32|        axis|         s_axis_features_V_data_V|       pointer|
+|s_axis_features_TVALID  |   in|    1|        axis|         s_axis_features_V_last_V|       pointer|
+|s_axis_features_TREADY  |  out|    1|        axis|         s_axis_features_V_last_V|       pointer|
+|s_axis_features_TLAST   |   in|    1|        axis|         s_axis_features_V_last_V|       pointer|
+|s_axis_features_TKEEP   |   in|    4|        axis|         s_axis_features_V_keep_V|       pointer|
+|s_axis_features_TSTRB   |   in|    4|        axis|         s_axis_features_V_strb_V|       pointer|
+|bypass_din              |  out|  201|     ap_fifo|                           bypass|       pointer|
+|bypass_num_data_valid   |   in|    5|     ap_fifo|                           bypass|       pointer|
+|bypass_fifo_cap         |   in|    5|     ap_fifo|                           bypass|       pointer|
+|bypass_full_n           |   in|    1|     ap_fifo|                           bypass|       pointer|
+|bypass_write            |  out|    1|     ap_fifo|                           bypass|       pointer|
++------------------------+-----+-----+------------+---------------------------------+--------------+
+

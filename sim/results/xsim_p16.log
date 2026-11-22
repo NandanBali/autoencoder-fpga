@@ -1,0 +1,19 @@
+
+****** xsim v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_sim/xsim_script.tcl
+# xsim {tb_sim} -testplusarg flows=512 -testplusarg period=16 -testplusarg mem_latency=40 -testplusarg csv=latency_p16.csv -testplusarg max_cycles=149152 -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+RESULT flows=512 period=16 mem_latency=40 mismatches=0
+RESULT latency_cycles min=161 mean=171.96 max=172
+RESULT output_interval_cycles=19.998  start_to_done_cycles=10539
+PASS
+$finish called at time : 106025 ns : File "/home/nandanbali/programming/deep-svdd/autoencoder/sim/tb.sv" Line 166
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov 23 00:53:37 2026...

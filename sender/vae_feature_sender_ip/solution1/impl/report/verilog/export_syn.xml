@@ -1,0 +1,269 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2023.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>6.509</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>6.509</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>6.509</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>3.491</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>3.491</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>3.491</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>3.491</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>10</BRAM>
+      <CLB>0</CLB>
+      <DSP>0</DSP>
+      <FF>5001</FF>
+      <LATCH>0</LATCH>
+      <LUT>4008</LUT>
+      <SRL>1139</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="vae_feature_sender" DISPNAME="inst" RTLNAME="vae_feature_sender">
+      <SubModules count="17">control_s_axi_U entry_proc_U0 gmem_in_m_axi_U gmem_res_m_axi_U gmem_ts_m_axi_U n_flows_c19_U n_flows_c_U p_anonymous_namespace_collect_U0 p_anonymous_namespace_load_U0 p_anonymous_namespace_pace_send_U0 p_anonymous_namespace_store_stamps_U0 period_c_U stamps_U start_for_p_anonymous_namespace_pace_send_U0_U start_for_p_anonymous_namespace_store_stamps_U0_U t_send_c_U words_U</SubModules>
+      <Resources BRAM="10" FF="5001" LUT="4008"/>
+      <LocalResources FF="3" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="vae_feature_sender_control_s_axi" DEPTH="1" TYPE="resource" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="vae_feature_sender_control_s_axi">
+      <Resources FF="312" LUT="422"/>
+      <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/entry_proc_U0" DEPTH="1" TYPE="function" MODULENAME="entry_proc" DISPNAME="entry_proc_U0" RTLNAME="vae_feature_sender_entry_proc">
+      <Resources FF="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem_in_m_axi_U" BINDMODULE="vae_feature_sender_gmem_in_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem_in_m_axi" DISPNAME="gmem_in_m_axi_U" RTLNAME="vae_feature_sender_gmem_in_m_axi">
+      <Resources BRAM="1" FF="859" LUT="845"/>
+      <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="gmem_in" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem_in_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem_res_m_axi_U" BINDMODULE="vae_feature_sender_gmem_res_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem_res_m_axi" DISPNAME="gmem_res_m_axi_U" RTLNAME="vae_feature_sender_gmem_res_m_axi">
+      <Resources BRAM="4" FF="1185" LUT="1047"/>
+      <BindNode BINDTYPE="adapter" BRAM="16" BUNDLEDNAME="gmem_res" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem_res_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem_ts_m_axi_U" BINDMODULE="vae_feature_sender_gmem_ts_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem_ts_m_axi" DISPNAME="gmem_ts_m_axi_U" RTLNAME="vae_feature_sender_gmem_ts_m_axi">
+      <Resources BRAM="2" FF="1126" LUT="917"/>
+      <BindNode BINDTYPE="adapter" BRAM="8" BUNDLEDNAME="gmem_ts" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem_ts_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/n_flows_c19_U" BINDMODULE="vae_feature_sender_fifo_w32_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d2_S" DISPNAME="n_flows_c19_U" RTLNAME="vae_feature_sender_fifo_w32_d2_S">
+      <Resources FF="69" LUT="37"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="n_flows_c19_U" SOURCE="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="n_flows_c19"/>
+    </RtlModule>
+    <RtlModule CELL="inst/n_flows_c_U" BINDMODULE="vae_feature_sender_fifo_w32_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d2_S" DISPNAME="n_flows_c_U" RTLNAME="vae_feature_sender_fifo_w32_d2_S">
+      <Resources FF="69" LUT="37"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="n_flows_c_U" SOURCE="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106" STORAGESIZE="32 2 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="n_flows_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_collect_U0" DEPTH="1" TYPE="function" MODULENAME="p_anonymous_namespace_collect" DISPNAME="p_anonymous_namespace_collect_U0" RTLNAME="vae_feature_sender_p_anonymous_namespace_collect">
+      <SubModules count="2">flow_control_loop_pipe_U regslice_both_s_axis_score_V_data_V_U</SubModules>
+      <Resources FF="526" LUT="107"/>
+      <LocalResources FF="393" LUT="22"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_collect_U0/flow_control_loop_pipe_U" BINDMODULE="vae_feature_sender_flow_control_loop_pipe" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe" DISPNAME="flow_control_loop_pipe_U" RTLNAME="vae_feature_sender_flow_control_loop_pipe">
+      <Resources FF="1" LUT="40"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_collect_U0/regslice_both_s_axis_score_V_data_V_U" BINDMODULE="vae_feature_sender_regslice_both" DEPTH="2" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_s_axis_score_V_data_V_U" RTLNAME="vae_feature_sender_regslice_both">
+      <Resources FF="132" LUT="45"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_load_U0" DEPTH="1" TYPE="function" MODULENAME="p_anonymous_namespace_load" DISPNAME="p_anonymous_namespace_load_U0" RTLNAME="vae_feature_sender_p_anonymous_namespace_load">
+      <SubModules count="1">grp_p_anonymous_namespace_load_Pipeline_read_ddr_fu_90</SubModules>
+      <Resources FF="179" LUT="49"/>
+      <LocalResources FF="106" LUT="16"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_load_U0/grp_p_anonymous_namespace_load_Pipeline_read_ddr_fu_90" DEPTH="2" TYPE="function" MODULENAME="p_anonymous_namespace_load_Pipeline_read_ddr" DISPNAME="grp_p_anonymous_namespace_load_Pipeline_read_ddr_fu_90" RTLNAME="vae_feature_sender_p_anonymous_namespace_load_Pipeline_read_ddr">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="73" LUT="33"/>
+      <LocalResources FF="71" LUT="26"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_load_U0/grp_p_anonymous_namespace_load_Pipeline_read_ddr_fu_90/flow_control_loop_pipe_sequential_init_U" BINDMODULE="vae_feature_sender_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="vae_feature_sender_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_pace_send_U0" DEPTH="1" TYPE="function" MODULENAME="p_anonymous_namespace_pace_send" DISPNAME="p_anonymous_namespace_pace_send_U0" RTLNAME="vae_feature_sender_p_anonymous_namespace_pace_send">
+      <SubModules count="3">grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88 regslice_both_m_axis_features_V_data_V_U regslice_both_m_axis_features_V_last_V_U</SubModules>
+      <Resources FF="446" LUT="213"/>
+      <LocalResources FF="134" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88" DEPTH="2" TYPE="function" MODULENAME="p_anonymous_namespace_pace_send_Pipeline_send" DISPNAME="grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88" RTLNAME="vae_feature_sender_p_anonymous_namespace_pace_send_Pipeline_send">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="238" LUT="177"/>
+      <LocalResources FF="236" LUT="101"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U" BINDMODULE="vae_feature_sender_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="vae_feature_sender_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="76"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_pace_send_U0/regslice_both_m_axis_features_V_data_V_U" BINDMODULE="vae_feature_sender_regslice_both" DEPTH="2" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_m_axis_features_V_data_V_U" RTLNAME="vae_feature_sender_regslice_both">
+      <Resources FF="68" LUT="27"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_pace_send_U0/regslice_both_m_axis_features_V_last_V_U" BINDMODULE="vae_feature_sender_regslice_both" DEPTH="2" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_m_axis_features_V_last_V_U" RTLNAME="vae_feature_sender_regslice_both">
+      <Resources FF="6" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_store_stamps_U0" DEPTH="1" TYPE="function" MODULENAME="p_anonymous_namespace_store_stamps" DISPNAME="p_anonymous_namespace_store_stamps_U0" RTLNAME="vae_feature_sender_p_anonymous_namespace_store_stamps">
+      <SubModules count="1">grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77</SubModules>
+      <Resources FF="141" LUT="126"/>
+      <LocalResources FF="104" LUT="54"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_store_stamps_U0/grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77" DEPTH="2" TYPE="function" MODULENAME="p_anonymous_namespace_store_stamps_Pipeline_write_stamps" DISPNAME="grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77" RTLNAME="vae_feature_sender_p_anonymous_namespace_store_stamps_Pipeline_write_stamps">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="37" LUT="72"/>
+      <LocalResources FF="35" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="inst/p_anonymous_namespace_store_stamps_U0/grp_p_anonymous_namespace_store_stamps_Pipeline_write_stamps_fu_77/flow_control_loop_pipe_sequential_init_U" BINDMODULE="vae_feature_sender_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="vae_feature_sender_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="62"/>
+    </RtlModule>
+    <RtlModule CELL="inst/period_c_U" BINDMODULE="vae_feature_sender_fifo_w32_d3_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d3_S" DISPNAME="period_c_U" RTLNAME="vae_feature_sender_fifo_w32_d3_S">
+      <Resources FF="5" LUT="40"/>
+      <LocalResources FF="5" LUT="6"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="period_c_U" SOURCE="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106" STORAGESIZE="32 3 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="period_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/stamps_U" BINDMODULE="vae_feature_sender_fifo_w64_d64_A" DEPTH="1" TYPE="resource" MODULENAME="fifo_w64_d64_A" DISPNAME="stamps_U" RTLNAME="vae_feature_sender_fifo_w64_d64_A">
+      <Resources BRAM="2" FF="29" LUT="30"/>
+      <LocalResources FF="29" LUT="30"/>
+      <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="stamps_U" SOURCE="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:109" STORAGESIZE="64 64 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="stamps"/>
+    </RtlModule>
+    <RtlModule CELL="inst/start_for_p_anonymous_namespace_pace_send_U0_U" BINDMODULE="vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0" DEPTH="1" TYPE="rtl" MODULENAME="start_for_p_anonymous_namespace_pace_send_U0" DISPNAME="start_for_p_anonymous_namespace_pace_send_U0_U" RTLNAME="vae_feature_sender_start_for_p_anonymous_namespace_pace_send_U0">
+      <Resources FF="4" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/start_for_p_anonymous_namespace_store_stamps_U0_U" BINDMODULE="vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0" DEPTH="1" TYPE="rtl" MODULENAME="start_for_p_anonymous_namespace_store_stamps_U0" DISPNAME="start_for_p_anonymous_namespace_store_stamps_U0_U" RTLNAME="vae_feature_sender_start_for_p_anonymous_namespace_store_stamps_U0">
+      <Resources FF="5" LUT="5"/>
+    </RtlModule>
+    <RtlModule CELL="inst/t_send_c_U" BINDMODULE="vae_feature_sender_fifo_w64_d4_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w64_d4_S" DISPNAME="t_send_c_U" RTLNAME="vae_feature_sender_fifo_w64_d4_S">
+      <Resources FF="5" LUT="68"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="t_send_c_U" SOURCE="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:106" STORAGESIZE="64 4 1" STORAGESUBTYPE="scalar prop" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="t_send_c"/>
+    </RtlModule>
+    <RtlModule CELL="inst/words_U" BINDMODULE="vae_feature_sender_fifo_w32_d256_A" DEPTH="1" TYPE="resource" MODULENAME="fifo_w32_d256_A" DISPNAME="words_U" RTLNAME="vae_feature_sender_fifo_w32_d256_A">
+      <Resources BRAM="1" FF="37" LUT="58"/>
+      <LocalResources FF="37" LUT="42"/>
+      <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="words_U" SOURCE="/home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:108" STORAGESIZE="32 256 1" STORAGESUBTYPE="stream" STORAGEUSAGE="fifo channel" URAM="0" VARIABLE="words"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="6.534" DATAPATH_LOGIC_DELAY="3.110" DATAPATH_NET_DELAY="3.424" ENDPOINT_PIN="words_U/mOutPtr_reg[6]/D" LOGIC_LEVELS="10" MAX_FANOUT="124" SLACK="3.491" STARTPOINT_PIN="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C">
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="223"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr[4]_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="9"/>
+      <CELL NAME="words_U/mOutPtr_reg[4]_i_1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[6]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="118"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.528" DATAPATH_LOGIC_DELAY="3.104" DATAPATH_NET_DELAY="3.424" ENDPOINT_PIN="words_U/mOutPtr_reg[8]/D" LOGIC_LEVELS="10" MAX_FANOUT="124" SLACK="3.497" STARTPOINT_PIN="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C">
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="223"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr[4]_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="9"/>
+      <CELL NAME="words_U/mOutPtr_reg[4]_i_1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[8]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="118"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.453" DATAPATH_LOGIC_DELAY="3.029" DATAPATH_NET_DELAY="3.424" ENDPOINT_PIN="words_U/mOutPtr_reg[7]/D" LOGIC_LEVELS="10" MAX_FANOUT="124" SLACK="3.572" STARTPOINT_PIN="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C">
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="223"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr[4]_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="9"/>
+      <CELL NAME="words_U/mOutPtr_reg[4]_i_1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[7]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="118"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.429" DATAPATH_LOGIC_DELAY="3.005" DATAPATH_NET_DELAY="3.424" ENDPOINT_PIN="words_U/mOutPtr_reg[5]/D" LOGIC_LEVELS="10" MAX_FANOUT="124" SLACK="3.596" STARTPOINT_PIN="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C">
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="223"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr[4]_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="9"/>
+      <CELL NAME="words_U/mOutPtr_reg[4]_i_1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[8]_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="118"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="6.283" DATAPATH_LOGIC_DELAY="2.868" DATAPATH_NET_DELAY="3.415" ENDPOINT_PIN="words_U/mOutPtr_reg[4]/D" LOGIC_LEVELS="9" MAX_FANOUT="124" SLACK="3.742" STARTPOINT_PIN="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C">
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="223"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="69"/>
+      <CELL NAME="p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr[4]_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="9"/>
+      <CELL NAME="words_U/mOutPtr_reg[4]_i_1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="88"/>
+      <CELL NAME="words_U/mOutPtr_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="118"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/vae_feature_sender_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/vae_feature_sender_failfast_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/vae_feature_sender_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/vae_feature_sender_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/vae_feature_sender_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/vae_feature_sender_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Sun Nov 22 22:42:40 IST 2026"/>
+    <item NAME="Version" VALUE="2023.2 (Build 4023990 on Oct 11 2023)"/>
+    <item NAME="Project" VALUE="vae_feature_sender_ip"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg400-1"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="2 ns"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

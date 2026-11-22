@@ -1,0 +1,287 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "1 18",
+    "file": "vae_axis.cpp",
+    "fileloc": 25,
+    "instructions": 154,
+    "loads": {
+      "L": 6
+    },
+    "name": "vae_axis",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 25317
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "12 2 6 11 5 17 10 16 3 13",
+    "file": "vae_core.cpp",
+    "fileloc": 7,
+    "instructions": 103,
+    "name": "vae_core",
+    "total_instructions": 24333
+  },
+  "10": {
+    "basicblocks": 372,
+    "calls": "",
+    "file": "nnet_activation.h",
+    "fileloc": 39,
+    "instructions": 721,
+    "loads": {
+      "L": 16
+    },
+    "name": "relu<ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, ap_ufixed<18, 4, AP_RND_CONV, AP_SAT, 0>, relu_config8>",
+    "stores": {
+      "L": 32
+    },
+    "total_instructions": 721
+  },
+  "11": {
+    "basicblocks": 372,
+    "calls": "",
+    "file": "nnet_activation.h",
+    "fileloc": 39,
+    "instructions": 721,
+    "loads": {
+      "L": 16
+    },
+    "name": "relu<ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, ap_ufixed<18, 4, AP_RND_CONV, AP_SAT, 0>, relu_config5>",
+    "stores": {
+      "L": 32
+    },
+    "total_instructions": 721
+  },
+  "12": {
+    "basicblocks": 516,
+    "calls": "9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9",
+    "file": "nnet_dense_resource.h",
+    "fileloc": 87,
+    "instructions": 1528,
+    "loads": {
+      "G": 17,
+      "L": 113
+    },
+    "name": "dense_resource_rf_gt_nin_rem0<ap_fixed<25, 9, AP_TRN, AP_WRAP, 0>, ap_fixed<18, 4, AP_RND_CONV, AP_SAT, 0>, config2>",
+    "stores": {
+      "L": 128
+    },
+    "total_instructions": 4696
+  },
+  "13": {
+    "basicblocks": 476,
+    "calls": "4 4 4 4 4 4 4 4",
+    "file": "nnet_dense_resource.h",
+    "fileloc": 13,
+    "instructions": 1381,
+    "loads": {
+      "G": 16,
+      "L": 80
+    },
+    "name": "dense_resource_rf_leq_nin<ap_ufixed<18, 5, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 4, AP_RND_CONV, AP_SAT, 0>, config11>",
+    "stores": {
+      "L": 56
+    },
+    "total_instructions": 2173
+  },
+  "14": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "nnet_mult.h",
+    "fileloc": 110,
+    "instructions": 99,
+    "loads": {
+      "L": 9
+    },
+    "name": "cast<ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, config7>",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 99
+  },
+  "15": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "nnet_mult.h",
+    "fileloc": 110,
+    "instructions": 99,
+    "loads": {
+      "L": 9
+    },
+    "name": "cast<ap_ufixed<18, 4, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 6, AP_RND_CONV, AP_SAT, 0>, config9>",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 99
+  },
+  "16": {
+    "basicblocks": 908,
+    "calls": "15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15",
+    "file": "nnet_dense_resource.h",
+    "fileloc": 13,
+    "instructions": 2674,
+    "loads": {
+      "G": 32,
+      "L": 192
+    },
+    "name": "dense_resource_rf_leq_nin<ap_ufixed<18, 4, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 6, AP_RND_CONV, AP_SAT, 0>, config9>",
+    "stores": {
+      "L": 160
+    },
+    "total_instructions": 5842
+  },
+  "17": {
+    "basicblocks": 176,
+    "calls": "14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14",
+    "file": "nnet_dense_resource.h",
+    "fileloc": 87,
+    "instructions": 532,
+    "loads": {
+      "G": 5,
+      "L": 45
+    },
+    "name": "dense_resource_rf_gt_nin_rem0<ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, config7>",
+    "stores": {
+      "L": 56
+    },
+    "total_instructions": 2116
+  },
+  "18": {
+    "basicblocks": 359,
+    "calls": "",
+    "file": "vae_axis.cpp",
+    "fileloc": 12,
+    "instructions": 830,
+    "loads": {
+      "L": 49
+    },
+    "name": "reconstruction_score",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 830
+  },
+  "2": {
+    "basicblocks": 740,
+    "calls": "",
+    "file": "nnet_activation.h",
+    "fileloc": 39,
+    "instructions": 1441,
+    "loads": {
+      "L": 32
+    },
+    "name": "relu<ap_fixed<18, 4, AP_RND_CONV, AP_SAT, 0>, ap_ufixed<18, 3, AP_RND_CONV, AP_SAT, 0>, relu_config3>",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 1441
+  },
+  "3": {
+    "basicblocks": 740,
+    "calls": "",
+    "file": "nnet_activation.h",
+    "fileloc": 39,
+    "instructions": 1441,
+    "loads": {
+      "L": 32
+    },
+    "name": "relu<ap_fixed<18, 6, AP_RND_CONV, AP_SAT, 0>, ap_ufixed<18, 5, AP_RND_CONV, AP_SAT, 0>, relu_config10>",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 1441
+  },
+  "4": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "nnet_mult.h",
+    "fileloc": 110,
+    "instructions": 99,
+    "loads": {
+      "L": 9
+    },
+    "name": "cast<ap_ufixed<18, 5, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 4, AP_RND_CONV, AP_SAT, 0>, config11>",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 99
+  },
+  "5": {
+    "basicblocks": 124,
+    "calls": "8 8 8 8",
+    "file": "nnet_dense_resource.h",
+    "fileloc": 13,
+    "instructions": 350,
+    "loads": {
+      "G": 4,
+      "L": 24
+    },
+    "name": "dense_resource_rf_leq_nin<ap_ufixed<18, 4, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, config6>",
+    "stores": {
+      "L": 20
+    },
+    "total_instructions": 746
+  },
+  "6": {
+    "basicblocks": 940,
+    "calls": "7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+    "file": "nnet_dense_resource.h",
+    "fileloc": 13,
+    "instructions": 2749,
+    "loads": {
+      "G": 32,
+      "L": 160
+    },
+    "name": "dense_resource_rf_leq_nin<ap_ufixed<18, 3, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, config4>",
+    "stores": {
+      "L": 112
+    },
+    "total_instructions": 4333
+  },
+  "7": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "nnet_mult.h",
+    "fileloc": 110,
+    "instructions": 99,
+    "loads": {
+      "L": 9
+    },
+    "name": "cast<ap_ufixed<18, 3, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, config4>",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 99
+  },
+  "8": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "nnet_mult.h",
+    "fileloc": 110,
+    "instructions": 99,
+    "loads": {
+      "L": 9
+    },
+    "name": "cast<ap_ufixed<18, 4, AP_RND_CONV, AP_SAT, 0>, ap_fixed<18, 5, AP_RND_CONV, AP_SAT, 0>, config6>",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 99
+  },
+  "9": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "nnet_mult.h",
+    "fileloc": 110,
+    "instructions": 99,
+    "loads": {
+      "L": 9
+    },
+    "name": "cast<ap_fixed<25, 9, AP_TRN, AP_WRAP, 0>, ap_fixed<18, 4, AP_RND_CONV, AP_SAT, 0>, config2>",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 99
+  }
+}

@@ -1,0 +1,16 @@
+185 ports -> ports.svh
+== period 0, 512 flows
+RESULT flows=512 period=0 mem_latency=40 mismatches=0
+RESULT latency_cycles min=161 mean=171.98 max=172
+RESULT output_interval_cycles=19.998  start_to_done_cycles=10539
+PASS
+== period 16, 512 flows
+RESULT flows=512 period=16 mem_latency=40 mismatches=0
+RESULT latency_cycles min=161 mean=171.96 max=172
+RESULT output_interval_cycles=19.998  start_to_done_cycles=10539
+PASS
+== period 1000, 128 flows
+RESULT flows=128 period=1000 mem_latency=40 mismatches=0
+RESULT latency_cycles min=161 mean=161.00 max=161
+RESULT output_interval_cycles=1000.000  start_to_done_cycles=127320
+PASS

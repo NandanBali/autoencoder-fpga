@@ -1,0 +1,55 @@
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:1321:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:1321:7: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:2295:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:2295:5: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:2309:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:2309:5: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:2323:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:2323:5: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:3952:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:3952:7: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:9814:9: warning: Added loop label VITIS_LOOP_27_1:   [xilinx-label-all-loops]
+        for (unsigned i = 0; i < N; i++) {
+        ^~~
+        VITIS_LOOP_27_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:9814:9: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:9826:9: warning: Added loop label VITIS_LOOP_39_1:   [xilinx-label-all-loops]
+        for (unsigned i = 0; i < N; i++) {
+        ^~~
+        VITIS_LOOP_39_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:9826:9: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:9843:9: warning: Added loop label VITIS_LOOP_56_1:   [xilinx-label-all-loops]
+        for (size_t i = 0; i < N; i++) {
+        ^~~
+        VITIS_LOOP_56_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:9843:9: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:28688:5: warning: Added loop label VITIS_LOOP_14_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < kFeatureCount; ++i) {
+    ^~~
+    VITIS_LOOP_14_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:28688:5: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:28721:5: warning: Added loop label VITIS_LOOP_43_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < kFeatureCount; ++i) {
+    ^~~
+    VITIS_LOOP_43_1: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:28721:5: note: FIX-IT applied suggested code changes
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:28734:9: warning: Added loop label VITIS_LOOP_56_2:   [xilinx-label-all-loops]
+        do {
+        ^~
+        VITIS_LOOP_56_2: 
+/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_axis.pp.0.cpp:28734:9: note: FIX-IT applied suggested code changes

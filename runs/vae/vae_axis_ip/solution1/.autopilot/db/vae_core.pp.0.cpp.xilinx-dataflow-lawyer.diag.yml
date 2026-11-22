@@ -1,0 +1,52 @@
+---
+MainSourceFile:  /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_ip/solution1/.autopilot/db/vae_core.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '69:57'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '69:61'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '73:70'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '73:74'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '77:70'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '77:74'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '79:70'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '79:74'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '83:70'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '83:74'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '87:74'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '87:79'
+    FilePath:        /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/hls4ml_prj/firmware/vae_core.cpp
+...

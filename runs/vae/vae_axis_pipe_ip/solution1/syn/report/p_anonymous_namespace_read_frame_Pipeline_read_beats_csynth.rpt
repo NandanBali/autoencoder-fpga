@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_read_frame_Pipeline_read_beats'
+================================================================
+* Date:           Sun Nov 22 20:17:02 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        vae_axis_pipe_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.889 ns|     3.50 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|       10|  20.000 ns|  0.100 us|    2|   10|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |              |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |   Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +--------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- read_beats  |        0|        8|         1|          1|          1|  0 ~ 8|       yes|
+        +--------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     36|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    100|    -|
+|Register         |        -|    -|      11|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      11|    136|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln42_fu_157_p2                |         +|   0|  0|  13|           4|           1|
+    |and_ln45_fu_188_p2                |       and|   0|  0|   4|           4|           4|
+    |valid_bytes_1_fu_194_p2           |       and|   0|  0|   4|           4|           4|
+    |icmp_ln42_fu_151_p2               |      icmp|   0|  0|  13|           4|           5|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  36|          17|          15|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                             |   9|          2|    1|          2|
+    |ap_phi_mux_UnifiedRetVal_phi_fu_125_p4  |  14|          3|    1|          3|
+    |ap_return                               |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1                    |   9|          2|    4|          8|
+    |ap_sig_allocacmp_valid_bytes_load       |   9|          2|    4|          8|
+    |ap_sig_allocacmp_valid_bytes_load_1     |   9|          2|    4|          8|
+    |i_fu_72                                 |   9|          2|    4|          8|
+    |s_axis_features_TDATA_blk_n             |   9|          2|    1|          2|
+    |valid_bytes_fu_68                       |   9|          2|    4|          8|
+    |valid_bytes_out                         |  14|          3|    4|         12|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   | 100|         22|   28|         61|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------+---+----+-----+-----------+
+    |        Name       | FF| LUT| Bits| Const Bits|
+    +-------------------+---+----+-----+-----------+
+    |ap_CS_fsm          |  1|   0|    1|          0|
+    |ap_done_reg        |  1|   0|    1|          0|
+    |ap_return_preg     |  1|   0|    1|          0|
+    |i_fu_72            |  4|   0|    4|          0|
+    |valid_bytes_fu_68  |  4|   0|    4|          0|
+    +-------------------+---+----+-----+-----------+
+    |Total              | 11|   0|   11|          0|
+    +-------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |                    Source Object                    |    C Type    |
++--------------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame_Pipeline_read_beats|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame_Pipeline_read_beats|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame_Pipeline_read_beats|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame_Pipeline_read_beats|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame_Pipeline_read_beats|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame_Pipeline_read_beats|  return value|
+|ap_return                 |  out|    1|  ap_ctrl_hs|  (anonymous namespace)read_frame_Pipeline_read_beats|  return value|
+|s_axis_features_TVALID    |   in|    1|        axis|                             s_axis_features_V_data_V|       pointer|
+|s_axis_features_TDATA     |   in|   32|        axis|                             s_axis_features_V_data_V|       pointer|
+|s_axis_features_TREADY    |  out|    1|        axis|                             s_axis_features_V_last_V|       pointer|
+|s_axis_features_TLAST     |   in|    1|        axis|                             s_axis_features_V_last_V|       pointer|
+|s_axis_features_TKEEP     |   in|    4|        axis|                             s_axis_features_V_keep_V|       pointer|
+|s_axis_features_TSTRB     |   in|    4|        axis|                             s_axis_features_V_strb_V|       pointer|
+|f_x_address0              |  out|    3|   ap_memory|                                                  f_x|         array|
+|f_x_ce0                   |  out|    1|   ap_memory|                                                  f_x|         array|
+|f_x_we0                   |  out|    1|   ap_memory|                                                  f_x|         array|
+|f_x_d0                    |  out|   25|   ap_memory|                                                  f_x|         array|
+|i_out                     |  out|    3|      ap_vld|                                                i_out|       pointer|
+|i_out_ap_vld              |  out|    1|      ap_vld|                                                i_out|       pointer|
+|valid_bytes_out           |  out|    4|      ap_vld|                                      valid_bytes_out|       pointer|
+|valid_bytes_out_ap_vld    |  out|    1|      ap_vld|                                      valid_bytes_out|       pointer|
+|valid_bytes_1_out         |  out|    4|      ap_vld|                                    valid_bytes_1_out|       pointer|
+|valid_bytes_1_out_ap_vld  |  out|    1|      ap_vld|                                    valid_bytes_1_out|       pointer|
++--------------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+

@@ -1,0 +1,548 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/opt/AMD/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_vae_axis.cpp
+   Compiling apatb_vae_axis_util.cpp
+   Compiling test_vae_axis.cpp_pre.cpp.tb.cpp
+   Compiling vae_axis.cpp_pre.cpp.tb.cpp
+   Compiling vae_core.cpp_pre.cpp.tb.cpp
+   Compiling apatb_vae_axis_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+VAE AXI4-Stream tests passed (256 golden vectors + framing)
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 51
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/AMD/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_vae_axis_top glbl -Oenable_linking_all_libraries -prj vae_axis.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_16 -L floating_point_v7_0_21 --lib ieee_proposed=./ieee_proposed -s vae_axis 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_vae_axis_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/AESL_axi_s_s_axis_features.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_s_axis_features
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/AESL_axi_s_m_axis_score.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_m_axis_score
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_p_anonymous_namespace_read_frame_Pipeline_read_beats.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_p_anonymous_namespace_read_frame_Pipeline_read_beats
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_p_anonymous_namespace_read_frame_Pipeline_drain.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_p_anonymous_namespace_read_frame_Pipeline_drain
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_p_anonymous_namespace_read_frame.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_p_anonymous_namespace_read_frame
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_cast_ap_fixed_25_9_5_3_0_ap_fixed_18_4_4_0_0_config2_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_cast_ap_fixed_25_9_5_3_0_ap_fixed_18_4_4_0_0_config2_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_relu_ap_fixed_18_4_4_0_0_ap_ufixed_18_3_4_0_0_relu_config3_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_relu_ap_fixed_18_4_4_0_0_ap_ufixed_18_3_4_0_0_relu_config3_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_cast_ap_ufixed_18_3_4_0_0_ap_fixed_18_5_4_0_0_config4_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_relu_ap_fixed_18_5_4_0_0_ap_ufixed_18_4_4_0_0_relu_config5_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_relu_ap_fixed_18_5_4_0_0_ap_ufixed_18_4_4_0_0_relu_config5_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_5_4_0_0_config6_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_5_4_0_0_config6_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config6_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config6_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_cast_ap_fixed_18_5_4_0_0_ap_fixed_18_5_4_0_0_config7_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_5_4_0_0_config7_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_5_4_0_0_config7_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_relu_ap_fixed_18_5_4_0_0_ap_ufixed_18_4_4_0_0_relu_config8_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_relu_ap_fixed_18_5_4_0_0_ap_ufixed_18_4_4_0_0_relu_config8_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_cast_ap_ufixed_18_4_4_0_0_ap_fixed_18_6_4_0_0_config9_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_relu_ap_fixed_18_6_4_0_0_ap_ufixed_18_5_4_0_0_relu_config10_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_relu_ap_fixed_18_6_4_0_0_ap_ufixed_18_5_4_0_0_relu_config10_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_cast_ap_ufixed_18_5_4_0_0_ap_fixed_18_4_4_0_0_config11_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_4_4_0_0_config11_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_4_4_0_0_config11_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_vae_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_vae_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_p_anonymous_namespace_score_and_write.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_p_anonymous_namespace_score_and_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_regslice_both
+INFO: [VRFC 10-311] analyzing module vae_axis_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_frp_fifoout.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_frp_fifoout
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_frp_pipeline_valid.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_frp_pipeline_valid
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_p_anonymous_namespace_read_frame_f_x_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_p_anonymous_namespace_read_frame_f_x_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_8s_6ns_8_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_8s_6ns_8_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_25s_18s_39_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_25s_18s_39_3_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_25s_16s_39_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_25s_16s_39_3_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_s_outidx_4bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_s_outidx_4bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_s_w2_ROM_Ncud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_4_4_0_0_config2_s_w2_ROM_Ncud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_sparsemux_33_4_18_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_sparsemux_33_4_18_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_18s_18ns_36_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_18s_18ns_36_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_18ns_15s_33_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_18ns_15s_33_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_s_w4_ROM_NP_BdEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_s_w4_ROM_NP_BdEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_18ns_14s_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_18ns_14s_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config6_s_w6_ROM_NP_BeOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config6_s_w6_ROM_NP_BeOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_sparsemux_9_2_18_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_sparsemux_9_2_18_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_18s_18s_36_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_18s_18s_36_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_18s_17s_35_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_18s_17s_35_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_sparsemux_9_2_30_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_sparsemux_9_2_30_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_5_4_0_0_config7_s_outidx_RfYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_5_4_0_0_config7_s_outidx_RfYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_5_4_0_0_config7_s_w7_ROM_Ng8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_18_5_4_0_0_config7_s_w7_ROM_Ng8j
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_s_w9_ROM_NP_Bhbi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_6_4_0_0_config9_s_w9_ROM_NP_Bhbi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_18ns_17s_35_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_18ns_17s_35_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_4_4_0_0_config11_s_w11_ROM_NPibs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_4_4_0_0_config11_s_w11_ROM_NPibs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_fifo_w18_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_fifo_w18_d2_S
+INFO: [VRFC 10-311] analyzing module vae_axis_fifo_w18_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_mul_26s_26s_50_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_mul_26s_26s_50_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_fifo_w201_d16_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_fifo_w201_d16_A
+INFO: [VRFC 10-311] analyzing module vae_axis_fifo_w201_d16_A_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_fifo_w200_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_fifo_w200_d2_S
+INFO: [VRFC 10-311] analyzing module vae_axis_fifo_w200_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_fifo_w18_d2_S_x.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vae_axis_fifo_w18_d2_S_x
+INFO: [VRFC 10-311] analyzing module vae_axis_fifo_w18_d2_S_x_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_fifo_w18_d2_S.v:49]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_fifo_w200_d2_S.v:49]
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis_fifo_w18_d2_S_x.v:49]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.vae_axis_p_anonymous_namespace_r...
+Compiling module xil_defaultlib.vae_axis_flow_control_loop_pipe_...
+Compiling module xil_defaultlib.vae_axis_p_anonymous_namespace_r...
+Compiling module xil_defaultlib.vae_axis_p_anonymous_namespace_r...
+Compiling module xil_defaultlib.vae_axis_regslice_both
+Compiling module xil_defaultlib.vae_axis_regslice_both(DataWidth...
+Compiling module xil_defaultlib.vae_axis_regslice_both(DataWidth...
+Compiling module xil_defaultlib.vae_axis_p_anonymous_namespace_r...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_gt_ni...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_gt_ni...
+Compiling module xil_defaultlib.vae_axis_cast_ap_fixed_25_9_5_3_...
+Compiling module xil_defaultlib.vae_axis_mul_8s_6ns_8_1_1(NUM_ST...
+Compiling module xil_defaultlib.vae_axis_mul_25s_18s_39_3_1(NUM_...
+Compiling module xil_defaultlib.vae_axis_mul_25s_16s_39_3_1(NUM_...
+Compiling module xil_defaultlib.vae_axis_flow_control_loop_pipe
+Compiling module xil_defaultlib.vae_axis_frp_pipeline_valid(Pipe...
+Compiling module xil_defaultlib.vae_axis_frp_fifoout(BlockingTyp...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_gt_ni...
+Compiling module xil_defaultlib.vae_axis_relu_ap_fixed_18_4_4_0_...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_leq_n...
+Compiling module xil_defaultlib.vae_axis_cast_ap_ufixed_18_3_4_0...
+Compiling module xil_defaultlib.vae_axis_sparsemux_33_4_18_1_1(d...
+Compiling module xil_defaultlib.vae_axis_mul_18s_18ns_36_1_1(NUM...
+Compiling module xil_defaultlib.vae_axis_mul_18ns_15s_33_1_1(NUM...
+Compiling module xil_defaultlib.vae_axis_frp_pipeline_valid(Pipe...
+Compiling module xil_defaultlib.vae_axis_frp_fifoout(BlockingTyp...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_leq_n...
+Compiling module xil_defaultlib.vae_axis_relu_ap_fixed_18_5_4_0_...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_leq_n...
+Compiling module xil_defaultlib.vae_axis_cast_ap_ufixed_18_4_4_0...
+Compiling module xil_defaultlib.vae_axis_mul_18ns_14s_32_1_1(NUM...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_leq_n...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_gt_ni...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_gt_ni...
+Compiling module xil_defaultlib.vae_axis_cast_ap_fixed_18_5_4_0_...
+Compiling module xil_defaultlib.vae_axis_sparsemux_9_2_18_1_1(di...
+Compiling module xil_defaultlib.vae_axis_mul_18s_18s_36_1_1(NUM_...
+Compiling module xil_defaultlib.vae_axis_mul_18s_17s_35_1_1(NUM_...
+Compiling module xil_defaultlib.vae_axis_sparsemux_9_2_30_1_1(di...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_gt_ni...
+Compiling module xil_defaultlib.vae_axis_relu_ap_fixed_18_5_4_0_...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_leq_n...
+Compiling module xil_defaultlib.vae_axis_cast_ap_ufixed_18_4_4_0...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_leq_n...
+Compiling module xil_defaultlib.vae_axis_relu_ap_fixed_18_6_4_0_...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_leq_n...
+Compiling module xil_defaultlib.vae_axis_cast_ap_ufixed_18_5_4_0...
+Compiling module xil_defaultlib.vae_axis_mul_18ns_17s_35_1_1(NUM...
+Compiling module xil_defaultlib.vae_axis_dense_resource_rf_leq_n...
+Compiling module xil_defaultlib.vae_axis_fifo_w18_d2_S_ShiftReg
+Compiling module xil_defaultlib.vae_axis_fifo_w18_d2_S
+Compiling module xil_defaultlib.vae_axis_vae_core
+Compiling module xil_defaultlib.vae_axis_mul_26s_26s_50_4_1(NUM_...
+Compiling module xil_defaultlib.vae_axis_regslice_both(DataWidth...
+Compiling module xil_defaultlib.vae_axis_regslice_both(DataWidth...
+Compiling module xil_defaultlib.vae_axis_p_anonymous_namespace_s...
+Compiling module xil_defaultlib.vae_axis_fifo_w201_d16_A_ram
+Compiling module xil_defaultlib.vae_axis_fifo_w201_d16_A
+Compiling module xil_defaultlib.vae_axis_fifo_w200_d2_S_ShiftReg
+Compiling module xil_defaultlib.vae_axis_fifo_w200_d2_S
+Compiling module xil_defaultlib.vae_axis_fifo_w18_d2_S_x_ShiftRe...
+Compiling module xil_defaultlib.vae_axis_fifo_w18_d2_S_x
+Compiling module xil_defaultlib.vae_axis
+Compiling module xil_defaultlib.fifo(DEPTH=10,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=10,WIDTH=4)
+Compiling module xil_defaultlib.fifo(DEPTH=10,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_s_axis_features
+Compiling module xil_defaultlib.fifo(DEPTH=2,WIDTH=64)
+Compiling module xil_defaultlib.fifo(DEPTH=2)
+Compiling module xil_defaultlib.fifo(DEPTH=2,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_m_axis_score
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.df_fifo_intf
+Compiling module xil_defaultlib.df_process_intf
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.rewind_loop_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_vae_axis_top
+Compiling module work.glbl
+Built simulation snapshot vae_axis
+
+****** xsim v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/vae_axis/xsim_script.tcl
+# xsim {vae_axis} -autoloadwcfg -tclbatch {vae_axis.tcl}
+Time resolution is 1 ps
+source vae_axis.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 263 [n/a] @ "125000"
+// RTL Simulation : 1 / 263 [n/a] @ "1765000"
+// RTL Simulation : 2 / 263 [n/a] @ "1955000"
+// RTL Simulation : 3 / 263 [n/a] @ "2155000"
+// RTL Simulation : 4 / 263 [n/a] @ "2355000"
+// RTL Simulation : 5 / 263 [n/a] @ "2555000"
+// RTL Simulation : 6 / 263 [n/a] @ "2755000"
+// RTL Simulation : 7 / 263 [n/a] @ "2955000"
+// RTL Simulation : 8 / 263 [n/a] @ "3155000"
+// RTL Simulation : 9 / 263 [n/a] @ "3355000"
+// RTL Simulation : 10 / 263 [n/a] @ "3555000"
+// RTL Simulation : 11 / 263 [n/a] @ "3755000"
+// RTL Simulation : 12 / 263 [n/a] @ "3955000"
+// RTL Simulation : 13 / 263 [n/a] @ "4155000"
+// RTL Simulation : 14 / 263 [n/a] @ "4355000"
+// RTL Simulation : 15 / 263 [n/a] @ "4555000"
+// RTL Simulation : 16 / 263 [n/a] @ "4755000"
+// RTL Simulation : 17 / 263 [n/a] @ "4955000"
+// RTL Simulation : 18 / 263 [n/a] @ "5155000"
+// RTL Simulation : 19 / 263 [n/a] @ "5355000"
+// RTL Simulation : 20 / 263 [n/a] @ "5555000"
+// RTL Simulation : 21 / 263 [n/a] @ "5755000"
+// RTL Simulation : 22 / 263 [n/a] @ "5955000"
+// RTL Simulation : 23 / 263 [n/a] @ "6155000"
+// RTL Simulation : 24 / 263 [n/a] @ "6355000"
+// RTL Simulation : 25 / 263 [n/a] @ "6555000"
+// RTL Simulation : 26 / 263 [n/a] @ "6755000"
+// RTL Simulation : 27 / 263 [n/a] @ "6955000"
+// RTL Simulation : 28 / 263 [n/a] @ "7155000"
+// RTL Simulation : 29 / 263 [n/a] @ "7355000"
+// RTL Simulation : 30 / 263 [n/a] @ "7555000"
+// RTL Simulation : 31 / 263 [n/a] @ "7755000"
+// RTL Simulation : 32 / 263 [n/a] @ "7955000"
+// RTL Simulation : 33 / 263 [n/a] @ "8155000"
+// RTL Simulation : 34 / 263 [n/a] @ "8355000"
+// RTL Simulation : 35 / 263 [n/a] @ "8555000"
+// RTL Simulation : 36 / 263 [n/a] @ "8755000"
+// RTL Simulation : 37 / 263 [n/a] @ "8955000"
+// RTL Simulation : 38 / 263 [n/a] @ "9155000"
+// RTL Simulation : 39 / 263 [n/a] @ "9355000"
+// RTL Simulation : 40 / 263 [n/a] @ "9555000"
+// RTL Simulation : 41 / 263 [n/a] @ "9755000"
+// RTL Simulation : 42 / 263 [n/a] @ "9955000"
+// RTL Simulation : 43 / 263 [n/a] @ "10155000"
+// RTL Simulation : 44 / 263 [n/a] @ "10355000"
+// RTL Simulation : 45 / 263 [n/a] @ "10555000"
+// RTL Simulation : 46 / 263 [n/a] @ "10755000"
+// RTL Simulation : 47 / 263 [n/a] @ "10955000"
+// RTL Simulation : 48 / 263 [n/a] @ "11155000"
+// RTL Simulation : 49 / 263 [n/a] @ "11355000"
+// RTL Simulation : 50 / 263 [n/a] @ "11555000"
+// RTL Simulation : 51 / 263 [n/a] @ "11755000"
+// RTL Simulation : 52 / 263 [n/a] @ "11955000"
+// RTL Simulation : 53 / 263 [n/a] @ "12155000"
+// RTL Simulation : 54 / 263 [n/a] @ "12355000"
+// RTL Simulation : 55 / 263 [n/a] @ "12555000"
+// RTL Simulation : 56 / 263 [n/a] @ "12755000"
+// RTL Simulation : 57 / 263 [n/a] @ "12955000"
+// RTL Simulation : 58 / 263 [n/a] @ "13155000"
+// RTL Simulation : 59 / 263 [n/a] @ "13355000"
+// RTL Simulation : 60 / 263 [n/a] @ "13555000"
+// RTL Simulation : 61 / 263 [n/a] @ "13755000"
+// RTL Simulation : 62 / 263 [n/a] @ "13955000"
+// RTL Simulation : 63 / 263 [n/a] @ "14155000"
+// RTL Simulation : 64 / 263 [n/a] @ "14355000"
+// RTL Simulation : 65 / 263 [n/a] @ "14555000"
+// RTL Simulation : 66 / 263 [n/a] @ "14755000"
+// RTL Simulation : 67 / 263 [n/a] @ "14955000"
+// RTL Simulation : 68 / 263 [n/a] @ "15155000"
+// RTL Simulation : 69 / 263 [n/a] @ "15355000"
+// RTL Simulation : 70 / 263 [n/a] @ "15555000"
+// RTL Simulation : 71 / 263 [n/a] @ "15755000"
+// RTL Simulation : 72 / 263 [n/a] @ "15955000"
+// RTL Simulation : 73 / 263 [n/a] @ "16155000"
+// RTL Simulation : 74 / 263 [n/a] @ "16355000"
+// RTL Simulation : 75 / 263 [n/a] @ "16555000"
+// RTL Simulation : 76 / 263 [n/a] @ "16755000"
+// RTL Simulation : 77 / 263 [n/a] @ "16955000"
+// RTL Simulation : 78 / 263 [n/a] @ "17155000"
+// RTL Simulation : 79 / 263 [n/a] @ "17355000"
+// RTL Simulation : 80 / 263 [n/a] @ "17555000"
+// RTL Simulation : 81 / 263 [n/a] @ "17755000"
+// RTL Simulation : 82 / 263 [n/a] @ "17955000"
+// RTL Simulation : 83 / 263 [n/a] @ "18155000"
+// RTL Simulation : 84 / 263 [n/a] @ "18355000"
+// RTL Simulation : 85 / 263 [n/a] @ "18555000"
+// RTL Simulation : 86 / 263 [n/a] @ "18755000"
+// RTL Simulation : 87 / 263 [n/a] @ "18955000"
+// RTL Simulation : 88 / 263 [n/a] @ "19155000"
+// RTL Simulation : 89 / 263 [n/a] @ "19355000"
+// RTL Simulation : 90 / 263 [n/a] @ "19555000"
+// RTL Simulation : 91 / 263 [n/a] @ "19755000"
+// RTL Simulation : 92 / 263 [n/a] @ "19955000"
+// RTL Simulation : 93 / 263 [n/a] @ "20155000"
+// RTL Simulation : 94 / 263 [n/a] @ "20355000"
+// RTL Simulation : 95 / 263 [n/a] @ "20555000"
+// RTL Simulation : 96 / 263 [n/a] @ "20755000"
+// RTL Simulation : 97 / 263 [n/a] @ "20955000"
+// RTL Simulation : 98 / 263 [n/a] @ "21155000"
+// RTL Simulation : 99 / 263 [n/a] @ "21355000"
+// RTL Simulation : 100 / 263 [n/a] @ "21555000"
+// RTL Simulation : 101 / 263 [n/a] @ "21755000"
+// RTL Simulation : 102 / 263 [n/a] @ "21955000"
+// RTL Simulation : 103 / 263 [n/a] @ "22155000"
+// RTL Simulation : 104 / 263 [n/a] @ "22355000"
+// RTL Simulation : 105 / 263 [n/a] @ "22555000"
+// RTL Simulation : 106 / 263 [n/a] @ "22755000"
+// RTL Simulation : 107 / 263 [n/a] @ "22955000"
+// RTL Simulation : 108 / 263 [n/a] @ "23155000"
+// RTL Simulation : 109 / 263 [n/a] @ "23355000"
+// RTL Simulation : 110 / 263 [n/a] @ "23555000"
+// RTL Simulation : 111 / 263 [n/a] @ "23755000"
+// RTL Simulation : 112 / 263 [n/a] @ "23955000"
+// RTL Simulation : 113 / 263 [n/a] @ "24155000"
+// RTL Simulation : 114 / 263 [n/a] @ "24355000"
+// RTL Simulation : 115 / 263 [n/a] @ "24555000"
+// RTL Simulation : 116 / 263 [n/a] @ "24755000"
+// RTL Simulation : 117 / 263 [n/a] @ "24955000"
+// RTL Simulation : 118 / 263 [n/a] @ "25155000"
+// RTL Simulation : 119 / 263 [n/a] @ "25355000"
+// RTL Simulation : 120 / 263 [n/a] @ "25555000"
+// RTL Simulation : 121 / 263 [n/a] @ "25755000"
+// RTL Simulation : 122 / 263 [n/a] @ "25955000"
+// RTL Simulation : 123 / 263 [n/a] @ "26155000"
+// RTL Simulation : 124 / 263 [n/a] @ "26355000"
+// RTL Simulation : 125 / 263 [n/a] @ "26555000"
+// RTL Simulation : 126 / 263 [n/a] @ "26755000"
+// RTL Simulation : 127 / 263 [n/a] @ "26955000"
+// RTL Simulation : 128 / 263 [n/a] @ "27155000"
+// RTL Simulation : 129 / 263 [n/a] @ "27355000"
+// RTL Simulation : 130 / 263 [n/a] @ "27555000"
+// RTL Simulation : 131 / 263 [n/a] @ "27755000"
+// RTL Simulation : 132 / 263 [n/a] @ "27955000"
+// RTL Simulation : 133 / 263 [n/a] @ "28155000"
+// RTL Simulation : 134 / 263 [n/a] @ "28355000"
+// RTL Simulation : 135 / 263 [n/a] @ "28555000"
+// RTL Simulation : 136 / 263 [n/a] @ "28755000"
+// RTL Simulation : 137 / 263 [n/a] @ "28955000"
+// RTL Simulation : 138 / 263 [n/a] @ "29155000"
+// RTL Simulation : 139 / 263 [n/a] @ "29355000"
+// RTL Simulation : 140 / 263 [n/a] @ "29555000"
+// RTL Simulation : 141 / 263 [n/a] @ "29755000"
+// RTL Simulation : 142 / 263 [n/a] @ "29955000"
+// RTL Simulation : 143 / 263 [n/a] @ "30155000"
+// RTL Simulation : 144 / 263 [n/a] @ "30355000"
+// RTL Simulation : 145 / 263 [n/a] @ "30555000"
+// RTL Simulation : 146 / 263 [n/a] @ "30755000"
+// RTL Simulation : 147 / 263 [n/a] @ "30955000"
+// RTL Simulation : 148 / 263 [n/a] @ "31155000"
+// RTL Simulation : 149 / 263 [n/a] @ "31355000"
+// RTL Simulation : 150 / 263 [n/a] @ "31555000"
+// RTL Simulation : 151 / 263 [n/a] @ "31755000"
+// RTL Simulation : 152 / 263 [n/a] @ "31955000"
+// RTL Simulation : 153 / 263 [n/a] @ "32155000"
+// RTL Simulation : 154 / 263 [n/a] @ "32355000"
+// RTL Simulation : 155 / 263 [n/a] @ "32555000"
+// RTL Simulation : 156 / 263 [n/a] @ "32755000"
+// RTL Simulation : 157 / 263 [n/a] @ "32955000"
+// RTL Simulation : 158 / 263 [n/a] @ "33155000"
+// RTL Simulation : 159 / 263 [n/a] @ "33355000"
+// RTL Simulation : 160 / 263 [n/a] @ "33555000"
+// RTL Simulation : 161 / 263 [n/a] @ "33755000"
+// RTL Simulation : 162 / 263 [n/a] @ "33955000"
+// RTL Simulation : 163 / 263 [n/a] @ "34155000"
+// RTL Simulation : 164 / 263 [n/a] @ "34355000"
+// RTL Simulation : 165 / 263 [n/a] @ "34555000"
+// RTL Simulation : 166 / 263 [n/a] @ "34755000"
+// RTL Simulation : 167 / 263 [n/a] @ "34955000"
+// RTL Simulation : 168 / 263 [n/a] @ "35155000"
+// RTL Simulation : 169 / 263 [n/a] @ "35355000"
+// RTL Simulation : 170 / 263 [n/a] @ "35555000"
+// RTL Simulation : 171 / 263 [n/a] @ "35755000"
+// RTL Simulation : 172 / 263 [n/a] @ "35955000"
+// RTL Simulation : 173 / 263 [n/a] @ "36155000"
+// RTL Simulation : 174 / 263 [n/a] @ "36355000"
+// RTL Simulation : 175 / 263 [n/a] @ "36555000"
+// RTL Simulation : 176 / 263 [n/a] @ "36755000"
+// RTL Simulation : 177 / 263 [n/a] @ "36955000"
+// RTL Simulation : 178 / 263 [n/a] @ "37155000"
+// RTL Simulation : 179 / 263 [n/a] @ "37355000"
+// RTL Simulation : 180 / 263 [n/a] @ "37555000"
+// RTL Simulation : 181 / 263 [n/a] @ "37755000"
+// RTL Simulation : 182 / 263 [n/a] @ "37955000"
+// RTL Simulation : 183 / 263 [n/a] @ "38155000"
+// RTL Simulation : 184 / 263 [n/a] @ "38355000"
+// RTL Simulation : 185 / 263 [n/a] @ "38555000"
+// RTL Simulation : 186 / 263 [n/a] @ "38755000"
+// RTL Simulation : 187 / 263 [n/a] @ "38955000"
+// RTL Simulation : 188 / 263 [n/a] @ "39155000"
+// RTL Simulation : 189 / 263 [n/a] @ "39355000"
+// RTL Simulation : 190 / 263 [n/a] @ "39555000"
+// RTL Simulation : 191 / 263 [n/a] @ "39755000"
+// RTL Simulation : 192 / 263 [n/a] @ "39955000"
+// RTL Simulation : 193 / 263 [n/a] @ "40155000"
+// RTL Simulation : 194 / 263 [n/a] @ "40355000"
+// RTL Simulation : 195 / 263 [n/a] @ "40555000"
+// RTL Simulation : 196 / 263 [n/a] @ "40755000"
+// RTL Simulation : 197 / 263 [n/a] @ "40955000"
+// RTL Simulation : 198 / 263 [n/a] @ "41155000"
+// RTL Simulation : 199 / 263 [n/a] @ "41355000"
+// RTL Simulation : 200 / 263 [n/a] @ "41555000"
+// RTL Simulation : 201 / 263 [n/a] @ "41755000"
+// RTL Simulation : 202 / 263 [n/a] @ "41955000"
+// RTL Simulation : 203 / 263 [n/a] @ "42155000"
+// RTL Simulation : 204 / 263 [n/a] @ "42355000"
+// RTL Simulation : 205 / 263 [n/a] @ "42555000"
+// RTL Simulation : 206 / 263 [n/a] @ "42755000"
+// RTL Simulation : 207 / 263 [n/a] @ "42955000"
+// RTL Simulation : 208 / 263 [n/a] @ "43155000"
+// RTL Simulation : 209 / 263 [n/a] @ "43355000"
+// RTL Simulation : 210 / 263 [n/a] @ "43555000"
+// RTL Simulation : 211 / 263 [n/a] @ "43755000"
+// RTL Simulation : 212 / 263 [n/a] @ "43955000"
+// RTL Simulation : 213 / 263 [n/a] @ "44155000"
+// RTL Simulation : 214 / 263 [n/a] @ "44355000"
+// RTL Simulation : 215 / 263 [n/a] @ "44555000"
+// RTL Simulation : 216 / 263 [n/a] @ "44755000"
+// RTL Simulation : 217 / 263 [n/a] @ "44955000"
+// RTL Simulation : 218 / 263 [n/a] @ "45155000"
+// RTL Simulation : 219 / 263 [n/a] @ "45355000"
+// RTL Simulation : 220 / 263 [n/a] @ "45555000"
+// RTL Simulation : 221 / 263 [n/a] @ "45755000"
+// RTL Simulation : 222 / 263 [n/a] @ "45955000"
+// RTL Simulation : 223 / 263 [n/a] @ "46155000"
+// RTL Simulation : 224 / 263 [n/a] @ "46355000"
+// RTL Simulation : 225 / 263 [n/a] @ "46555000"
+// RTL Simulation : 226 / 263 [n/a] @ "46755000"
+// RTL Simulation : 227 / 263 [n/a] @ "46955000"
+// RTL Simulation : 228 / 263 [n/a] @ "47155000"
+// RTL Simulation : 229 / 263 [n/a] @ "47355000"
+// RTL Simulation : 230 / 263 [n/a] @ "47555000"
+// RTL Simulation : 231 / 263 [n/a] @ "47755000"
+// RTL Simulation : 232 / 263 [n/a] @ "47955000"
+// RTL Simulation : 233 / 263 [n/a] @ "48155000"
+// RTL Simulation : 234 / 263 [n/a] @ "48355000"
+// RTL Simulation : 235 / 263 [n/a] @ "48555000"
+// RTL Simulation : 236 / 263 [n/a] @ "48755000"
+// RTL Simulation : 237 / 263 [n/a] @ "48955000"
+// RTL Simulation : 238 / 263 [n/a] @ "49155000"
+// RTL Simulation : 239 / 263 [n/a] @ "49355000"
+// RTL Simulation : 240 / 263 [n/a] @ "49555000"
+// RTL Simulation : 241 / 263 [n/a] @ "49755000"
+// RTL Simulation : 242 / 263 [n/a] @ "49955000"
+// RTL Simulation : 243 / 263 [n/a] @ "50155000"
+// RTL Simulation : 244 / 263 [n/a] @ "50355000"
+// RTL Simulation : 245 / 263 [n/a] @ "50555000"
+// RTL Simulation : 246 / 263 [n/a] @ "50755000"
+// RTL Simulation : 247 / 263 [n/a] @ "50955000"
+// RTL Simulation : 248 / 263 [n/a] @ "51155000"
+// RTL Simulation : 249 / 263 [n/a] @ "51355000"
+// RTL Simulation : 250 / 263 [n/a] @ "51555000"
+// RTL Simulation : 251 / 263 [n/a] @ "51755000"
+// RTL Simulation : 252 / 263 [n/a] @ "51955000"
+// RTL Simulation : 253 / 263 [n/a] @ "52155000"
+// RTL Simulation : 254 / 263 [n/a] @ "52355000"
+// RTL Simulation : 255 / 263 [n/a] @ "52555000"
+// RTL Simulation : 256 / 263 [n/a] @ "52755000"
+// RTL Simulation : 257 / 263 [n/a] @ "52955000"
+// RTL Simulation : 258 / 263 [n/a] @ "52965000"
+// RTL Simulation : 259 / 263 [n/a] @ "52975000"
+// RTL Simulation : 260 / 263 [n/a] @ "52985000"
+// RTL Simulation : 261 / 263 [n/a] @ "52995000"
+// RTL Simulation : 262 / 263 [n/a] @ "53915000"
+// RTL Simulation : 263 / 263 [n/a] @ "54115000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 54175 ns : File "/home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/vae_axis.autotb.v" Line 250
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov 22 20:17:49 2026...
+VAE AXI4-Stream tests passed (256 golden vectors + framing)
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 51
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

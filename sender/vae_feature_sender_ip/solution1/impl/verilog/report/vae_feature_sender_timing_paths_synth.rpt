@@ -1,0 +1,697 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Sun Nov 22 22:41:10 2026
+| Host         : fedora running 64-bit unknown
+| Command      : report_timing -max_paths 10 -file ./report/vae_feature_sender_timing_paths_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             3.491ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.534ns  (logic 3.110ns (47.597%)  route 3.424ns (52.403%))
+  Logic Levels:           10  (CARRY4=6 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       0.554     5.151    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.275 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4/O
+                         net (fo=2, unplaced)         0.460     5.735    bd_0_i/hls_inst/inst/words_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     5.859 r  bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6/O
+                         net (fo=1, unplaced)         0.665     6.524    bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     7.161 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     7.170    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     7.507 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]_i_2/O[1]
+                         net (fo=1, unplaced)         0.000     7.507    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]_i_2_n_6
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/words_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[6]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[6]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -7.507    
+  -------------------------------------------------------------------
+                         slack                                  3.491    
+
+Slack (MET) :             3.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.528ns  (logic 3.104ns (47.549%)  route 3.424ns (52.451%))
+  Logic Levels:           10  (CARRY4=6 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       0.554     5.151    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.275 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4/O
+                         net (fo=2, unplaced)         0.460     5.735    bd_0_i/hls_inst/inst/words_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     5.859 r  bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6/O
+                         net (fo=1, unplaced)         0.665     6.524    bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     7.161 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     7.170    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     7.501 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]_i_2/O[3]
+                         net (fo=1, unplaced)         0.000     7.501    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]_i_2_n_4
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/words_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -7.501    
+  -------------------------------------------------------------------
+                         slack                                  3.497    
+
+Slack (MET) :             3.572ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.453ns  (logic 3.029ns (46.939%)  route 3.424ns (53.061%))
+  Logic Levels:           10  (CARRY4=6 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       0.554     5.151    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.275 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4/O
+                         net (fo=2, unplaced)         0.460     5.735    bd_0_i/hls_inst/inst/words_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     5.859 r  bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6/O
+                         net (fo=1, unplaced)         0.665     6.524    bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     7.161 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     7.170    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     7.426 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]_i_2/O[2]
+                         net (fo=1, unplaced)         0.000     7.426    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]_i_2_n_5
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/words_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[7]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[7]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -7.426    
+  -------------------------------------------------------------------
+                         slack                                  3.572    
+
+Slack (MET) :             3.596ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.429ns  (logic 3.005ns (46.741%)  route 3.424ns (53.259%))
+  Logic Levels:           10  (CARRY4=6 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       0.554     5.151    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.275 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4/O
+                         net (fo=2, unplaced)         0.460     5.735    bd_0_i/hls_inst/inst/words_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     5.859 r  bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6/O
+                         net (fo=1, unplaced)         0.665     6.524    bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     7.161 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     7.170    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.232     7.402 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]_i_2/O[0]
+                         net (fo=1, unplaced)         0.000     7.402    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[8]_i_2_n_7
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/words_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[5]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[5]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -7.402    
+  -------------------------------------------------------------------
+                         slack                                  3.596    
+
+Slack (MET) :             3.742ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.283ns  (logic 2.868ns (45.647%)  route 3.415ns (54.353%))
+  Logic Levels:           9  (CARRY4=5 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       0.554     5.151    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.275 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4/O
+                         net (fo=2, unplaced)         0.460     5.735    bd_0_i/hls_inst/inst/words_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     5.859 r  bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6/O
+                         net (fo=1, unplaced)         0.665     6.524    bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6_n_0
+                         CARRY4 (Prop_carry4_S[0]_O[3])
+                                                      0.732     7.256 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1/O[3]
+                         net (fo=1, unplaced)         0.000     7.256    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1_n_4
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/words_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -7.256    
+  -------------------------------------------------------------------
+                         slack                                  3.742    
+
+Slack (MET) :             3.806ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.219ns  (logic 2.804ns (45.088%)  route 3.415ns (54.912%))
+  Logic Levels:           9  (CARRY4=5 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       0.554     5.151    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.275 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/empty_n_i_4/O
+                         net (fo=2, unplaced)         0.460     5.735    bd_0_i/hls_inst/inst/words_U/empty_n_reg_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     5.859 r  bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6/O
+                         net (fo=1, unplaced)         0.665     6.524    bd_0_i/hls_inst/inst/words_U/mOutPtr[4]_i_6_n_0
+                         CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.668     7.192 r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     7.192    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[4]_i_1_n_5
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/words_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[3]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/words_U/mOutPtr_reg[3]
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                          -7.192    
+  -------------------------------------------------------------------
+                         slack                                  3.806    
+
+Slack (MET) :             3.812ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[0]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.935ns  (logic 2.136ns (35.990%)  route 3.799ns (64.010%))
+  Logic Levels:           8  (CARRY4=4 LUT4=2 LUT5=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       1.007     5.604    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT4 (Prop_lut4_I0_O)        0.124     5.728 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/B_V_data_1_state[0]_i_2/O
+                         net (fo=11, unplaced)        0.495     6.223    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/next_1_fu_72_reg[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     6.347 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/next_1_fu_72[63]_i_1/O
+                         net (fo=64, unplaced)        0.561     6.908    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[0]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.720    
+                         arrival time                          -6.908    
+  -------------------------------------------------------------------
+                         slack                                  3.812    
+
+Slack (MET) :             3.812ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[10]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.935ns  (logic 2.136ns (35.990%)  route 3.799ns (64.010%))
+  Logic Levels:           8  (CARRY4=4 LUT4=2 LUT5=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       1.007     5.604    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT4 (Prop_lut4_I0_O)        0.124     5.728 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/B_V_data_1_state[0]_i_2/O
+                         net (fo=11, unplaced)        0.495     6.223    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/next_1_fu_72_reg[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     6.347 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/next_1_fu_72[63]_i_1/O
+                         net (fo=64, unplaced)        0.561     6.908    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[10]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[10]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[10]
+  -------------------------------------------------------------------
+                         required time                         10.720    
+                         arrival time                          -6.908    
+  -------------------------------------------------------------------
+                         slack                                  3.812    
+
+Slack (MET) :             3.812ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[11]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.935ns  (logic 2.136ns (35.990%)  route 3.799ns (64.010%))
+  Logic Levels:           8  (CARRY4=4 LUT4=2 LUT5=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       1.007     5.604    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT4 (Prop_lut4_I0_O)        0.124     5.728 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/B_V_data_1_state[0]_i_2/O
+                         net (fo=11, unplaced)        0.495     6.223    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/next_1_fu_72_reg[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     6.347 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/next_1_fu_72[63]_i_1/O
+                         net (fo=64, unplaced)        0.561     6.908    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[11]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[11]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[11]
+  -------------------------------------------------------------------
+                         required time                         10.720    
+                         arrival time                          -6.908    
+  -------------------------------------------------------------------
+                         slack                                  3.812    
+
+Slack (MET) :             3.812ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[12]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.935ns  (logic 2.136ns (35.990%)  route 3.799ns (64.010%))
+  Logic Levels:           8  (CARRY4=4 LUT4=2 LUT5=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.973     0.973    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]/Q
+                         net (fo=3, unplaced)         0.759     2.250    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_fu_80_reg[1]
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.569 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4/O
+                         net (fo=1, unplaced)         0.000     2.569    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.576     3.145 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.154    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.271 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.271    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.388    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.505 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/icmp_ln36_fu_204_p2_carry__2/CO[3]
+                         net (fo=13, unplaced)        0.968     4.473    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/CO[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     4.597 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/cycle_tx_read_INST_0_i_2/O
+                         net (fo=124, unplaced)       1.007     5.604    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_block_pp0_stage0_subdone
+                         LUT4 (Prop_lut4_I0_O)        0.124     5.728 f  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/B_V_data_1_state[0]_i_2/O
+                         net (fo=11, unplaced)        0.495     6.223    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/next_1_fu_72_reg[0]
+                         LUT5 (Prop_lut5_I1_O)        0.124     6.347 r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/flow_control_loop_pipe_sequential_init_U/next_1_fu_72[63]_i_1/O
+                         net (fo=64, unplaced)        0.561     6.908    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[12]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=6151, unset)         0.924    10.924    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[12]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/inst/p_anonymous_namespace_pace_send_U0/grp_p_anonymous_namespace_pace_send_Pipeline_send_fu_88/next_1_fu_72_reg[12]
+  -------------------------------------------------------------------
+                         required time                         10.720    
+                         arrival time                          -6.908    
+  -------------------------------------------------------------------
+                         slack                                  3.812    
+
+
+
+

@@ -1,0 +1,2 @@
+vae_feature_sender tests passed (256 flows, end to end through vae_axis)
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 2049

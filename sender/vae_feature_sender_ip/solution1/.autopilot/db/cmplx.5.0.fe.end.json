@@ -1,0 +1,119 @@
+{
+    "1": {
+        "name": "(anonymous namespace)load",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/sender\/vae_feature_sender.cpp",
+        "fileloc": "18",
+        "instructions": "15",
+        "total_instructions": "35",
+        "calls": "8",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "(anonymous namespace)store_stamps_Pipeline_write_stamps",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/sender\/vae_feature_sender.cpp",
+        "fileloc": "63",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "(anonymous namespace)pace_send",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/sender\/vae_feature_sender.cpp",
+        "fileloc": "27",
+        "instructions": "15",
+        "total_instructions": "74",
+        "calls": "7",
+        "basicblocks": "1"
+    },
+    "4": {
+        "name": "entry_proc",
+        "file": "vae_feature_sender.cpp",
+        "fileloc": "0",
+        "instructions": "7",
+        "total_instructions": "7",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "5": {
+        "name": "(anonymous namespace)collect",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/sender\/vae_feature_sender.cpp",
+        "fileloc": "69",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "(anonymous namespace)store_stamps",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/sender\/vae_feature_sender.cpp",
+        "fileloc": "61",
+        "instructions": "14",
+        "total_instructions": "34",
+        "calls": "2",
+        "basicblocks": "1"
+    },
+    "7": {
+        "name": "(anonymous namespace)pace_send_Pipeline_send",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/sender\/vae_feature_sender.cpp",
+        "fileloc": "30",
+        "instructions": "59",
+        "total_instructions": "59",
+        "calls": "",
+        "basicblocks": "11",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "(anonymous namespace)load_Pipeline_read_ddr",
+        "file": "\/home\/nandanbali\/programming\/deep-svdd\/autoencoder\/sender\/vae_feature_sender.cpp",
+        "fileloc": "21",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "vae_feature_sender",
+        "file": "vae_feature_sender.cpp",
+        "fileloc": "85",
+        "instructions": "66",
+        "total_instructions": "250",
+        "calls": "4 1 3 6 5",
+        "basicblocks": "1"
+    }
+}

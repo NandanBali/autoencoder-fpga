@@ -1,0 +1,10 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../../hls/test_vae_axis.cpp in debug mode
+   Compiling ../../../../hls4ml_prj/firmware/vae_core.cpp in debug mode
+   Compiling ../../../../../../hls/vae_axis.cpp in debug mode
+   Generating csim.exe
+VAE AXI4-Stream tests passed (256 golden vectors + framing)
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 51
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

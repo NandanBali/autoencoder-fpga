@@ -1,0 +1,467 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Sat Nov 21 23:10:46 2026
+| Host         : fedora running 64-bit unknown
+| Command      : report_timing -max_paths 10 -file ./report/vae_axis_timing_paths_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.227ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[24]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.520ns  (logic 0.456ns (4.790%)  route 9.064ns (95.210%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.064    10.493    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X90Y90         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[24]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X90Y90         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[24]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X90Y90         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[24]
+  -------------------------------------------------------------------
+                         required time                         10.720    
+                         arrival time                         -10.493    
+  -------------------------------------------------------------------
+                         slack                                  0.227    
+
+Slack (MET) :             0.227ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[25]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.520ns  (logic 0.456ns (4.790%)  route 9.064ns (95.210%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.064    10.493    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X90Y90         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[25]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X90Y90         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[25]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X90Y90         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[25]
+  -------------------------------------------------------------------
+                         required time                         10.720    
+                         arrival time                         -10.493    
+  -------------------------------------------------------------------
+                         slack                                  0.227    
+
+Slack (MET) :             0.227ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[26]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.520ns  (logic 0.456ns (4.790%)  route 9.064ns (95.210%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.064    10.493    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X90Y90         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[26]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X90Y90         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[26]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X90Y90         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[26]
+  -------------------------------------------------------------------
+                         required time                         10.720    
+                         arrival time                         -10.493    
+  -------------------------------------------------------------------
+                         slack                                  0.227    
+
+Slack (MET) :             0.227ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[27]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.520ns  (logic 0.456ns (4.790%)  route 9.064ns (95.210%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.064    10.493    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X90Y90         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[27]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X90Y90         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[27]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X90Y90         FDRE (Setup_fdre_C_CE)      -0.169    10.720    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_43_reg_3749_reg[27]
+  -------------------------------------------------------------------
+                         required time                         10.720    
+                         arrival time                         -10.493    
+  -------------------------------------------------------------------
+                         slack                                  0.227    
+
+Slack (MET) :             0.230ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[24]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.481ns  (logic 0.456ns (4.810%)  route 9.025ns (95.190%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.025    10.454    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X103Y83        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[24]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X103Y83        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[24]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X103Y83        FDRE (Setup_fdre_C_CE)      -0.205    10.684    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[24]
+  -------------------------------------------------------------------
+                         required time                         10.684    
+                         arrival time                         -10.454    
+  -------------------------------------------------------------------
+                         slack                                  0.230    
+
+Slack (MET) :             0.230ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[25]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.481ns  (logic 0.456ns (4.810%)  route 9.025ns (95.190%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.025    10.454    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X103Y83        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[25]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X103Y83        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[25]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X103Y83        FDRE (Setup_fdre_C_CE)      -0.205    10.684    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[25]
+  -------------------------------------------------------------------
+                         required time                         10.684    
+                         arrival time                         -10.454    
+  -------------------------------------------------------------------
+                         slack                                  0.230    
+
+Slack (MET) :             0.230ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[26]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.481ns  (logic 0.456ns (4.810%)  route 9.025ns (95.190%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.025    10.454    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X103Y83        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[26]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X103Y83        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[26]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X103Y83        FDRE (Setup_fdre_C_CE)      -0.205    10.684    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[26]
+  -------------------------------------------------------------------
+                         required time                         10.684    
+                         arrival time                         -10.454    
+  -------------------------------------------------------------------
+                         slack                                  0.230    
+
+Slack (MET) :             0.230ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[27]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.481ns  (logic 0.456ns (4.810%)  route 9.025ns (95.190%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.025    10.454    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X103Y83        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[27]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X103Y83        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[27]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X103Y83        FDRE (Setup_fdre_C_CE)      -0.205    10.684    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[27]
+  -------------------------------------------------------------------
+                         required time                         10.684    
+                         arrival time                         -10.454    
+  -------------------------------------------------------------------
+                         slack                                  0.230    
+
+Slack (MET) :             0.234ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[28]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.477ns  (logic 0.456ns (4.811%)  route 9.021ns (95.189%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.021    10.450    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X103Y84        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[28]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X103Y84        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[28]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X103Y84        FDRE (Setup_fdre_C_CE)      -0.205    10.684    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[28]
+  -------------------------------------------------------------------
+                         required time                         10.684    
+                         arrival time                         -10.450    
+  -------------------------------------------------------------------
+                         slack                                  0.234    
+
+Slack (MET) :             0.234ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[29]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.477ns  (logic 0.456ns (4.811%)  route 9.021ns (95.189%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/ap_clk
+    SLICE_X49Y92         FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y92         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U/genblk1[2].v2_reg[2]/Q
+                         net (fo=481, routed)         9.021    10.450    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/frp_pipeline_valid_U_valid_out[3]
+    SLICE_X103Y84        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[29]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=30056, unset)        0.924    10.924    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/ap_clk
+    SLICE_X103Y84        FDRE                                         r  bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X103Y84        FDRE (Setup_fdre_C_CE)      -0.205    10.684    bd_0_i/hls_inst/inst/grp_vae_core_fu_279/dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_18_5_4_0_0_config4_U0/add_ln58_37_reg_3731_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.684    
+                         arrival time                         -10.450    
+  -------------------------------------------------------------------
+                         slack                                  0.234    
+
+
+
+

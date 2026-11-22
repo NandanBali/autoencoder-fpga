@@ -1,0 +1,22 @@
+{
+ "top": "vae_axis",
+ "part": "xc7z020clg400-1",
+ "clock_ns": 10.0,
+ "ordered_pl_inputs": [
+  "IN_BYTES",
+  "OUT_BYTES",
+  "FLOW_DURATION_MILLISECONDS",
+  "MIN_TTL",
+  "MAX_IP_PKT_LEN",
+  "MIN_IP_PKT_LEN",
+  "TCP_WIN_MAX_IN",
+  "TCP_WIN_MAX_OUT"
+ ],
+ "input_format": "ap_fixed<25,9> in TDATA[24:0] (16 fractional bits)",
+ "output_format": "ap_ufixed<64,32> in TDATA[63:0] (32 fractional bits)",
+ "threshold_float": 0.05266858451068401,
+ "threshold_code_u64": 226209848,
+ "decision": "anomaly iff score_code > threshold_code_u64",
+ "preprocessing": "/home/nandanbali/programming/deep-svdd/software-model/runs/software/data/compact_preprocessing.json",
+ "preprocessing_sha256": "9c947318add1c3c260dcc2eb500c45e67953a5ae75e939dabcda1014a4a3fc67"
+}

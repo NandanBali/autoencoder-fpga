@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Nov 22 20:17:43 2026
+# Process ID: 839257
+# Current directory: /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/vae_axis/xsim_script.tcl}
+# Log file: /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/xsim.log
+# Journal file: /home/nandanbali/programming/deep-svdd/autoencoder/runs/vae/vae_axis_pipe_ip/solution1/sim/verilog/xsim.jou
+# Running On: fedora, OS: Linux, CPU Frequency: 3168.641 MHz, CPU Physical cores: 16, Host memory: 14305 MB
+#-----------------------------------------------------------
+source xsim.dir/vae_axis/xsim_script.tcl
+source vae_axis.tcl

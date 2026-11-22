@@ -1,0 +1,242 @@
+
+
+================================================================
+== Synthesis Summary Report of 'vae_feature_sender'
+================================================================
++ General Information: 
+    * Date:           Sun Nov 22 22:38:40 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        vae_feature_sender_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+----------+----+-----------+------------+-----+
+    |                            Modules                           |  Issue |       | Latency | Latency| Iteration|         | Trip |          |          |    |           |            |     |
+    |                            & Loops                           |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|   BRAM   | DSP|     FF    |     LUT    | URAM|
+    +--------------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+----------+----+-----------+------------+-----+
+    |+ vae_feature_sender*                                         |  Timing|  -6.09|        -|       -|         -|        -|     -|  dataflow|  34 (12%)|   -|  4974 (4%)|  5531 (10%)|    -|
+    | + entry_proc                                                 |       -|   4.37|        0|   0.000|         -|        0|     -|        no|         -|   -|    3 (~0%)|    38 (~0%)|    -|
+    | + p_anonymous_namespace_load                                 |       -|   0.00|        -|       -|         -|        -|     -|        no|         -|   -|  242 (~0%)|    665 (1%)|    -|
+    |  + p_anonymous_namespace_load_Pipeline_read_ddr              |       -|   0.00|        -|       -|         -|        -|     -|        no|         -|   -|   73 (~0%)|   142 (~0%)|    -|
+    |   o read_ddr                                                 |       -|   8.00|        -|       -|         3|        1|     -|       yes|         -|   -|          -|           -|    -|
+    | + p_anonymous_namespace_collect                              |       -|   0.00|        -|       -|         -|        -|     -|        no|         -|   -|  466 (~0%)|   246 (~0%)|    -|
+    |  o write_results                                             |       -|   8.00|        -|       -|         8|        1|     -|       yes|         -|   -|          -|           -|    -|
+    | + p_anonymous_namespace_pace_send                            |  Timing|  -6.09|        -|       -|         -|        -|     -|        no|         -|   -|  372 (~0%)|    569 (1%)|    -|
+    |  + p_anonymous_namespace_pace_send_Pipeline_send             |  Timing|  -6.09|        -|       -|         -|        -|     -|        no|         -|   -|  238 (~0%)|   463 (~0%)|    -|
+    |   o send                                                     |       -|   8.00|        -|       -|         2|        1|     -|       yes|         -|   -|          -|           -|    -|
+    | + p_anonymous_namespace_store_stamps                         |       -|   0.00|        -|       -|         -|        -|     -|        no|         -|   -|  205 (~0%)|   393 (~0%)|    -|
+    |  + p_anonymous_namespace_store_stamps_Pipeline_write_stamps  |       -|   0.00|        -|       -|         -|        -|     -|        no|         -|   -|  101 (~0%)|   138 (~0%)|    -|
+    |   o write_stamps                                             |       -|   8.00|        -|       -|         3|        1|     -|       yes|         -|   -|          -|           -|    -|
+    +--------------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+----------+----+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface      | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|                | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem_in  | 32 -> 32   | 64            | 64      | slave  | 0        | 0         | 64           | 16           | 8           | 16          | BRAM=4            |
+| m_axi_gmem_res | 128 -> 128 | 64            | 0       | slave  | 0        | 0         | 16           | 64           | 16          | 8           | BRAM=16           |
+| m_axi_gmem_ts  | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 64           | 16          | 8           | BRAM=8            |
++----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | features_1 | 0x10   | 32    | W      | Data signal of features          |                                                                      |
+| s_axi_control | features_2 | 0x14   | 32    | W      | Data signal of features          |                                                                      |
+| s_axi_control | t_send_1   | 0x1c   | 32    | W      | Data signal of t_send            |                                                                      |
+| s_axi_control | t_send_2   | 0x20   | 32    | W      | Data signal of t_send            |                                                                      |
+| s_axi_control | results_1  | 0x28   | 32    | W      | Data signal of results           |                                                                      |
+| s_axi_control | results_2  | 0x2c   | 32    | W      | Data signal of results           |                                                                      |
+| s_axi_control | n_flows    | 0x34   | 32    | W      | Data signal of n_flows           |                                                                      |
+| s_axi_control | period     | 0x3c   | 32    | W      | Data signal of period            |                                                                      |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-----------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface       | Direction | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| m_axis_features | out       | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| s_axis_score    | in        | both          | 64    | 8     | 1     | 1      | 8     | 1      |
++-----------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* AP_FIFO
++-----------+-----------+------------+
+| Interface | Direction | Data Width |
++-----------+-----------+------------+
+| cycle_rx  | out       | 64         |
+| cycle_tx  | out       | 64         |
++-----------+-----------+------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------+-----------+---------------------------------------------------------+
+| Argument        | Direction | Datatype                                                |
++-----------------+-----------+---------------------------------------------------------+
+| features        | in        | ap_uint<32> const *                                     |
+| t_send          | out       | ap_uint<64>*                                            |
+| results         | out       | ap_uint<128>*                                           |
+| n_flows         | in        | ap_uint<32>                                             |
+| period          | in        | ap_uint<32>                                             |
+| cycle_tx        | in        | stream<ap_uint<64>, 0>&                                 |
+| cycle_rx        | in        | stream<ap_uint<64>, 0>&                                 |
+| m_axis_features | out       | stream<hls::axis<ap_uint<32>, 0, 0, 0, '8', false>, 0>& |
+| s_axis_score    | in        | stream<hls::axis<ap_uint<64>, 0, 0, 0, '8', false>, 0>& |
++-----------------+-----------+---------------------------------------------------------+
+
+* SW-to-HW Mapping
++-----------------+-----------------+-----------+----------+--------------------------------------+
+| Argument        | HW Interface    | HW Type   | HW Usage | HW Info                              |
++-----------------+-----------------+-----------+----------+--------------------------------------+
+| features        | m_axi_gmem_in   | interface |          |                                      |
+| features        | s_axi_control   | register  | offset   | name=features_1 offset=0x10 range=32 |
+| features        | s_axi_control   | register  | offset   | name=features_2 offset=0x14 range=32 |
+| t_send          | m_axi_gmem_ts   | interface |          |                                      |
+| t_send          | s_axi_control   | register  | offset   | name=t_send_1 offset=0x1c range=32   |
+| t_send          | s_axi_control   | register  | offset   | name=t_send_2 offset=0x20 range=32   |
+| results         | m_axi_gmem_res  | interface |          |                                      |
+| results         | s_axi_control   | register  | offset   | name=results_1 offset=0x28 range=32  |
+| results         | s_axi_control   | register  | offset   | name=results_2 offset=0x2c range=32  |
+| n_flows         | s_axi_control   | register  |          | name=n_flows offset=0x34 range=32    |
+| period          | s_axi_control   | register  |          | name=period offset=0x3c range=32     |
+| cycle_tx        | cycle_tx        | interface |          |                                      |
+| cycle_rx        | cycle_rx        | interface |          |                                      |
+| m_axis_features | m_axis_features | interface |          |                                      |
+| s_axis_score    | s_axis_score    | interface |          |                                      |
++-----------------+-----------------+-----------+----------+--------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++----------------+-----------+----------+-------+---------------+---------------------------------------------------------------------------------------+
+| HW Interface   | Direction | Length   | Width | Loop          | Loop Location                                                                         |
++----------------+-----------+----------+-------+---------------+---------------------------------------------------------------------------------------+
+| m_axi_gmem_in  | read      | variable | 32    | read_ddr      | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5 |
+| m_axi_gmem_res | write     | variable | 128   | write_results | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5 |
+| m_axi_gmem_ts  | write     | variable | 64    | write_stamps  | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5 |
++----------------+-----------+----------+-------+---------------+---------------------------------------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++----------------+----------+----------------------------------------------------------------------------------------+-----------+--------------+----------+---------------+---------------------------------------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+| HW Interface   | Variable | Access Location                                                                        | Direction | Burst Status | Length   | Loop          | Loop Location                                                                         | Resolution | Problem                                                                                                |
++----------------+----------+----------------------------------------------------------------------------------------+-----------+--------------+----------+---------------+---------------------------------------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+| m_axi_gmem_in  | features | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:23:8  | read      | Widen Fail   |          | read_ddr      | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem_in  | features | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:23:8  | read      | Inferred     | variable | read_ddr      | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:21:5 |            |                                                                                                        |
+| m_axi_gmem_res | results  | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:79:20 | write     | Widen Fail   |          | write_results | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5 | 214-353    | Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_res | results  | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:79:20 | write     | Inferred     | variable | write_results | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:72:5 |            |                                                                                                        |
+| m_axi_gmem_ts  | t_send   | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:65:12 | write     | Widen Fail   |          | write_stamps  | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5 | 214-353    | Could not widen since type i64 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem_ts  | t_send   | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:65:12 | write     | Inferred     | variable | write_stamps  | /home/nandanbali/programming/deep-svdd/autoencoder/sender/vae_feature_sender.cpp:63:5 |            |                                                                                                        |
++----------------+----------+----------------------------------------------------------------------------------------+-----------+--------------+----------+---------------+---------------------------------------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                                                         | DSP | Pragma | Variable | Op  | Impl   | Latency |
++--------------------------------------------------------------+-----+--------+----------+-----+--------+---------+
+| + vae_feature_sender                                         | 0   |        |          |     |        |         |
+|  + p_anonymous_namespace_load                                | 0   |        |          |     |        |         |
+|   + p_anonymous_namespace_load_Pipeline_read_ddr             | 0   |        |          |     |        |         |
+|     add_ln21_fu_97_p2                                        |     |        | add_ln21 | add | fabric | 0       |
+|  + p_anonymous_namespace_collect                             | 0   |        |          |     |        |         |
+|    add_ln72_fu_181_p2                                        |     |        | add_ln72 | add | fabric | 0       |
+|  + p_anonymous_namespace_pace_send                           | 0   |        |          |     |        |         |
+|   + p_anonymous_namespace_pace_send_Pipeline_send            | 0   |        |          |     |        |         |
+|     next_2_fu_277_p2                                         |     |        | next_2   | add | fabric | 0       |
+|     add_ln54_fu_287_p2                                       |     |        | add_ln54 | add | fabric | 0       |
+|     beat_3_fu_301_p2                                         |     |        | beat_3   | add | fabric | 0       |
+|  + p_anonymous_namespace_store_stamps                        | 0   |        |          |     |        |         |
+|   + p_anonymous_namespace_store_stamps_Pipeline_write_stamps | 0   |        |          |     |        |         |
+|     add_ln63_fu_98_p2                                        |     |        | add_ln63 | add | fabric | 0       |
++--------------------------------------------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------------+--------------+-------------+------+------+--------+-------------+--------+---------+------------------+
+| Name                 | Usage        | Type        | BRAM | URAM | Pragma | Variable    | Impl   | Latency | Bitwidth, Depth, |
+|                      |              |             |      |      |        |             |        |         | Banks            |
++----------------------+--------------+-------------+------+------+--------+-------------+--------+---------+------------------+
+| + vae_feature_sender |              |             | 34   | 0    |        |             |        |         |                  |
+|   control_s_axi_U    | interface    | s_axilite   |      |      |        |             |        |         |                  |
+|   gmem_in_m_axi_U    | interface    | m_axi       | 4    |      |        |             |        |         |                  |
+|   gmem_res_m_axi_U   | interface    | m_axi       | 16   |      |        |             |        |         |                  |
+|   gmem_ts_m_axi_U    | interface    | m_axi       | 8    |      |        |             |        |         |                  |
+|   t_send_c_U         | fifo channel | scalar prop |      |      |        | t_send_c    | srl    | 0       | 64, 4, 1         |
+|   period_c_U         | fifo channel | scalar prop |      |      |        | period_c    | srl    | 0       | 32, 3, 1         |
+|   words_U            | fifo channel | stream      | 2    |      |        | words       | memory | 0       | 32, 256, 1       |
+|   n_flows_c19_U      | fifo channel | scalar prop |      |      |        | n_flows_c19 | srl    | 0       | 32, 2, 1         |
+|   stamps_U           | fifo channel | stream      | 4    |      |        | stamps      | memory | 0       | 64, 64, 1        |
+|   n_flows_c_U        | fifo channel | scalar prop |      |      |        | n_flows_c   | srl    | 0       | 32, 2, 1         |
++----------------------+--------------+-------------+------+------+--------+-------------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+| Type      | Options                                                                                                               | Location                                                          |
++-----------+-----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+| pipeline  | II=1                                                                                                                  | vae_feature_sender.cpp:22 in load                                 |
+| pipeline  | II=1                                                                                                                  | vae_feature_sender.cpp:37 in pace_send                            |
+| pipeline  | II=1                                                                                                                  | vae_feature_sender.cpp:64 in store_stamps                         |
+| pipeline  | II=1                                                                                                                  | vae_feature_sender.cpp:73 in collect                              |
+| interface | m_axi port=features offset=slave bundle=gmem_in depth=2048 max_read_burst_length=64 num_read_outstanding=8 latency=64 | vae_feature_sender.cpp:90 in vae_feature_sender, features         |
+| interface | m_axi port=t_send offset=slave bundle=gmem_ts depth=256 max_write_burst_length=64 num_write_outstanding=8             | vae_feature_sender.cpp:92 in vae_feature_sender, t_send           |
+| interface | m_axi port=results offset=slave bundle=gmem_res depth=256 max_write_burst_length=64 num_write_outstanding=8           | vae_feature_sender.cpp:94 in vae_feature_sender, results          |
+| interface | s_axilite port=features bundle=control                                                                                | vae_feature_sender.cpp:96 in vae_feature_sender, features         |
+| interface | s_axilite port=t_send bundle=control                                                                                  | vae_feature_sender.cpp:97 in vae_feature_sender, t_send           |
+| interface | s_axilite port=results bundle=control                                                                                 | vae_feature_sender.cpp:98 in vae_feature_sender, results          |
+| interface | s_axilite port=n_flows bundle=control                                                                                 | vae_feature_sender.cpp:99 in vae_feature_sender, n_flows          |
+| interface | s_axilite port=period bundle=control                                                                                  | vae_feature_sender.cpp:100 in vae_feature_sender, period          |
+| interface | s_axilite port=return bundle=control                                                                                  | vae_feature_sender.cpp:101 in vae_feature_sender, return          |
+| interface | ap_fifo port=cycle_tx                                                                                                 | vae_feature_sender.cpp:102 in vae_feature_sender, cycle_tx        |
+| interface | ap_fifo port=cycle_rx                                                                                                 | vae_feature_sender.cpp:103 in vae_feature_sender, cycle_rx        |
+| interface | axis port=m_axis_features register_mode=both                                                                          | vae_feature_sender.cpp:104 in vae_feature_sender, m_axis_features |
+| interface | axis port=s_axis_score register_mode=both                                                                             | vae_feature_sender.cpp:105 in vae_feature_sender, s_axis_score    |
+| dataflow  |                                                                                                                       | vae_feature_sender.cpp:106 in vae_feature_sender                  |
++-----------+-----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+
+

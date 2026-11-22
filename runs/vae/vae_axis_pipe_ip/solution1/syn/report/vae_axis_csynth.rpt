@@ -1,0 +1,191 @@
+
+
+================================================================
+== Vitis HLS Report for 'vae_axis'
+================================================================
+* Date:           Sun Nov 22 20:17:05 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        vae_axis_pipe_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  9.776 ns|     3.50 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |                                          |                                       |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+        |                 Instance                 |                 Module                |   min   |   max   |    min    |    max    | min | max |   Type   |
+        +------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |p_anonymous_namespace_read_frame_U0       |p_anonymous_namespace_read_frame       |        ?|        ?|          ?|          ?|    ?|    ?|        no|
+        |vae_core_U0                               |vae_core                               |      133|      139|   1.330 us|   1.390 us|   16|   16|  dataflow|
+        |p_anonymous_namespace_score_and_write_U0  |p_anonymous_namespace_score_and_write  |        8|        8|  80.000 ns|  80.000 ns|    1|    1|  yes(flp)|
+        +------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     36|    -|
+|FIFO             |       12|    -|    1049|    692|    -|
+|Instance         |       52|  128|   49723|  62746|    0|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     72|    -|
+|Register         |        -|    -|       8|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       64|  128|   50780|  63546|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       22|   58|      47|    119|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------+---------------------------------------+---------+-----+-------+-------+-----+
+    |                 Instance                 |                 Module                | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +------------------------------------------+---------------------------------------+---------+-----+-------+-------+-----+
+    |p_anonymous_namespace_read_frame_U0       |p_anonymous_namespace_read_frame       |        0|    0|    252|    470|    0|
+    |p_anonymous_namespace_score_and_write_U0  |p_anonymous_namespace_score_and_write  |        0|   24|   2314|   1499|    0|
+    |vae_core_U0                               |vae_core                               |       52|  104|  47157|  60777|    0|
+    +------------------------------------------+---------------------------------------+---------+-----+-------+-------+-----+
+    |Total                                     |                                       |       52|  128|  49723|  62746|    0|
+    +------------------------------------------+---------------------------------------+---------+-----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-----------+---------+-----+----+-----+------+-----+---------+
+    |    Name   | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +-----------+---------+-----+----+-----+------+-----+---------+
+    |bypass_U   |       12|  158|   0|    -|    16|  201|     3216|
+    |recon_1_U  |        0|   99|   0|    -|     2|   18|       36|
+    |recon_2_U  |        0|   99|   0|    -|     2|   18|       36|
+    |recon_3_U  |        0|   99|   0|    -|     2|   18|       36|
+    |recon_4_U  |        0|   99|   0|    -|     2|   18|       36|
+    |recon_5_U  |        0|   99|   0|    -|     2|   18|       36|
+    |recon_6_U  |        0|   99|   0|    -|     2|   18|       36|
+    |recon_7_U  |        0|   99|   0|    -|     2|   18|       36|
+    |recon_U    |        0|   99|   0|    -|     2|   18|       36|
+    |x_core_U   |        0|   99|   0|    -|     2|  200|      400|
+    +-----------+---------+-----+----+-----+------+-----+---------+
+    |Total      |       12| 1049|   0|    0|    34|  545|     3904|
+    +-----------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------------------------------+----------+----+---+----+------------+------------+
+    |                   Variable Name                   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_recon                              |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_recon_1                            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_recon_2                            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_recon_3                            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_recon_4                            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_recon_5                            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_recon_6                            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_recon_7                            |       and|   0|  0|   2|           1|           1|
+    |p_anonymous_namespace_score_and_write_U0_ap_start  |       and|   0|  0|   2|           1|           1|
+    |vae_core_U0_ap_continue                            |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_recon                        |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_recon_1                      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_recon_2                      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_recon_3                      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_recon_4                      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_recon_5                      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_recon_6                      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_recon_7                      |        or|   0|  0|   2|           1|           1|
+    +---------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                              |          |   0|  0|  36|          18|          18|
+    +---------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_recon    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_recon_1  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_recon_2  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_recon_3  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_recon_4  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_recon_5  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_recon_6  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_recon_7  |   9|          2|    1|          2|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              |  72|         16|    8|         16|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+---+----+-----+-----------+
+    |                Name               | FF| LUT| Bits| Const Bits|
+    +-----------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_recon    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_recon_1  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_recon_2  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_recon_3  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_recon_4  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_recon_5  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_recon_6  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_recon_7  |  1|   0|    1|          0|
+    +-----------------------------------+---+----+-----+-----------+
+    |Total                              |  8|   0|    8|          0|
+    +-----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+--------------+--------------------------+--------------+
+|        RTL Ports       | Dir | Bits|   Protocol   |       Source Object      |    C Type    |
++------------------------+-----+-----+--------------+--------------------------+--------------+
+|s_axis_features_TDATA   |   in|   32|          axis|  s_axis_features_V_data_V|       pointer|
+|s_axis_features_TKEEP   |   in|    4|          axis|  s_axis_features_V_keep_V|       pointer|
+|s_axis_features_TSTRB   |   in|    4|          axis|  s_axis_features_V_strb_V|       pointer|
+|s_axis_features_TLAST   |   in|    1|          axis|  s_axis_features_V_last_V|       pointer|
+|s_axis_features_TVALID  |   in|    1|          axis|  s_axis_features_V_last_V|       pointer|
+|s_axis_features_TREADY  |  out|    1|          axis|  s_axis_features_V_last_V|       pointer|
+|m_axis_score_TDATA      |  out|   64|          axis|     m_axis_score_V_data_V|       pointer|
+|m_axis_score_TKEEP      |  out|    8|          axis|     m_axis_score_V_keep_V|       pointer|
+|m_axis_score_TSTRB      |  out|    8|          axis|     m_axis_score_V_strb_V|       pointer|
+|m_axis_score_TLAST      |  out|    1|          axis|     m_axis_score_V_last_V|       pointer|
+|m_axis_score_TVALID     |  out|    1|          axis|     m_axis_score_V_last_V|       pointer|
+|m_axis_score_TREADY     |   in|    1|          axis|     m_axis_score_V_last_V|       pointer|
+|ap_clk                  |   in|    1|  ap_ctrl_none|                  vae_axis|  return value|
+|ap_rst_n                |   in|    1|  ap_ctrl_none|                  vae_axis|  return value|
++------------------------+-----+-----+--------------+--------------------------+--------------+
+
